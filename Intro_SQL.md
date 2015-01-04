@@ -28,11 +28,6 @@ import sqlite3 as sql
 con = sql.connect('stats_club3.db')
 ```
 
-
-    import pandas as pd
-    import sqlite3 as sql
-    con = sql.connect('stats_club3.db')
-
 #### Using SQLite Browser
 
 1. Open SQLite browser
@@ -247,14 +242,6 @@ __Foreign key:__ A tuple of columns identifying a relationship to another table
 (Blue items below)
 ![alt text](Images/primary_keys.png)
 
-### Quiz (5 mins)
-
-Normalize the following table:
-![alt text](Images/quiz1.png)
-
-
-    #from IPython.display import Image
-    #Image('Images/quiz1sol.png')
 
 ## Relational Algebra Operations
 
@@ -275,16 +262,6 @@ $$\theta=\left\{ \ge,\le,<,>,=\right\}$$
 
 __Set Operations:__ Set theory's unions, set difference, and cartesian product
 of tuples performed on tuples of different tables.
-
-### Quiz
-
-__Q1:__ What kind of operation is performed on the following table?
-![alt text](Images/quiz2a.png)
-
-__Q2:__ What kind of operation is performed on the following table?
-![alt text](Images/quiz2b.png)
-
-__Q3:__ What kinds of joins can peform on tables?
 
 ## Constraints
 
@@ -417,13 +394,6 @@ __Example:__ What are the names, type, times and locations for Stats Club?
 SELECT name, type, start_time, end_time, location
 FROM event;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT name, type, start_time, end_time, location \
-    FROM event", con)
-
-
 
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
