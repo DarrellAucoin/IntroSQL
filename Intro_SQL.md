@@ -499,19 +499,6 @@ FROM table1 AS t1, table2 AS t2;
 ```
 - Very useful when tables have common names but different meanings
 
-### Quiz
-
-__Q:__ Who are the execs for Stats Club, and what are their positions, and
-emails?
-- Projection of name, position, and email from the table exec
-
-
-    #pd.read_sql_query("  ", con)
-
-
-    # to check your answer, remove the '#' below and run the cell
-    #%load quizSELECT.py
-
 ## Selection (WHERE Clause)
 
 __WHERE__ clauses filters the result set, removing rows where the condition
@@ -530,14 +517,6 @@ SELECT name, type, start_time, end_time, location
 FROM event
 WHERE type = 'social';
 ```
-
-
-    pd.read_sql_query(
-    "SELECT name, type, start_time, end_time, location \
-    FROM event \
-    WHERE type = 'social'", con)
-
-
 
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -608,14 +587,6 @@ WHERE name LIKE 'F%';
 ```
 
 
-    pd.read_sql_query(
-    "SELECT * \
-    FROM member \
-    WHERE name LIKE 'F%'", con)
-
-
-
-
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
   <thead>
@@ -667,18 +638,6 @@ FROM tables
 WHERE (condition1 AND condition2 ) OR condition3;
 ```
 
-### Quiz
-
-__Q:__ What events for Stats Club are introductory talks?
-- Introductory talk names start with 'Intro'
-
-
-    #pd.read_sql_query("   ", con)
-
-
-    # to check your answer, remove the '#' below and run the cell
-    #%load quizWHERE.py
-
 ## GROUP BY Clause
 
 - GROUP BY clause groups the table by a column (or tuple of columns) and applies
@@ -714,13 +673,6 @@ SELECT type, COUNT(*) AS num_events
 FROM event
 GROUP BY type;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT type, COUNT(*) AS num_events \
-    FROM event \
-    GROUP BY type", con)
-
 
 
 
@@ -766,13 +718,6 @@ FROM member
 GROUP BY faculty, major
 HAVING COUNT(*) >= 2;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT faculty, major, COUNT(*) \
-    FROM member \
-    GROUP BY faculty, major \
-    HAVING COUNT(*) >= 2", con)
 
 
 
@@ -843,17 +788,6 @@ FROM tables
 GROUP BY col1, col2, ... WITH ROLLUP;
 ```
 
-### Quiz
-
-__Q:__ What are the attendance for each Stats Club event?
-
-
-    #pd.read_sql_query("  ", con)
-
-
-    # to check your answer, remove the '#' below and run the cell
-    #%load quizGROUPBY.py
-
 ## Joins
 
 At times, we need information from multiple tables, to do this we need to join
@@ -900,12 +834,6 @@ a table?
 SELECT m1.name AS Player_1, m2.name  AS Player_2
 FROM member AS m1 CROSS JOIN member AS m2;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT m1.name AS Player_1, m2.name  AS Player_2 \
-    FROM member AS m1 CROSS JOIN member AS m2", con)
-
 
 
 
@@ -1238,12 +1166,6 @@ SELECT m1.name AS Player_1, m2.name  AS Player_2
 FROM member AS m1 CROSS JOIN member AS m2
 WHERE m1.name > m2.name;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT m1.name AS Player_1, m2.name  AS Player_2 \
-    FROM member AS m1 CROSS JOIN member AS m2 \
-    WHERE m1.name > m2.name", con)
 
 
 
@@ -1608,13 +1530,6 @@ ORDER BY events_attended;
 ```
 
 
-    pd.read_sql_query(
-    "SELECT at.name, at.faculty, at.major, COUNT(a.event) AS events_attended \
-    FROM (member AS m INNER JOIN attendance AS a ON m.quest_id = a.member) AS at \
-    GROUP BY at.quest_id, at.name, at.faculty, at.major \
-    ORDER BY events_attended", con)
-
-
 
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -1890,14 +1805,6 @@ ORDER BY events_attended;
 ```
 
 
-    pd.read_sql_query(
-    "SELECT at.name, at.faculty, at.major, COUNT(a.event) AS events_attended \
-    FROM (member AS m LEFT OUTER JOIN attendance AS a ON m.quest_id = a.member) AS at \
-    GROUP BY at.quest_id, at.name, at.faculty, at.major \
-    ORDER BY events_attended", con)
-
-
-
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
@@ -2169,12 +2076,6 @@ FROM exec AS e NATURAL JOIN exec_position AS ep;
 ```
 
 
-    pd.read_sql_query(
-    "SELECT  e.name, e.position, ep.duties \
-    FROM exec AS e NATURAL JOIN exec_position AS ep", con)
-
-
-
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
@@ -2337,19 +2238,6 @@ FROM exec AS e NATURAL JOIN exec_position AS ep;
 
 
 
-### Quiz
-
-__Q:__ What are the email addresses and phone numbers of stats club execs who
-are in change or organizing at least one event?
-![alt text](Images/StatClubTables.png)
-
-
-    #pd.read_sql_query("   ", con)
-
-
-    # to check your answer, remove the '#' below and run the cell
-    #%load quizJOIN.py
-
 ## Set Operations
 
 Set operations create a combination of rows from 2 tables into one result set.
@@ -2389,14 +2277,6 @@ UNION
 SELECT name, email, phone
 FROM exec;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT name, email, NULL AS phone \
-    FROM member \
-    UNION \
-    SELECT name, email, phone \
-    FROM exec", con)
 
 
 
@@ -2697,14 +2577,6 @@ FROM exec;
 ```
 
 
-    pd.read_sql_query(
-    "SELECT name, quest_id \
-    FROM member \
-    INTERSECT \
-    SELECT name, questid \
-    FROM exec", con)
-
-
 
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -2774,15 +2646,6 @@ EXCEPT
 SELECT name, questid
 FROM exec;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT name, quest_id \
-    FROM member \
-    EXCEPT \
-    SELECT name, questid \
-    FROM exec", con)
-
 
 
 
@@ -2974,12 +2837,6 @@ WHERE e.questid IN (SELECT poster FROM event);
 ```
 
 
-    pd.read_sql_query(
-    "SELECT e.name, e.position \
-    FROM exec AS e \
-    WHERE e.questid IN (SELECT poster FROM event)", con)
-
-
 
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3035,13 +2892,6 @@ SELECT name, position,
 (SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major
 FROM exec AS e;
 ```
-
-
-    pd.read_sql_query(
-    "SELECT name, position, \
-    (SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, \
-    (SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major \
-    FROM exec AS e", con)
 
 
 
@@ -3140,12 +2990,6 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated
 subquery}\prec\mbox{Joins}$$
 
 
-### Quiz
-
-__Q:__ Where can a Non-Correlated subquery can be placed?
-
-__Q:__ Where can a Non-Correlated subquery can be placed?
-
 ## WITH Clause
 
 __WITH clause:__ Makes a non-correlated subquery look like a table in the
@@ -3173,16 +3017,6 @@ WITH cost (event, expenses) AS
 SELECT e.name, e.type, e.budget, cost.expenses
 FROM event AS e INNER JOIN cost ON e.name = cost.event;
 ```
-
-
-    pd.read_sql_query(
-    "WITH cost (event, expenses) AS \
-        (SELECT event, SUM(price) \
-        FROM expenses \
-        GROUP BY event) \
-    SELECT e.name, e.type, e.budget, cost.expenses \
-    FROM event AS e INNER JOIN cost ON e.name = cost.event", con)
-
 
 
 
@@ -3292,19 +3126,6 @@ SELECT e.name, e.type, e.budget, cost.expenses,
     END AS warning
 FROM event AS e INNER JOIN cost ON e.name = cost.event;
 ```
-
-
-    pd.read_sql_query(
-    "WITH cost (event, expenses) AS \
-        (SELECT event, SUM(price) \
-        FROM expenses \
-        GROUP BY event) \
-    SELECT e.name, e.type, e.budget, cost.expenses, \
-        CASE \
-        WHEN e.budget - cost.expenses < 0 THEN 'Over budget' \
-        ELSE 'On budget' \
-        END AS warning \
-    FROM event AS e INNER JOIN cost ON e.name = cost.event", con)
 
 
 
@@ -3438,9 +3259,3 @@ LIMIT no_of_rows OFFSET row_num
     - Creating constraints
     - Views
     - How to insert, delete, alter, drop, etc. data in a table
-
-
-    con.close()
-
-
-    #sudo ipython nbconvert Intro_SQL.ipynb --to slides --post serve
