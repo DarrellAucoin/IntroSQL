@@ -1,30 +1,8 @@
+# Intro to SQL: A Brief Introduction</h2>
 
-<head>
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-
-MML_HTMLorMML">
-</script>
+## Darrell Aucoin</h3>
 
-</head>
-
-<center>
-
-<p class="gap05"<p>
-<h1>Intro to SQL:</h1>
-<h2>A Brief Introduction</h2>
-
-<p class="gap05"<p>
-<h3>Darrell Aucoin</h3>
-
-<h3>Stats Club</h3>
-
-<p class="gap2"<p>
-</center>
-<style type="text/css">
-.input_prompt, .input_area, .output_prompt {
-    display:none !important;
-}
-</style>
+## Stats Club
 
 # How to Follow Along
 
