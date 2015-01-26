@@ -1726,6 +1726,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <head>
+
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
@@ -1734,18 +1735,19 @@ div.output_prompt {
 
 <center>
 
-<p><p class="gap05"<p></p>
-<p><h1>Intro to SQL:</h1></p>
+<p class="gap05"<p>
+<h1>Intro to SQL:</h1>
 <h2>A Brief Introduction</h2>
 
-<p><p class="gap05"<p></p>
+<p class="gap05"<p>
 <h3>Darrell Aucoin</h3>
 
 <h3>Stats Club</h3>
 
-<p><p class="gap2"<p>
+<p class="gap2"<p>
+<img src="Images/exploits_of_a_mom.png" alt="alt text">
 </center>
-<img src="Images/exploits_of_a_mom.png" alt="alt text"></p>
+
 <p><style type="text/css">
 .input_prompt, .input_area, .output_prompt {
     display:none !important;
@@ -1828,7 +1830,7 @@ con = sql.connect(&#39;stats_club3.db&#39;)
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[62]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2083,8 +2085,10 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Relational Database:</strong> A relational database is a system organized in tables containing records (rows) related to other records in other tables. Each entity having attributes (columns also called fields) which give additional information on an entity. 
-<img src="Images/RelationalDatabase.png" alt="alt text"></p>
+<p><strong>Relational Database:</strong> A relational database is a system organized in tables containing records (rows) related to other records in other tables. Each entity having attributes (columns also called fields) which give additional information on an entity. </p>
+<center>
+<img src="Images/RelationalDatabase.png" alt="alt text">
+</center>
 </div>
 </div>
 </div><div class="fragment">
@@ -2149,7 +2153,9 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Images/RelationalDatabase.png" alt="alt text">
+<p><center>
+<img src="Images/RelationalDatabase.png" alt="alt text">
+</center>
 <strong>(Virtual) View:</strong> A named query saved into memory and performed whenever it is named. Some SQL servers have materialized views that permanently save the data for faster access.</p>
 </div>
 </div>
@@ -2204,8 +2210,10 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Each entity has properties associated with every instance of an object.
-<img src="Images/ER_Model.png" alt="alt text"></p>
+<p>Each entity has properties associated with every instance of an object.</p>
+<center>
+<img src="Images/ER_Model.png" alt="alt text">
+</center>
 </div>
 </div>
 </div>
@@ -2216,8 +2224,10 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Objects are related to each other through relationships:
-<img src="Images/ER_Model2.png" alt="alt text"></p>
+<p>Objects are related to each other through relationships:</p>
+<center>
+<img src="Images/ER_Model2.png" alt="alt text">
+</center>
 </div>
 </div>
 </div></section><section>
@@ -2291,7 +2301,7 @@ In&nbsp;[1]:
 <ol>
 <li><strong>First Normalized Form:</strong> Each attribute contains only atomic values and only a single value from that domain. i.e. The data is in the form of a table with no merged columns or rows.</li>
 <li><strong>Second Normalized Form:</strong> Each attribute in the table is dependent on the entity it is describing (dependent on the primary key).</li>
-<li><strong>Third Normalized Form:</strong> All non-primary key attributes is not determined by any other non-primary key attributes.</li>
+<li><strong>Third Normalized Form:</strong> All non-primary key attributes are not determined by any other non-primary key attributes.</li>
 </ol>
 </div>
 </div>
@@ -2309,8 +2319,10 @@ In&nbsp;[1]:
 <li>the event&#39;s name, type (social or education), the roles for Stats Club execs for the event, time and location of the event, and a budget,</li>
 <li>as well as a list of expenses for the event  </li>
 </ol>
-<p>A report of the event would look something like:
-<img src="Images/Event_report.png" alt="alt text"></p>
+<p>A report of the event would look something like:</p>
+<center>
+<img src="Images/Event_report.png" alt="alt text">
+</center>
 </div>
 </div>
 </div></section><section>
@@ -2320,8 +2332,10 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We first need to tabulate the data:
+<p>We first need to tabulate the data:</p>
+<p><center>
 <img src="Images/Event_report_table.png" alt="alt text">
+</center>
 However this is not enough, the data is not in a form that can be easily recognized by computers.</p>
 <ul>
 <li>How do you add new events?</li>
@@ -2370,7 +2384,9 @@ However this is not enough, the data is not in a form that can be easily recogni
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Images/Event_report_table_1st.png" alt="alt text"></p>
+<p><center>
+<img src="Images/Event_report_table_1st.png" alt="alt text">
+</center></p>
 <ul>
 <li>This contains all of the information before but is more organized for the computers to deal with</li>
 <li>Still not enough, a mispelling of an event or type could make the database think there is a new event</li>
@@ -2417,7 +2433,9 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Images/Event_report_table_2nd.png" alt="alt text"></p>
+<p><center>
+<img src="Images/Event_report_table_2nd.png" alt="alt text">
+</center></p>
 <ul>
 <li>Attendance is 2nd normalized form if we consider the primary key as the tuple of event and quest ID.</li>
 <li>Attendance still has redundant information, several members can attend multiple events or none at all</li>
@@ -2442,7 +2460,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Third Normalized Form:</strong> All non-primary key attributes is not determined by any other non-primary key attributes.  </p>
+<p><strong>Third Normalized Form:</strong> All non-primary key attributes are not determined by any other non-primary key attributes.</p>
 </div>
 </div>
 </div><div class="fragment">
@@ -2463,7 +2481,9 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="Images/Event_report_table_3rd.png" alt="alt text"></p>
+<center>
+<img src="Images/Event_report_table_3rd.png" alt="alt text">
+</center>
 </div>
 </div>
 </div>
@@ -2500,8 +2520,10 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Primary key:</strong> A tuple of columns that uniquely define each row in a table. (Red items below)<br><strong>Foreign key:</strong> A tuple of columns identifying a relationship to another table. (Blue items below)
-<img src="Images/primary_keys.png" alt="alt text"></p>
+<p><strong>Primary key:</strong> A tuple of columns that uniquely define each row in a table. (Red items below)<br><strong>Foreign key:</strong> A tuple of columns identifying a relationship to another table. (Blue items below)</p>
+<center>
+<img src="Images/primary_keys.png" alt="alt text">
+</center>
 </div>
 </div>
 </div>
@@ -2522,8 +2544,10 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Normalize the following table:
-<img src="Images/quiz1.png" alt="alt text"></p>
+<p>Normalize the following table:</p>
+<center>
+<img src="Images/quiz1.png" alt="alt text">
+</center>
 </div>
 </div>
 </div><div class="fragment">
@@ -2531,7 +2555,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[63]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2548,7 +2572,7 @@ In&nbsp;[2]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[2]:</div>
+    Out[63]:</div>
 
 
 <div class="output_png output_subarea output_pyout">
@@ -2908,7 +2932,7 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Projection (</strong>𝜋<strong>):</strong> Returns a subset of columns.</p>
+<p><strong>Projection ($\pi$):</strong> Returns a subset of columns.</p>
 </div>
 </div>
 </div><div class="fragment">
@@ -2918,7 +2942,7 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Selection (</strong>𝜎<strong>):</strong> Returns only entities where some condition is true.</p>
+<p><strong>Selection ($\sigma$):</strong> Returns only entities where some condition is true.</p>
 </div>
 </div>
 </div>
@@ -2929,7 +2953,7 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Rename (</strong>𝜌<strong>):</strong> Rename an attribute.</p>
+<p><strong>Rename ($\rho$):</strong> Rename an attribute.</p>
 </div>
 </div>
 </div>
@@ -2951,7 +2975,7 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>𝜃<strong>-Join and Equijoin:</strong> Join tuples from two different tables where some binary condition (𝜃 = {≥, ≤, &gt;, &lt;, =}) between two tables attributes is true. When 𝜃 is =, the join is called an equijoin.
+<p>$\theta$<strong>-Join and Equijoin:</strong> Join tuples from two different tables where some binary condition ($\theta$ = {≥, ≤, &gt;, &lt;, =}) between two tables attributes is true. When $\theta$ is =, the join is called an equijoin.
 $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
@@ -2984,8 +3008,10 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q1:</strong> What kind of operation is performed on the following table?
-<img src="Images/quiz2a.png" alt="alt text"></p>
+<p><strong>Q1:</strong> What kind of operation is performed on the following table?</p>
+<center>
+<img src="Images/quiz2a.png" alt="alt text">
+</center>
 </div>
 </div>
 </div><div class="fragment">
@@ -3007,8 +3033,10 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q2:</strong> What kind of operation is performed on the following table?
-<img src="Images/quiz2b.png" alt="alt text"></p>
+<p><strong>Q2:</strong> What kind of operation is performed on the following table?</p>
+<center>
+<img src="Images/quiz2b.png" alt="alt text">
+</center>
 </div>
 </div>
 </div><div class="fragment">
@@ -3043,7 +3071,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Natural Join: Join based on common columns</li>
-<li>𝜃-Join: Join based on a comparison operator between two columns<ul>
+<li>$\theta$-Join: Join based on a comparison operator between two columns<ul>
 <li>Equijoin: Join based on equality between columns</li>
 </ul>
 </li>
@@ -3174,9 +3202,10 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 <ul>
 <li>Case does not matter, for presentation purposes UPPER CASE is used for SQL key words  </li>
 <li>SQL statements are processed as a whole (ignoring white space and new lines) and ends with a &#39;;&#39;</li>
-<li>We will be used a database based on Stats Club, supplied with fake data:</li>
+<li>We will be used a database based on Stats Club, supplied with fake data:<center>
+<img src="Images/StatClubTables.png" alt="alt text">
+</center></li>
 </ul>
-<p><img src="Images/StatClubTables.png" alt="alt text"></p>
 </div>
 </div>
 </div></section>
@@ -3540,7 +3569,7 @@ FROM event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[64]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3558,7 +3587,7 @@ In&nbsp;[3]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
+    Out[64]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3578,57 +3607,65 @@ In&nbsp;[3]:
       <th>0</th>
       <td>             BOT</td>
       <td>      social</td>
-      <td> </td>
-      <td> </td>
-      <td>     MC Comfy</td>
+      <td> 2015-01-28 19:00:00</td>
+      <td> 2015-01-28 22:00:00</td>
+      <td>   C &amp; D</td>
     </tr>
     <tr>
       <th>1</th>
       <td>             EOT</td>
       <td>      social</td>
-      <td> </td>
-      <td> </td>
-      <td> Molly Blooms</td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
     </tr>
     <tr>
       <th>2</th>
       <td> Intro to Hadoop</td>
       <td> educational</td>
-      <td> </td>
-      <td> </td>
-      <td>             </td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>    Intro to Pig</td>
+      <td>    Intro to SQL</td>
       <td> educational</td>
-      <td> </td>
-      <td> </td>
-      <td>             </td>
+      <td> 2015-02-05 18:00:00</td>
+      <td> 2015-02-05 19:30:00</td>
+      <td> MC-3003</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>    Intro to SQL</td>
+      <td>       Prof Talk</td>
       <td> educational</td>
-      <td> </td>
-      <td> </td>
-      <td>             </td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>       Prof Talk</td>
+      <td>  Intro to SQL 2</td>
       <td> educational</td>
-      <td> </td>
-      <td> </td>
-      <td>             </td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>      R Tutorial</td>
+      <td>     Prof Talk 2</td>
       <td> educational</td>
-      <td> </td>
-      <td> </td>
-      <td>             </td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>     Prof Talk 3</td>
+      <td> educational</td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
     </tr>
   </tbody>
 </table>
@@ -3753,7 +3790,7 @@ FROM table1 AS t1, table2 AS t2;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[65]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3783,7 +3820,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[66]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3801,7 +3838,7 @@ In&nbsp;[5]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[5]:</div>
+    Out[66]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3936,7 +3973,7 @@ WHERE type = &#39;social&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[67]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3955,7 +3992,7 @@ In&nbsp;[6]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
+    Out[67]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3975,17 +4012,17 @@ In&nbsp;[6]:
       <th>0</th>
       <td> BOT</td>
       <td> social</td>
-      <td> </td>
-      <td> </td>
-      <td>     MC Comfy</td>
+      <td> 2015-01-28 19:00:00</td>
+      <td> 2015-01-28 22:00:00</td>
+      <td> C &amp; D</td>
     </tr>
     <tr>
       <th>1</th>
       <td> EOT</td>
       <td> social</td>
-      <td> </td>
-      <td> </td>
-      <td> Molly Blooms</td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>  None</td>
     </tr>
   </tbody>
 </table>
@@ -4139,7 +4176,7 @@ WHERE name LIKE &#39;F%&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[68]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4158,7 +4195,7 @@ In&nbsp;[7]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[68]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4259,7 +4296,7 @@ WHERE (condition1 AND condition2 ) OR condition3;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[69]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4290,7 +4327,7 @@ WHERE name LIKE &#39;Intro%&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[70]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4309,7 +4346,7 @@ In&nbsp;[9]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[70]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4337,37 +4374,37 @@ In&nbsp;[9]:
       <td> darrell</td>
       <td> darrell</td>
       <td> gilberto</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
       <td> 90.0</td>
-      <td>                                                  </td>
+      <td> Hadoop is a distributed computing system desig...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>    Intro to Pig</td>
-      <td> educational</td>
-      <td> darrell</td>
-      <td> darrell</td>
-      <td> gilberto</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> 90.0</td>
-      <td>                                                  </td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>    Intro to SQL</td>
       <td> educational</td>
       <td> darrell</td>
       <td> darrell</td>
       <td>  patrick</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td> 2015-02-05 18:00:00</td>
+      <td> 2015-02-05 19:30:00</td>
+      <td> MC-3003</td>
       <td> 90.0</td>
-      <td> Databases are essential for modern society fro...</td>
+      <td> SQL is a relational database language and alon...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>  Intro to SQL 2</td>
+      <td> educational</td>
+      <td> darrell</td>
+      <td> darrell</td>
+      <td>   judith</td>
+      <td>                None</td>
+      <td>                None</td>
+      <td>    None</td>
+      <td> 90.0</td>
+      <td> SQL is a relational database language and alon...</td>
     </tr>
   </tbody>
 </table>
@@ -4401,11 +4438,12 @@ In&nbsp;[9]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>GROUP BY clause groups the table by a column (or tuple of columns) and applies a function to each group<ul>
-<li>In the SELECT portion of the statement, you can only list the grouped column(s) and aggregate functions on them.  </li>
+<li>In the SELECT portion of the statement, you can only list the grouped column(s) and aggregate functions on them.  <center>
+<img src="Images/Group By.png" alt="alt text">
+</center></li>
 </ul>
 </li>
 </ul>
-<p><img src="Images/Group By.png" alt="alt text"></p>
 </div>
 </div>
 </div><div class="fragment">
@@ -4507,7 +4545,7 @@ GROUP BY type;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[71]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4526,7 +4564,7 @@ In&nbsp;[10]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[71]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4542,7 +4580,7 @@ In&nbsp;[10]:
     <tr>
       <th>0</th>
       <td> educational</td>
-      <td> 5</td>
+      <td> 6</td>
     </tr>
     <tr>
       <th>1</th>
@@ -4612,7 +4650,7 @@ HAVING COUNT(*) &gt;= 2;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[72]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4632,7 +4670,7 @@ In&nbsp;[11]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[11]:</div>
+    Out[72]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4770,7 +4808,7 @@ GROUP BY event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[12]:
+In&nbsp;[73]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4787,7 +4825,7 @@ In&nbsp;[12]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[74]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4806,7 +4844,7 @@ In&nbsp;[13]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[13]:</div>
+    Out[74]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4836,13 +4874,13 @@ In&nbsp;[13]:
     </tr>
     <tr>
       <th>3</th>
-      <td>    Intro to Pig</td>
-      <td> 23</td>
+      <td>    Intro to SQL</td>
+      <td> 22</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>    Intro to SQL</td>
-      <td> 22</td>
+      <td>  Intro to SQL 2</td>
+      <td> 23</td>
     </tr>
     <tr>
       <th>5</th>
@@ -4851,7 +4889,7 @@ In&nbsp;[13]:
     </tr>
     <tr>
       <th>6</th>
-      <td>      R Tutorial</td>
+      <td>     Prof Talk 2</td>
       <td> 16</td>
     </tr>
   </tbody>
@@ -4970,7 +5008,7 @@ FROM member AS m1 CROSS JOIN member AS m2;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[75]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4988,7 +5026,7 @@ In&nbsp;[14]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[14]:</div>
+    Out[75]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5337,7 +5375,7 @@ WHERE m1.name &gt; m2.name;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[76]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5356,7 +5394,7 @@ In&nbsp;[15]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
+    Out[76]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5779,7 +5817,7 @@ ORDER BY events_attended;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[77]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5799,7 +5837,7 @@ In&nbsp;[16]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[16]:</div>
+    Out[77]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6111,7 +6149,7 @@ ORDER BY events_attended;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[78]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6131,7 +6169,7 @@ In&nbsp;[17]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[17]:</div>
+    Out[78]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6444,7 +6482,7 @@ FROM exec AS e NATURAL JOIN exec_position AS ep;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[18]:
+In&nbsp;[79]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6462,7 +6500,7 @@ In&nbsp;[18]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[18]:</div>
+    Out[79]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6648,8 +6686,10 @@ In&nbsp;[18]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> What are the email addresses and phone numbers of stats club execs who are in change or organizing at least one event?
-<img src="Images/StatClubTables.png" alt="alt text"></p>
+<p><strong>Q:</strong> What are the email addresses and phone numbers of stats club execs who are in change or organizing at least one event?</p>
+<center>
+<img src="Images/StatClubTables.png" alt="alt text">
+</center>
 </div>
 </div>
 </div><div style=display:none>
@@ -6657,7 +6697,7 @@ In&nbsp;[18]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[80]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6674,7 +6714,7 @@ In&nbsp;[19]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[20]:
+In&nbsp;[81]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6703,7 +6743,7 @@ FROM exec INNER JOIN event ON exec.questid = event.organizer;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[82]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6721,7 +6761,7 @@ In&nbsp;[21]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[21]:</div>
+    Out[82]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6758,12 +6798,6 @@ In&nbsp;[21]:
       <td> Patrick Robertson</td>
       <td>     patrick@uwaterloo.ca</td>
       <td> 519-555-2312</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>    Gilberto Cross</td>
-      <td>    gilberto@uwaterloo.ca</td>
-      <td> 519-555-3453</td>
     </tr>
   </tbody>
 </table>
@@ -6876,7 +6910,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[83]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6897,7 +6931,7 @@ In&nbsp;[22]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[22]:</div>
+    Out[83]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -7236,7 +7270,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[84]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -7257,7 +7291,7 @@ In&nbsp;[23]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[23]:</div>
+    Out[84]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -7372,7 +7406,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[85]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -7393,7 +7427,7 @@ In&nbsp;[24]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[24]:</div>
+    Out[85]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -7651,7 +7685,7 @@ WHERE e.questid IN (SELECT poster FROM event);
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[25]:
+In&nbsp;[86]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -7670,7 +7704,7 @@ In&nbsp;[25]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[25]:</div>
+    Out[86]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -7771,7 +7805,7 @@ FROM exec AS e;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[26]:
+In&nbsp;[87]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -7791,7 +7825,7 @@ In&nbsp;[26]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[26]:</div>
+    Out[87]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8022,7 +8056,7 @@ FROM event AS e INNER JOIN cost ON e.name = cost.event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[27]:
+In&nbsp;[88]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8044,7 +8078,7 @@ In&nbsp;[27]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[27]:</div>
+    Out[88]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8082,17 +8116,17 @@ In&nbsp;[27]:
     </tr>
     <tr>
       <th>3</th>
-      <td>    Intro to Pig</td>
-      <td> educational</td>
-      <td>  90.0</td>
-      <td>  62.63</td>
-    </tr>
-    <tr>
-      <th>4</th>
       <td>    Intro to SQL</td>
       <td> educational</td>
       <td>  90.0</td>
       <td> 102.77</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>  Intro to SQL 2</td>
+      <td> educational</td>
+      <td>  90.0</td>
+      <td>  62.63</td>
     </tr>
     <tr>
       <th>5</th>
@@ -8103,10 +8137,17 @@ In&nbsp;[27]:
     </tr>
     <tr>
       <th>6</th>
-      <td>      R Tutorial</td>
+      <td>     Prof Talk 2</td>
       <td> educational</td>
       <td>  90.0</td>
       <td>  77.21</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>     Prof Talk 3</td>
+      <td> educational</td>
+      <td>  90.0</td>
+      <td>  75.68</td>
     </tr>
   </tbody>
 </table>
@@ -8215,7 +8256,7 @@ FROM event AS e INNER JOIN cost ON e.name = cost.event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[89]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8241,7 +8282,7 @@ In&nbsp;[28]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[28]:</div>
+    Out[89]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8283,19 +8324,19 @@ In&nbsp;[28]:
     </tr>
     <tr>
       <th>3</th>
-      <td>    Intro to Pig</td>
-      <td> educational</td>
-      <td>  90</td>
-      <td>  62.63</td>
-      <td>   On budget</td>
-    </tr>
-    <tr>
-      <th>4</th>
       <td>    Intro to SQL</td>
       <td> educational</td>
       <td>  90</td>
       <td> 102.77</td>
       <td> Over budget</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>  Intro to SQL 2</td>
+      <td> educational</td>
+      <td>  90</td>
+      <td>  62.63</td>
+      <td>   On budget</td>
     </tr>
     <tr>
       <th>5</th>
@@ -8307,10 +8348,18 @@ In&nbsp;[28]:
     </tr>
     <tr>
       <th>6</th>
-      <td>      R Tutorial</td>
+      <td>     Prof Talk 2</td>
       <td> educational</td>
       <td>  90</td>
       <td>  77.21</td>
+      <td>   On budget</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>     Prof Talk 3</td>
+      <td> educational</td>
+      <td>  90</td>
+      <td>  75.68</td>
       <td>   On budget</td>
     </tr>
   </tbody>
@@ -8460,6 +8509,7 @@ LIMIT no_of_rows OFFSET row_num
 <li>How to create a database<ul>
 <li>Creating tables</li>
 <li>Creating constraints</li>
+<li>Indices</li>
 <li>Views</li>
 <li>How to insert, delete, alter, drop, etc. data in a table</li>
 </ul>
@@ -8472,7 +8522,7 @@ LIMIT no_of_rows OFFSET row_num
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[29]:
+In&nbsp;[90]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8488,11 +8538,11 @@ In&nbsp;[29]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[30]:
+In&nbsp;[91]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c">#sudo ipython nbconvert Intro_SQL_Presentation.ipynb --to slides --post serve</span>
+<div class="highlight"><pre><span class="c">#sudo ipython nbconvert Intro_SQL_Presentation.ipynb --to slides --post serve --NotebookApp.browser=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome</span>
 </pre></div>
 
 </div>
