@@ -1,44 +1,12 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<title>Intro_SQL_Presentation slides</title>
+<title>Notebook</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
-
-<!-- For syntax highlighting -->
-<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
-</script>
-
-<!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 
 <style type="text/css">
     .clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}
@@ -1650,76 +1618,63 @@ span#checkpoint_status,span#autosave_status{font-size:small}
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-html {
-  overflow-y: auto;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal {
-  font-size: 160%;
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
 }
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-.rendered_html p {
-  text-align: inherit;
+
+@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
 
+</head>
 <body>
-<div class="reveal">
-<div class="slides">
-<section>
-    <section>
-    
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1756,10 +1711,7 @@ div.output_prompt {
 Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://xkcd.com/327/</a></p>
 </div>
 </div>
-</div></section>
-    </section><section>
-    <section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1795,43 +1747,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </ol>
 </div>
 </div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Using-SQLite-Browser">Using SQLite Browser<a class="anchor-link" href="#Using-SQLite-Browser">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Open SQLite browser</li>
-<li>Open stats_club.db database file in the downloaded directory</li>
-<li>Click on &#39;Execute SQL&#39; tab<ol>
-<li>Open SQL file <code>IntroSQL.sql</code> file in the downloaded directory</li>
-<li>Follow along with file, executing statement as topics dictate</li>
-</ol>
-</li>
-<li>Content of the talk is on <a href="https://github.com/NormallySane/IntroSQL/wiki">https://github.com/NormallySane/IntroSQL/wiki</a> (open in your favorite browser)</li>
-</ol>
-<ul>
-<li>SQLite browser is a great tool for learning SQLite and SQL in general</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1842,8 +1758,6 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 </div>
 
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1860,8 +1774,6 @@ con = sql.connect(&#39;stats_club.db&#39;)
 </div>
 </div>
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -1879,10 +1791,37 @@ In&nbsp;[62]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Using-SQLite-Browser">Using SQLite Browser<a class="anchor-link" href="#Using-SQLite-Browser">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Open SQLite browser</li>
+<li>Open stats_club.db database file in the downloaded directory</li>
+<li>Click on &#39;Execute SQL&#39; tab<ol>
+<li>Open SQL file stats_club.sql file in the downloaded directory</li>
+<li>Follow along with file, executing statement as topics dictate</li>
+</ol>
+</li>
+<li>Content of the talk is in <code>Intro_SQL.html</code> (open in your favorite browser)</li>
+</ol>
+<ul>
+<li>SQLite browser is a great tool for learning SQLite and SQL in general</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1901,8 +1840,7 @@ In&nbsp;[62]:
 <p><strong>Q:</strong> Why learn a database lanugage?  </p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1915,8 +1853,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1926,8 +1862,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1941,8 +1875,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1952,8 +1884,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1966,8 +1896,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1977,8 +1905,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1992,8 +1918,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2012,8 +1936,7 @@ In&nbsp;[62]:
 <p><strong><a href="http://www.mysql.com/">MySQL</a>:</strong> Highly popular open source SQL implementation.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2023,8 +1946,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2034,8 +1955,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2045,8 +1964,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2056,8 +1973,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2067,10 +1982,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2092,8 +2003,7 @@ In&nbsp;[62]:
 </center>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2103,8 +2013,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2114,19 +2022,15 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Table:</strong> A collection of rows. Usually in reference a persistent table saved permanently to memory</p>
+<p><strong>Table:</strong> A collection of rows. Usually in reference a persistent saved permanently to memory</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2136,8 +2040,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2147,8 +2049,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2160,8 +2060,7 @@ In&nbsp;[62]:
 <strong>(Virtual) View:</strong> A named query saved into memory and performed whenever it is named. Some SQL servers have materialized views that permanently save the data for faster access.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2171,8 +2070,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2182,10 +2079,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2204,8 +2097,7 @@ In&nbsp;[62]:
 <p>The E-R (entity-relationship) Model is an <em>analysis tool</em> for relational databases.<br><strong>E</strong> refers to <em>entity</em>: An object<br><strong>R</strong> refers to <em>relationship</em>: As in how objects relate to each other.  </p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2218,8 +2110,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2231,8 +2121,7 @@ In&nbsp;[62]:
 </center>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2271,8 +2160,7 @@ In&nbsp;[62]:
 </ol>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2292,8 +2180,7 @@ In&nbsp;[62]:
 <p>Data goes through three forms until it is fully utilizied by a  relational database:</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2307,8 +2194,6 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2326,8 +2211,7 @@ In&nbsp;[62]:
 </center>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2347,8 +2231,7 @@ However this is not enough, the data is not in a form that can be easily recogni
 </ul>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2367,8 +2250,7 @@ However this is not enough, the data is not in a form that can be easily recogni
 <p><strong>First Normalized Form:</strong> Each attribute contains only atomic values and only a single value from that domain</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2378,8 +2260,6 @@ However this is not enough, the data is not in a form that can be easily recogni
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2395,8 +2275,6 @@ However this is not enough, the data is not in a form that can be easily recogni
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2415,8 +2293,7 @@ However this is not enough, the data is not in a form that can be easily recogni
 <p><strong>Second Normalized Form:</strong> Each attribute in the table is dependent on the entity it is describing (dependent on the primary key).</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2427,8 +2304,6 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2444,8 +2319,6 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2464,8 +2337,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 <p><strong>Third Normalized Form:</strong> All non-primary key attributes are not determined by any other non-primary key attributes.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2475,8 +2347,6 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2488,8 +2358,6 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2514,8 +2382,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </ul>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2528,8 +2395,6 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2551,8 +2416,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </center>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2914,10 +2778,6 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2936,8 +2796,7 @@ wXRQ/gAAAABJRU5ErkJggg==
 <p><strong>Projection ($\pi$):</strong> Returns a subset of columns.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2947,8 +2806,6 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2958,8 +2815,6 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2969,8 +2824,6 @@ wXRQ/gAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2981,8 +2834,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2992,8 +2843,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3015,8 +2864,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </center>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3028,7 +2876,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3040,8 +2887,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </center>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3053,8 +2899,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3063,8 +2907,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 <p><strong>Q3:</strong> What kinds of joins can peform on tables?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3080,10 +2923,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3102,8 +2941,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 <p>Constraints limit what can be entered into fields in a table and help ensure encapsulation: </p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3113,8 +2951,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3124,8 +2960,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3135,8 +2969,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3146,8 +2978,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3157,8 +2987,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3168,8 +2996,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3181,10 +3007,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3209,10 +3031,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </ul>
 </div>
 </div>
-</div></section>
-    </section><section>
-    <section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3243,8 +3062,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </ol>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3257,8 +3075,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3272,8 +3088,6 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3294,8 +3108,7 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </ul>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3382,8 +3195,6 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3432,8 +3243,7 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </table>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3472,8 +3282,6 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3500,10 +3308,6 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </div>
 </div>
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3531,8 +3335,7 @@ FROM tables;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3542,8 +3345,6 @@ FROM tables;
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3552,8 +3353,7 @@ FROM tables;
 <p><strong>Example:</strong> What are the names, type, times and locations for Stats Club?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3565,8 +3365,6 @@ FROM event;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -3679,8 +3477,6 @@ In&nbsp;[64]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3702,8 +3498,7 @@ FROM tables;
 </code></pre>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3735,8 +3530,7 @@ FROM tables;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3747,8 +3541,6 @@ FROM tables;
 </div>
 </div>
 
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3763,8 +3555,6 @@ FROM table1 AS t1, table2 AS t2;
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3786,8 +3576,7 @@ FROM table1 AS t1, table2 AS t2;
 </ul>
 </div>
 </div>
-</div><div style=display:none>
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -3803,8 +3592,6 @@ In&nbsp;[65]:
 </div>
 
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3816,8 +3603,6 @@ FROM exec;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -3918,10 +3703,6 @@ In&nbsp;[66]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3944,8 +3725,7 @@ WHERE condition;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3955,8 +3735,6 @@ WHERE condition;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3969,8 +3747,6 @@ WHERE type = &#39;social&#39;;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4036,8 +3812,6 @@ In&nbsp;[67]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4126,8 +3900,7 @@ In&nbsp;[67]:
 </table>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4147,8 +3920,7 @@ In&nbsp;[67]:
 <p>&#39;_&#39; means a character of any type<br>&#39;%&#39; means between 0 or more characters of any type</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4158,8 +3930,6 @@ In&nbsp;[67]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4172,8 +3942,6 @@ WHERE name LIKE &#39;F%&#39;;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4245,8 +4013,6 @@ In&nbsp;[68]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4269,8 +4035,7 @@ WHERE (condition1 AND condition2 ) OR condition3;
 </code></pre>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4292,8 +4057,7 @@ WHERE (condition1 AND condition2 ) OR condition3;
 </ul>
 </div>
 </div>
-</div><div style=display:none>
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4309,8 +4073,6 @@ In&nbsp;[69]:
 </div>
 
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4323,8 +4085,6 @@ WHERE name LIKE &#39;Intro%&#39;;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4418,10 +4178,6 @@ In&nbsp;[70]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4447,8 +4203,7 @@ In&nbsp;[70]:
 </ul>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4461,8 +4216,6 @@ GROUP BY col1, col2, ...;
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4517,8 +4270,7 @@ GROUP BY col1, col2, ...;
 </ul>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4527,8 +4279,7 @@ GROUP BY col1, col2, ...;
 <p><strong>Example:</strong> What are the number of each type of event for Stats Club?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4541,8 +4292,6 @@ GROUP BY type;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4599,8 +4348,6 @@ In&nbsp;[71]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4620,8 +4367,7 @@ In&nbsp;[71]:
 <p>You can have a WHERE and HAVING clause in the same statement.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4631,8 +4377,6 @@ In&nbsp;[71]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4646,8 +4390,6 @@ HAVING COUNT(*) &gt;= 2;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4732,8 +4474,6 @@ In&nbsp;[72]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4756,8 +4496,7 @@ In&nbsp;[72]:
 </ul>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4770,8 +4509,6 @@ GROUP BY col1, col2, ... WITH ROLLUP;
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4787,11 +4524,10 @@ GROUP BY col1, col2, ... WITH ROLLUP;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> What is the attendance for each Stats Club event?</p>
+<p><strong>Q:</strong> What are the attendance for each Stats Club event?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4804,8 +4540,6 @@ GROUP BY event;
 </div>
 </div>
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4821,8 +4555,6 @@ In&nbsp;[73]:
 </div>
 
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -4904,10 +4636,6 @@ In&nbsp;[74]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4926,8 +4654,7 @@ In&nbsp;[74]:
 <p>At times, we need information from multiple tables, to do this we need to join tables together. We can do this several ways:</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4952,8 +4679,6 @@ In&nbsp;[74]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4981,8 +4706,7 @@ FROM table1, table2
 </code></pre>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4991,8 +4715,7 @@ FROM table1, table2
 <p><strong>Example:</strong> Suppose we are creating a games tourtament between Stats Club members where every member play every other member once. How can we create such a table? </p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -5004,8 +4727,6 @@ FROM member AS m1 CROSS JOIN member AS m2;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -5357,8 +5078,6 @@ In&nbsp;[75]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -5371,8 +5090,7 @@ WHERE m1.name &gt; m2.name;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -5725,8 +5443,6 @@ In&nbsp;[76]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -5748,8 +5464,7 @@ FROM table1 INNER JOIN table2 ON condition;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -5760,8 +5475,6 @@ FROM table1 INNER JOIN table2 ON condition;
 </div>
 </div>
 
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -5782,8 +5495,6 @@ FROM table1 INNER JOIN table2 ON condition;
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -5792,8 +5503,7 @@ FROM table1 INNER JOIN table2 ON condition;
 <p><strong>Example:</strong> How many events does each member attend? (Including what department they are from)</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -5813,8 +5523,6 @@ ORDER BY events_attended;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -6088,8 +5796,6 @@ In&nbsp;[77]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6120,8 +5826,7 @@ In&nbsp;[77]:
 </ul>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6130,8 +5835,7 @@ In&nbsp;[77]:
 <p><strong>Example:</strong> What are the names, their faculty and major of Stat Club members and how many events they attended?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6145,8 +5849,6 @@ ORDER BY events_attended;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -6434,8 +6136,6 @@ In&nbsp;[78]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6454,8 +6154,7 @@ In&nbsp;[78]:
 <p><strong>NATURAL JOIN</strong> A join condition that lets the server decide on the join conditions based on the same column names and types across columns for the tables.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6465,8 +6164,6 @@ In&nbsp;[78]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6478,8 +6175,6 @@ FROM exec AS e NATURAL JOIN exec_position AS ep;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -6670,8 +6365,6 @@ In&nbsp;[79]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6693,8 +6386,7 @@ In&nbsp;[79]:
 </center>
 </div>
 </div>
-</div><div style=display:none>
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -6710,8 +6402,6 @@ In&nbsp;[80]:
 </div>
 
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -6727,8 +6417,6 @@ In&nbsp;[81]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6739,8 +6427,7 @@ FROM exec INNER JOIN event ON exec.questid = event.organizer;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -6811,10 +6498,6 @@ In&nbsp;[82]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6839,8 +6522,7 @@ In&nbsp;[82]:
 </ul>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6854,8 +6536,6 @@ In&nbsp;[82]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6880,8 +6560,7 @@ SELECT ... FROM ...
 </ul>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6890,8 +6569,7 @@ SELECT ... FROM ...
 <p><strong>Example:</strong> Suppose are you need to contact everyone involved in Stats Club: members and execs.<br>What are the names, email addresses, and phone numbers (if you have them) of all Stats Club members and execs?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6906,8 +6584,6 @@ FROM exec;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -7215,8 +6891,6 @@ In&nbsp;[83]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7239,8 +6913,7 @@ SELECT ... FROM ...
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7250,8 +6923,6 @@ SELECT ... FROM ...
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7266,8 +6937,6 @@ FROM exec;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -7341,8 +7010,6 @@ In&nbsp;[84]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7376,8 +7043,7 @@ SELECT ... FROM ...
 </ul>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7386,8 +7052,7 @@ SELECT ... FROM ...
 <p><strong>Example:</strong> What Stats Club members are not execs?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7402,8 +7067,6 @@ FROM exec;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -7597,10 +7260,6 @@ In&nbsp;[85]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7620,8 +7279,7 @@ In&nbsp;[85]:
 <p>There are two types of subqueries:</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7636,8 +7294,6 @@ In&nbsp;[85]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7656,8 +7312,7 @@ In&nbsp;[85]:
 <p><strong>Non-Correlated Subquery:</strong> Any valid query within query that if executed by itself will produce a result (including empty set). These are enclosed in &#39;(&#39;, &#39;)&#39; in <strong>FROM</strong>, <strong>WHERE</strong>, or <strong>HAVING</strong> clauses.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7667,8 +7322,6 @@ In&nbsp;[85]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7681,8 +7334,6 @@ WHERE e.questid IN (SELECT poster FROM event);
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -7749,8 +7400,6 @@ In&nbsp;[86]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7772,22 +7421,19 @@ In&nbsp;[86]:
 </ul>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What majors are the current Stats Club execs enrolled in?</p>
+<p><strong>Example:</strong> What majors do the current Stats Club execs enrolled in?</p>
 <ul>
 <li>The member table has the information on majors but exec has the information on execs</li>
 </ul>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7801,8 +7447,6 @@ FROM exec AS e;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -7915,8 +7559,6 @@ In&nbsp;[87]:
 </div>
 
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7943,8 +7585,7 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}
 </ol>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7963,8 +7604,7 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}
 <p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7974,7 +7614,6 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}
 </div>
 </div>
 </div>
-    </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7983,8 +7622,7 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}
 <p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7994,10 +7632,6 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}
 </div>
 </div>
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8025,8 +7659,7 @@ SELECT ...
 </code></pre>
 </div>
 </div>
-</div></section><section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8035,8 +7668,7 @@ SELECT ...
 <p><strong>Example:</strong> Suppose you are doing a report for MathSoc detailing events, their budget, and expenses. </p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8052,8 +7684,6 @@ FROM event AS e INNER JOIN cost ON e.name = cost.event;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -8161,10 +7791,6 @@ In&nbsp;[88]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8191,8 +7817,7 @@ END
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8204,8 +7829,6 @@ END
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8221,8 +7844,6 @@ END
 </div>
 </div>
 </div>
-    </div></section><section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8231,8 +7852,7 @@ END
 <p><strong>Example:</strong> Suppose like before we are preparing a report for MathSoc, but now we want to give a warning if the event is over budget or not.</p>
 </div>
 </div>
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8252,8 +7872,6 @@ FROM event AS e INNER JOIN cost ON e.name = cost.event;
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -8374,10 +7992,6 @@ In&nbsp;[89]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8426,10 +8040,7 @@ In&nbsp;[89]:
 </table>
 </div>
 </div>
-</div></section>
-    </section><section>
-    <section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8453,10 +8064,7 @@ ORDER BY column1, column2, .. columnN [ASC | DESC];
 <p><code>DESC</code> is descending</p>
 </div>
 </div>
-</div></section>
-    </section><section>
-    <section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8485,10 +8093,7 @@ LIMIT no_of_rows OFFSET row_num;
 </code></pre>
 </div>
 </div>
-</div></section>
-    </section><section>
-    <section>
-    
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8498,8 +8103,7 @@ LIMIT no_of_rows OFFSET row_num;
 </div>
 </div>
 </div>
-<div class="fragment">
-    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8519,7 +8123,6 @@ LIMIT no_of_rows OFFSET row_num;
 </div>
 </div>
 </div>
-    </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -8534,8 +8137,7 @@ In&nbsp;[90]:
 </div>
 </div>
 
-</div><div style=display:none>
-    
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -8551,65 +8153,7 @@ In&nbsp;[91]:
 </div>
 
 </div>
-    </div></section>
-    </section>
-</div>
-</div>
-
-<script src="reveal.js/lib/js/head.min.js"></script>
-
-<script src="reveal.js/js/reveal.js"></script>
-
-<script>
-
-// Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
-
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
-
-// Optional libraries used to extend on reveal.js
-dependencies: [
-{ src: "reveal.js/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "reveal.js/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "reveal.js/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
-]
-});
-</script>
-
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-<script>
-Reveal.addEventListener( 'slidechanged', function( event ) {
-  window.scrollTo(0,0);
-  MathJax.Hub.Rerender(event.currentSlide);
-});
-</script>
-
+    </div>
+  </div>
 </body>
-
 </html>
