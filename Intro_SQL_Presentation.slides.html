@@ -1795,7 +1795,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </ol>
 </div>
 </div>
-</div><div class="fragment">
+</div><div style=display:none>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1807,7 +1807,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 </div>
 
-    </div><div class="fragment">
+    </div><div style=display:none>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1820,12 +1820,12 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </ol>
 <pre><code>import pandas as pd
 import sqlite3 as sql
-con = sql.connect(&#39;stats_club3.db&#39;)
+con = sql.connect(&#39;stats_club.db&#39;)
 </code></pre>
 </div>
 </div>
 </div>
-    </div><div class="fragment">
+    </div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1844,7 +1844,7 @@ In&nbsp;[62]:
 </div>
 
 </div>
-    </div></section><section>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1855,7 +1855,8 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-<div class="fragment">
+
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -8474,13 +8475,13 @@ ORDER BY column1, column2, .. columnN [ASC | DESC];
 <p><strong>LIMIT Clause:</strong> Restrict the result set to the first n of rows.</p>
 <pre><code>SELECT column1, column2, columnN 
 FROM table_name
-LIMIT no_of_rows
+LIMIT no_of_rows;
 </code></pre><ul>
 <li>We can also offset where the restriction begins  </li>
 </ul>
 <pre><code>SELECT column1, column2, columnN 
 FROM table_name
-LIMIT no_of_rows OFFSET row_num
+LIMIT no_of_rows OFFSET row_num;
 </code></pre>
 </div>
 </div>
