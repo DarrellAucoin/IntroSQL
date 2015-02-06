@@ -1737,7 +1737,7 @@ div.output_prompt {
 
 <p class="gap05"<p>
 <h1>Intro to SQL:</h1>
-<h2>A Brief Introduction</h2>
+<h2>Basic Theory and Basic Queries</h2>
 
 <p class="gap05"<p>
 <h3>Darrell Aucoin</h3>
@@ -1786,16 +1786,14 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>Open terminal</li>
-<li>Go to home directory<ol>
-<li>Enter the command<br><code>cd ~</code></li>
-</ol>
-</li>
-<li>Type<br> <code>git clone https://github.com/NormallySane/IntroSQL.git</code></li>
+<li>Go to <a href="https://github.com/NormallySane/IntroSQL">https://github.com/NormallySane/IntroSQL</a></li>
+<li>Download zip file
+ <img src="Images/IntroSQLGithub.png" alt="alt text"></li>
+<li>Unzip downloaded file in your preferred directory</li>
 </ol>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1807,8 +1805,6 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 </div>
 
-    </div><div class="fragment">
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1829,38 +1825,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </ul>
 </div>
 </div>
-</div>
-    </div><div style=display:none>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Using-ipython-notebook">Using ipython notebook<a class="anchor-link" href="#Using-ipython-notebook">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div style=display:none>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Type <code>ipython notebook</code> and open Intro_SQL.ipynb in the web browser that appears </li>
-<li>Make sure you execute the following python commands (shift + enter with block highlighted)  </li>
-</ol>
-<pre><code>import pandas as pd
-import sqlite3 as sql
-con = sql.connect(&#39;stats_club.db&#39;)
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div style=display:none>
+</div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -3786,24 +3751,7 @@ FROM table1 AS t1, table2 AS t2;
 </ul>
 </div>
 </div>
-</div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[65]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="c">#%load quizSELECT.py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4292,24 +4240,7 @@ WHERE (condition1 AND condition2 ) OR condition3;
 </ul>
 </div>
 </div>
-</div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[69]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="c">#%load quizWHERE.py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4797,29 +4728,12 @@ GROUP BY col1, col2, ... WITH ROLLUP;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT event, COUNT(*) AS attendance \
-FROM attendance \
+<pre><code>SELECT event, COUNT(*) AS attendance 
+FROM attendance 
 GROUP BY event;
 </code></pre>
 </div>
 </div>
-</div>
-    </div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[73]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="c">#%load quizGROUPBY.py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div><div class="fragment">
     
@@ -4971,13 +4885,13 @@ In&nbsp;[74]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>CROSS JOIN</strong> is the cartesian product of two tables</p>
 <pre><code>SELECT col1, col2, ...
-FROM table1 CROSS JOIN table2
+FROM table1 CROSS JOIN table2;
 </code></pre><ul>
 <li>if table1 has n rows and table2 has m rows, then the result set has n * m rows  </li>
 </ul>
 <p>We can also get a CROSS JOIN by listing the tables seperated by a &#39;,&#39;</p>
 <pre><code>SELECT col1, col2, ...
-FROM table1, table2
+FROM table1, table2;
 </code></pre>
 </div>
 </div>
@@ -6693,41 +6607,7 @@ In&nbsp;[79]:
 </center>
 </div>
 </div>
-</div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[80]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="c">#pd.read_sql_query(&quot;   &quot;, con)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-    </div><div style=display:none>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[81]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="c">#%load quizJOIN.py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
