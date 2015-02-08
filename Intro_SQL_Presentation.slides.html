@@ -1731,7 +1731,30 @@ div.output_prompt {
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-</head>
+<p></head></p>
+<style>
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+}
+#notebook_panel { /* main background */
+    background: #888;
+    color: #f6f6f6;
+}
+#notebook li { /* More space between bullet points */
+margin-top:0.8em;
+}
+div.text_cell_render{
+    font-family: 'Arvo' sans-serif;
+    line-height: 130%;
+    font-size: 135%;
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+}
+</style>
+
 
 <center>
 
@@ -1812,7 +1835,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
 <li>Open SQLite browser</li>
-<li>Open stats_club.db database file in the downloaded directory</li>
+<li>Open <code>stats_club.db</code> database file in the downloaded directory</li>
 <li>Click on &#39;Execute SQL&#39; tab<ol>
 <li>Open SQL file <code>IntroSQL.sql</code> file in the downloaded directory</li>
 <li>Follow along with file, executing statement as topics dictate</li>
@@ -1830,7 +1853,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[62]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1906,7 +1929,7 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1916,8 +1939,7 @@ In&nbsp;[62]:
 <p><strong>Q:</strong> What is SQL?</p>
 </div>
 </div>
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2090,14 +2112,27 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div><div class="fragment">
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Result set:</strong> A non-persistent table, usually the result of a query.</p>
+<p><center>
+<img src="Images/RelationalDatabase.png" alt="alt text">
+</center>
+<strong>Result set:</strong> A non-persistent table, usually the result of a query.</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>(Virtual) View:</strong> A named query saved into memory and performed whenever it is named. Some SQL servers have materialized views that permanently save the data for faster access.</p>
 </div>
 </div>
 </div>
@@ -2112,20 +2147,7 @@ In&nbsp;[62]:
 </div>
 </div>
 </div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><center>
-<img src="Images/RelationalDatabase.png" alt="alt text">
-</center>
-<strong>(Virtual) View:</strong> A named query saved into memory and performed whenever it is named. Some SQL servers have materialized views that permanently save the data for faster access.</p>
-</div>
-</div>
-</div><div class="fragment">
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2350,6 +2372,19 @@ However this is not enough, the data is not in a form that can be easily recogni
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<img src="Images/Event_report_table_1st.png" alt="alt text">
+</center>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><center>
 <img src="Images/Event_report_table_1st.png" alt="alt text">
 </center></p>
@@ -2359,8 +2394,7 @@ However this is not enough, the data is not in a form that can be easily recogni
 </ul>
 </div>
 </div>
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2399,6 +2433,19 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<img src="Images/Event_report_table_2nd.png" alt="alt text">
+</center>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><center>
 <img src="Images/Event_report_table_2nd.png" alt="alt text">
 </center></p>
@@ -2408,8 +2455,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </ul>
 </div>
 </div>
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2429,7 +2475,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 <p><strong>Third Normalized Form:</strong> All non-primary key attributes are not determined by any other non-primary key attributes.</p>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2439,8 +2485,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 <p><strong>Example:</strong> The information on each member (name, email, etc.) is not determined by the event. We need to break the attendance table to bring into 3rd normalized form: attendance and members.</p>
 </div>
 </div>
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2479,7 +2524,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </ul>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2492,8 +2537,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </center>
 </div>
 </div>
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2518,366 +2562,16 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[63]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="s">&#39;Images/quiz1sol.png&#39;</span><span class="p">)</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<img src="Images/quiz1sol.png" alt="alt text">
+</center>
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[63]:</div>
-
-
-<div class="output_png output_subarea output_pyout">
-<img src="data:image/png;base64,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
-wXRQ/gAAAABJRU5ErkJggg==
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     </div></section>
     </section><section>
@@ -3129,17 +2823,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>DROP constraints</strong> Drops a constraint from a table.</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>We can also create indexes for fields making them easily searchable</li>
 </ul>
@@ -3168,6 +2851,17 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 <ul>
 <li>Case does not matter, for presentation purposes UPPER CASE is used for SQL key words  </li>
 <li>SQL statements are processed as a whole (ignoring white space and new lines) and ends with a &#39;;&#39;</li>
+</ul>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>We will be used a database based on Stats Club, supplied with fake data:<center>
 <img src="Images/StatClubTables.png" alt="alt text">
 </center></li>
@@ -3208,36 +2902,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </ol>
 </div>
 </div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Any datatype can have NULL values</li>
-</ul>
-<p><strong>NULL</strong> The value is a NULL value. This is best thought of NULL is as the value is unknown.</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>if either x or y is NULL:
-$$x+y\implies\mbox{NULL}$$
-$$x&gt;y\implies\mbox{NULL}$$</li>
-</ul>
-</div>
-</div>
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3318,6 +2983,26 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 <td>NUMERIC(p,s)</td>
 <td>Exact numerical. precision p, scale s</td>
 </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>FLOAT(p)</td>
 <td>Floating point number. mantissa precision p</td>
@@ -3346,8 +3031,7 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </table>
 </div>
 </div>
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3359,6 +3043,22 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 </div>
 </div>
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>NULL</strong> A NULL can be thought of as an unknown value.</p>
+<ul>
+<li>Any datatype can have NULL values</li>
+<li>if either x or y is NULL:
+$$x+y\implies\mbox{NULL}$$
+$$x&gt;y\implies\mbox{NULL}$$</li>
+</ul>
+</div>
+</div>
+</div></section><section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3487,12 +3187,486 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 <p><strong>SELECT Statement:</strong> The SELECT statement returns a table of values (sometimes empty) as specified in the statement.  </p>
 <p><strong>SELECT Clause:</strong> The SELECT clause of a SELECT statement specifies the columns for the result set.</p>
 <pre><code>SELECT col1, col2, ...
-FROM tables;
+FROM table;
 </code></pre><ul>
 <li>We can also specify all columns form a table  </li>
 </ul>
 <pre><code>SELECT *
-FROM tables;
+FROM table;
+</code></pre><ul>
+<li>If we leave out &#39;<code>FROM table</code>&#39; we are effectively taking from an empty table</li>
+</ul>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In SELECT clauses, we can specify more than just columns from a table:<br><strong>Literials:</strong> Strings, numbers that are repeated for every row<br><strong>Expressions:</strong> Expressions of columns/literals<br><strong>Functions:</strong> Built in functions in SQL (ROUND(), etc.)<br><strong>User Defined Functions:</strong> Functions that a user can create within SQL to run</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> Let&#39;s try something simple: some literials and a calculation of <code>1 / 2</code></p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT 1, 2, &#39;this is a string&#39;, 1/2;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT 1, 2, &#39;this is a string&#39;, 1/2&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>'this is a string'</th>
+      <th>1/2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 1</td>
+      <td> 2</td>
+      <td> this is a string</td>
+      <td> 0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> What happened here?  </p>
+<p><strong>A:</strong> Since 1 and 2 are both integers, the expression 1/2 returns an integer. To get 0.5, we need to use a real number (a FLOAT).</p>
+</div>
+</div>
+</div>
+    </aside><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT 1, 2, &#39;this is a string&#39;, 1/2, 4/2, 5/2, 1/2., 1./2, 1/CAST(2 AS FLOAT);
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT 1, 2, &#39;this is a string&#39;, 1/2, 4/2, 5/2, 1/2., 1./2, 1/CAST(2 AS FLOAT)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>'this is a string'</th>
+      <th>1/2</th>
+      <th>4/2</th>
+      <th>5/2</th>
+      <th>1/2.</th>
+      <th>1./2</th>
+      <th>1/CAST(2 AS FLOAT)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 1</td>
+      <td> 2</td>
+      <td> this is a string</td>
+      <td> 0</td>
+      <td> 2</td>
+      <td> 2</td>
+      <td> 0.5</td>
+      <td> 0.5</td>
+      <td> 0.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="SQL-Functions">SQL Functions<a class="anchor-link" href="#SQL-Functions">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are many functions in SQLite and each implementation of SQL have different functions. Here are some random functions in SQLite:  </p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ABS(col)</strong></td>
+<td>Absolute value of numeric column</td>
+</tr>
+<tr>
+<td><strong>LENGTH(col)</strong></td>
+<td>Return length of string column</td>
+</tr>
+<tr>
+<td><strong>LOWER(col)</strong></td>
+<td>Return the string column in lower case</td>
+</tr>
+<tr>
+<td><strong>UPPER(col)</strong></td>
+<td>Return the string column in upper case</td>
+</tr>
+<tr>
+<td><strong>RANDOM()</strong></td>
+<td>A pseudo-random integer between -9223372036854775808 and +9223372036854775807</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT ABS(-8), LENGTH(&#39;This is a String&#39;), LOWER(&#39;ThIS Is A StRiNg&#39;), RANDOM();
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT ABS(-8), LENGTH(&#39;This is a String&#39;), LOWER(&#39;ThIS Is A StRiNg&#39;), RANDOM()&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[17]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ABS(-8)</th>
+      <th>LENGTH('This is a String')</th>
+      <th>LOWER('ThIS Is A StRiNg')</th>
+      <th>RANDOM()</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 8</td>
+      <td> 16</td>
+      <td> this is a string</td>
+      <td> 5529549118593371893</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Calculate the average of 2 random numbers.</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT (RANDOM() + RANDOM())/2.;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT (RANDOM() + RANDOM())/2.&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[28]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>(RANDOM() + RANDOM())/2.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 1.588450e+18</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> What is the upper and lower case for the string <strong>&#39;UPPER or lower&#39;</strong>?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT UPPER(&#39;UPPER or lower&#39;), LOWER(&#39;UPPER or lower&#39;)
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[31]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT UPPER(&#39;UPPER or lower&#39;), LOWER(&#39;UPPER or lower&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[31]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>UPPER('UPPER or lower')</th>
+      <th>LOWER('UPPER or lower')</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> UPPER OR LOWER</td>
+      <td> upper or lower</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="FROM-Clause">FROM Clause<a class="anchor-link" href="#FROM-Clause">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>FROM Clause:</strong> Specifies the table: either a persistant table, or a result set: a join of two or more tables or a subquery or some combination of the two. </p>
+<pre><code>SELECT col1, col2, ...
+FROM table;
 </code></pre>
 </div>
 </div>
@@ -3503,21 +3677,11 @@ FROM tables;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In SELECT clauses, we can specify more than just columns from a table:<br><strong>Literials:</strong> Strings, numbers that are repeated for every row<br><strong>Expressions:</strong> Expressions of columns/literals<br><strong>Functions:</strong> Built in functions in SQL (ROUND(), etc.)<br><strong>User Defined Functions:</strong> Functions that a user can create within SQL to run</p>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Example:</strong> What are the names, type, times and locations for Stats Club?</p>
 </div>
 </div>
-</div><div class="fragment">
+</div>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3643,90 +3807,6 @@ In&nbsp;[64]:
 </div>
 </div>
 
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="DISTINCT-Prefix">DISTINCT Prefix<a class="anchor-link" href="#DISTINCT-Prefix">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In the SELECT clause we can specify to return only distinct tuples of columns</p>
-<pre><code>SELECT DISTINCT col1, col2, ...
-FROM tables;
-</code></pre>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Alias">Alias<a class="anchor-link" href="#Alias">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Column-Alias">Column Alias<a class="anchor-link" href="#Column-Alias">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To increase the readability of SQL as well as the result set, we can give columns new names:</p>
-<pre><code>SELECT col AS new_name
-FROM tables;
-</code></pre>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Table-Alias">Table Alias<a class="anchor-link" href="#Table-Alias">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also give tables new names as well:</p>
-<pre><code>SELECT t1.col1, t2.col2, ...
-FROM table1 AS t1, table2 AS t2;
-</code></pre><ul>
-<li>Very useful when tables have common names but different meanings</li>
-</ul>
-</div>
-</div>
 </div>
     </div></section><section>
     
@@ -3875,6 +3955,902 @@ In&nbsp;[66]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aggregate-Functions">Aggregate Functions<a class="anchor-link" href="#Aggregate-Functions">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Aggregate Functions:</strong> Takes in the columns of a table and aggregates over the entries. </p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Return value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVG(column)</td>
+<td>Average of non-null values</td>
+</tr>
+<tr>
+<td>COUNT(column)</td>
+<td>Count of non-null values</td>
+</tr>
+<tr>
+<td>MAX(column)</td>
+<td>Maximum of values</td>
+</tr>
+<tr>
+<td>MIN(column)</td>
+<td>Minimum of values</td>
+</tr>
+<tr>
+<td>SUM(column)</td>
+<td>Sum of values</td>
+</tr>
+<tr>
+<td>GROUP_CONCAT(column)</td>
+<td>Concatenation of column strings</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>There are more aggregate functions for other implementations of SQL</li>
+</ul>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT COUNT( 12 ), COUNT(&#39;ssdf&#39;), COUNT(NULL), SUM(23), SUM(0), SUM(NULL), 
+  AVG(0), AVG(NULL);
+</code></pre>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT COUNT( 12 ), COUNT(&#39;ssdf&#39;), COUNT(NULL), SUM(23), SUM(0), SUM(NULL), AVG(0), AVG(NULL)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[18]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT( 12 )</th>
+      <th>COUNT('ssdf')</th>
+      <th>COUNT(NULL)</th>
+      <th>SUM(23)</th>
+      <th>SUM(0)</th>
+      <th>SUM(NULL)</th>
+      <th>AVG(0)</th>
+      <th>AVG(NULL)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 1</td>
+      <td> 1</td>
+      <td> 0</td>
+      <td> 23</td>
+      <td> 0</td>
+      <td> None</td>
+      <td> 0</td>
+      <td> None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lets work with some aggregate functions with the table below:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[40]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT * </span><span class="se">\</span>
+<span class="s">FROM example&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[40]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>number</th>
+      <th>floating</th>
+      <th>string</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>    1</td>
+      <td> 23.23</td>
+      <td>         this</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> 3232</td>
+      <td>-21.23</td>
+      <td>           is</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>   11</td>
+      <td> -2.00</td>
+      <td>            a</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>  -23</td>
+      <td> 54.00</td>
+      <td>       string</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>    2</td>
+      <td>   NaN</td>
+      <td> concatenated</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT COUNT(*), COUNT(string), COUNT(floating), AVG(number), SUM(number), GROUP_CONCAT(string, &#39; &#39;) 
+FROM example;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[39]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT COUNT(*), COUNT(string), COUNT(floating), AVG(number), SUM(number), GROUP_CONCAT(string, &#39; &#39;) </span><span class="se">\</span>
+<span class="s">FROM example&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[39]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT( * )</th>
+      <th>COUNT(string)</th>
+      <th>COUNT(floating)</th>
+      <th>AVG(number)</th>
+      <th>SUM(number)</th>
+      <th>GROUP_CONCAT(string, ' ')</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 5</td>
+      <td> 5</td>
+      <td> 4</td>
+      <td> 644.6</td>
+      <td> 3223</td>
+      <td> this is a string concatenated</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="DISTINCT-Prefix">DISTINCT Prefix<a class="anchor-link" href="#DISTINCT-Prefix">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the SELECT clause we can specify to return only distinct tuples of columns</p>
+<pre><code>SELECT DISTINCT col1, col2, ...
+FROM table;
+</code></pre><ul>
+<li>We can also use DISTINCT within aggregate functions making them only aggregate over distinct entries<pre><code>SELECT aggregate_function(DISTINCT column_name)
+FROM table;
+</code></pre></li>
+</ul>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> What events have members attended?</p>
+<ul>
+<li>What are the distinct events where at least one member attended?</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT DISTINCT event 
+FROM attendance;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[41]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT DISTINCT event </span><span class="se">\</span>
+<span class="s">FROM attendance&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[41]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>event</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>    Intro to SQL</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>             BOT</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>             EOT</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> Intro to Hadoop</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>  Intro to SQL 2</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>       Prof Talk</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>     Prof Talk 2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> What are the <strong>distinct</strong> majors of Stats Club members?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT DISTINCT major 
+FROM member;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[43]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT DISTINCT major </span><span class="se">\</span>
+<span class="s">FROM member&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[43]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>        Stats</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>    Pure Math</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>           CS</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> Applied Math</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>      Act Sci</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>        C &amp; O</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>         Econ</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> How many <strong>distinct</strong> majors of Stats Club members are there?</p>
+</div>
+</div>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>DISTINCT can be within aggregate functions</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT COUNT(DISTINCT major) 
+FROM member;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[44]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT COUNT(DISTINCT major) </span><span class="se">\</span>
+<span class="s">FROM member&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[44]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT(DISTINCT major)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Alias">Alias<a class="anchor-link" href="#Alias">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Column-Alias">Column Alias<a class="anchor-link" href="#Column-Alias">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To increase the readability of SQL as well as the result set, we can give columns new names:</p>
+<pre><code>SELECT col AS new_name
+FROM table;
+</code></pre><ul>
+<li>Column aliases make the final table more readiable and workiable for subqueries</li>
+</ul>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Table-Alias">Table Alias<a class="anchor-link" href="#Table-Alias">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also give tables new names as well:</p>
+<pre><code>SELECT table_alias_1.col_name, table_alias_2.col_name, ...
+FROM table_1 AS table_alias_1, table_2 AS table_alias_2;
+</code></pre><ul>
+<li>Very useful when tables have common column names  </li>
+</ul>
+<p><strong>Note:</strong> We can reference what table a column is coming from by a &#39;.&#39;</p>
+<pre><code class="language-python">table_name.column_name
+</code></pre>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> If we give column aliases for the previous table, we make the result more interpretiable:</p>
+<pre><code>SELECT COUNT(*) AS num_rows, COUNT(string) AS num_strings, 
+  COUNT(floating) AS num_float, AVG(number) AS avg_integer, 
+  SUM(number) AS sum_int, GROUP_CONCAT(string, &#39; &#39;) AS cat_string 
+FROM example;
+</code></pre>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[48]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT COUNT(*) AS num_rows, COUNT(string) AS num_strings, </span><span class="se">\</span>
+<span class="s">COUNT(floating) AS num_float, AVG(number) AS avg_integer, </span><span class="se">\</span>
+<span class="s">SUM(number) AS sum_int, GROUP_CONCAT(string, &#39; &#39;) AS cat_string </span><span class="se">\</span>
+<span class="s">FROM example&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[48]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>num_rows</th>
+      <th>num_strings</th>
+      <th>num_float</th>
+      <th>avg_integer</th>
+      <th>sum_int</th>
+      <th>cat_string</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 5</td>
+      <td> 5</td>
+      <td> 4</td>
+      <td> 644.6</td>
+      <td> 3223</td>
+      <td> this is a string concatenated</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Perform a query using a table alias, and use this table alias when referencing the column i.e. <code>table_alias.column_name</code></p>
+<ul>
+<li>This will be really important for bigger, more complicated queries</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT e.name, e.start_time, e.location, e.Description 
+FROM event AS e;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[50]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT e.name, e.start_time, e.location, e.Description </span><span class="se">\</span>
+<span class="s">FROM event AS e&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[50]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>start_time</th>
+      <th>location</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>             BOT</td>
+      <td> 2015-01-28 19:00:00</td>
+      <td>   C &amp; D</td>
+      <td> Come and play games with your fellow stats Clu...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>             EOT</td>
+      <td>                None</td>
+      <td>    None</td>
+      <td> End of Term social at a local Pub. A joint eve...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> Intro to Hadoop</td>
+      <td>                None</td>
+      <td>    None</td>
+      <td> Hadoop is a distributed computing system desig...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>    Intro to SQL</td>
+      <td> 2015-02-05 18:00:00</td>
+      <td> MC-3003</td>
+      <td> SQL is a relational database language and alon...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>       Prof Talk</td>
+      <td>                None</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>  Intro to SQL 2</td>
+      <td>                None</td>
+      <td>    None</td>
+      <td> SQL is a relational database language and alon...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>     Prof Talk 2</td>
+      <td>                None</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>     Prof Talk 3</td>
+      <td>                None</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Selection-(WHERE-Clause)">Selection (WHERE Clause)<a class="anchor-link" href="#Selection-(WHERE-Clause)">&#182;</a></h2>
 </div>
 </div>
@@ -3887,7 +4863,7 @@ In&nbsp;[66]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>WHERE</strong> clauses filters the result set, removing rows where the condition returns either FALSE or NULL.</p>
 <pre><code>SELECT col1, col2, ...
-FROM tables
+FROM table
 WHERE condition;
 </code></pre>
 </div>
@@ -4047,27 +5023,27 @@ In&nbsp;[67]:
 </tr>
 <tr>
 <td>IS NOT NULL</td>
-<td>Value is NULL</td>
+<td>Value is not NULL</td>
 <td>WHERE num IS NOT NULL</td>
 </tr>
 <tr>
 <td>BETWEEN</td>
-<td>Between an inclusive range</td>
+<td>Between a range</td>
 <td>WHERE num BETWEEN 3 AND 5</td>
 </tr>
 <tr>
 <td>IN</td>
-<td>Value is a list of values</td>
+<td>In a list of values</td>
 <td>WHERE num IN (3, 5, 8)</td>
 </tr>
 <tr>
 <td>LIKE</td>
-<td>Search for a pattern</td>
+<td>Pattern Search</td>
 <td>WHERE str LIKE &#39;F%&#39;</td>
 </tr>
 <tr>
 <td>EXISTS</td>
-<td>Does subquery have any rows</td>
+<td>Subquery have any rows?</td>
 <td>WHERE EXISTS (subquery)</td>
 </tr>
 </tbody>
@@ -4212,12 +5188,124 @@ In&nbsp;[68]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A group of filter conditions can be linked together with AND or OR operators. </p>
 <pre><code>SELECT col1, col2, ...
-FROM tables
+FROM table
 WHERE (condition1 AND condition2 ) OR condition3;
 </code></pre>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> What Stats Club members has a name with it&#39;s second letter as A or ends in B?</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name
+FROM member 
+WHERE name LIKE &#39;_a%&#39; OR  name LIKE &#39;%b&#39;;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[70]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name </span><span class="se">\</span>
+<span class="s">FROM member </span><span class="se">\</span>
+<span class="s">WHERE name LIKE &#39;_a%&#39; OR  name LIKE &#39;%b&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[70]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>      Darrell Aucoin</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>    James M. Eddings</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>       James A. Foxt</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>     Daniel J. Moore</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>    Nancy P. Jackson</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>    Ralph L. Waldrop</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td> Tameika M. McMaster</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>    Janelle T. Smith</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>          Ruben Lamb</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>   Patrick Robertson</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4358,6 +5446,598 @@ In&nbsp;[70]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="questions-">Questions?</h1>
+<h3 id="topics-covered-in-next-presentation">Topics Covered in Next Presentation</h3>
+<ol>
+<li>Aggregation (GROUP BY)</li>
+<li>Joining tables</li>
+<li>Subqueries</li>
+<li>CASE expressions</li>
+<li>Set Operations</li>
+<li>WITH Clause (Increases Readiablity)</li>
+<li>ORDER BY Clause</li>
+<li>LIMIT Clause  </li>
+</ol>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="further-practice-questions-">Further Practice Questions?</h2>
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> What events have dates specified?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name 
+FROM event 
+WHERE start_time IS NOT NULL;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[59]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name, start_time </span><span class="se">\</span>
+<span class="s">FROM event </span><span class="se">\</span>
+<span class="s">WHERE start_time IS NOT NULL&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[59]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>start_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>          BOT</td>
+      <td> 2015-01-28 19:00:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> Intro to SQL</td>
+      <td> 2015-02-05 18:00:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> What events don&#39;t have dates specified?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name 
+FROM event 
+WHERE start_time IS NULL;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[60]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name, start_time </span><span class="se">\</span>
+<span class="s">FROM event </span><span class="se">\</span>
+<span class="s">WHERE start_time IS NULL&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[60]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>start_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>             EOT</td>
+      <td> None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> Intro to Hadoop</td>
+      <td> None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>       Prof Talk</td>
+      <td> None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>  Intro to SQL 2</td>
+      <td> None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>     Prof Talk 2</td>
+      <td> None</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>     Prof Talk 3</td>
+      <td> None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> What Stats Club members are in Stats, Act Sci, or CS?</p>
+<ul>
+<li>Recall the <code>IN</code> predicate operator</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name 
+FROM member 
+WHERE major in (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;);
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[62]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name </span><span class="se">\</span>
+<span class="s">FROM member </span><span class="se">\</span>
+<span class="s">WHERE major in (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[62]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0 </th>
+      <td>        Darrell Aucoin</td>
+    </tr>
+    <tr>
+      <th>1 </th>
+      <td>          Ryan T. Luby</td>
+    </tr>
+    <tr>
+      <th>2 </th>
+      <td>       Billy L. Hunter</td>
+    </tr>
+    <tr>
+      <th>3 </th>
+      <td> Stephanie R. Matthews</td>
+    </tr>
+    <tr>
+      <th>4 </th>
+      <td>    Robert B. Williams</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td>    Austin K. Gilliard</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td>      James M. Eddings</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td>         Elaine S. Ott</td>
+    </tr>
+    <tr>
+      <th>8 </th>
+      <td>         James A. Foxt</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td>       Daniel J. Moore</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>     Kelly S. Ferguson</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>      Vivian R. Donley</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>     Frances A. Miller</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>      Mina W. Lawrence</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td> Phillip C. Mascarenas</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>        Jeff M. Wright</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>   Deborah D. Helfrich</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>      Nancy P. Jackson</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>     Bobbie D. Mathews</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>      Arnold J. Fuller</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>      Ralph L. Waldrop</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>   Tameika M. McMaster</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>   Melissa R. Anderson</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>     Ann W. McLaughlin</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>     Judith B. Gibbons</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>            Ruben Lamb</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>     Patrick Robertson</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> What are the Stats Club exec positions?</p>
+<ul>
+<li>Avoid duplication of positions</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT DISTINCT position 
+FROM exec_position;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[65]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT DISTINCT position </span><span class="se">\</span>
+<span class="s">FROM exec_position&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[65]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>         Events</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>        Finance</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>      President</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> Senior Advisor</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>     Technology</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> How many different Stats Club exec positions are there?</p>
+<ul>
+<li>Note that we can use DISTINCT within aggregate functions</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT COUNT(DISTINCT position) AS num_exec_positions
+FROM exec_position;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[67]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT COUNT(DISTINCT position) AS num_exec_positions </span><span class="se">\</span>
+<span class="s">FROM exec_position&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[67]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>num_exec_positions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Start-of-Second-Presentation">Start of Second Presentation<a class="anchor-link" href="#Start-of-Second-Presentation">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+    </aside></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="GROUP-BY-Clause">GROUP BY Clause<a class="anchor-link" href="#GROUP-BY-Clause">&#182;</a></h2>
 </div>
 </div>
@@ -4386,7 +6066,7 @@ In&nbsp;[70]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <pre><code>SELECT col1, col2, ..., aggregate_function
-FROM tables
+FROM table
 GROUP BY col1, col2, ...;
 </code></pre>
 </div>
@@ -4409,6 +6089,11 @@ GROUP BY col1, col2, ...;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Recall:
+<strong>Aggregate Functions:</strong> Takes in the columns of a table and aggregates over the entries. </p>
+<ul>
+<li>If we use a GROUP BY clause, the aggregation will be over those groups</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -4444,7 +6129,7 @@ GROUP BY col1, col2, ...;
 </tbody>
 </table>
 <ul>
-<li>There are more aggregate functions for other implementations of SQL</li>
+<li>There are more aggregate functions for other implementations of SQL  </li>
 </ul>
 </div>
 </div>
@@ -4695,7 +6380,7 @@ In&nbsp;[72]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <pre><code>SELECT col1, col2, ..., aggregate_function
-FROM tables
+FROM table
 GROUP BY col1, col2, ... WITH ROLLUP;
 </code></pre>
 </div>
@@ -5662,7 +7347,7 @@ FROM table1 INNER JOIN table2 ON condition;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -5674,6 +7359,27 @@ FROM table1 INNER JOIN table2 ON condition;
 </div>
 </div>
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>ON</strong> clause specifies the join condition:</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The ON clause can use a multiple set of conditions connected by AND, OR</li>
+</ul>
+</div>
+</div>
+</div>
     </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -5681,14 +7387,21 @@ FROM table1 INNER JOIN table2 ON condition;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <strong>ON</strong> clause specifies the join condition:</p>
 <ul>
-<li><p>The ON clause can use a multiple set of conditions connected by AND, OR</p>
-</li>
-<li><p>USING(<join col>) can also be used if both tables have the same column name and type</p>
-</li>
-<li><p>Some SQL implementations constructs the ON clause from the WHERE clause (DB2)</p>
+<li>USING(<join col>) can also be used if both tables have the same column name and type</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+<li>Some SQL implementations constructs the ON clause from the WHERE clause (DB2)<ul>
 <li>filtering by the WHERE clause gives the same result but in some implementations will product an intermediate cross product of tables (making the query slower)</li>
 </ul>
 </li>
@@ -6603,7 +8316,7 @@ In&nbsp;[79]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Q:</strong> What are the email addresses and phone numbers of stats club execs who are in change or organizing at least one event?</p>
 <center>
-<img src="Images/StatClubTables.png" alt="alt text">
+<img src="Images/StatClubTables2.png" alt="alt text">
 </center>
 </div>
 </div>
@@ -6690,6 +8403,402 @@ In&nbsp;[82]:
 </div>
 </div>
 
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Subqueries">Subqueries<a class="anchor-link" href="#Subqueries">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Subqueries are queries contained in queries. These subqueries are contained in &#39;(&#39;, &#39;)&#39;</p>
+<p>There are two types of subqueries:</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p><strong>Non-Correlated Subqueries:</strong> Can be run independently of the larger query.</p>
+</li>
+<li><p><strong>Correlated Subqueries:</strong> Must be run concurrently with the outer query. They are dependent on the outer query.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Non-Correlated-Subqueries">Non-Correlated Subqueries<a class="anchor-link" href="#Non-Correlated-Subqueries">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Non-Correlated Subquery:</strong> Any valid query within query that if executed by itself will produce a result (including empty set). These are enclosed in &#39;(&#39;, &#39;)&#39; in <strong>FROM</strong>, <strong>WHERE</strong>, or <strong>HAVING</strong> clauses.</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> What Stats Club execs are in charge of making posters?</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT e.name, e.position 
+FROM exec AS e 
+WHERE e.questid IN (SELECT poster FROM event);
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[86]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT e.name, e.position </span><span class="se">\</span>
+<span class="s">FROM exec AS e </span><span class="se">\</span>
+<span class="s">WHERE e.questid IN (SELECT poster FROM event)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[86]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>     Dominick Byrd</td>
+      <td> Events</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>    Gilberto Cross</td>
+      <td> Events</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> Judith B. Gibbons</td>
+      <td> Events</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> Patrick Robertson</td>
+      <td> Events</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Correlated-Subqueries">Correlated Subqueries<a class="anchor-link" href="#Correlated-Subqueries">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Correlated  Subquery</strong> makes references to it&#39;s containing query, executing it for every candidate row referenced.</p>
+<ul>
+<li>Correlated subqueries can appear in the <strong>SELECT</strong>, <strong>WHERE</strong>, or <strong>HAVING</strong> clauses.</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> What majors are the current Stats Club execs enrolled in?</p>
+<ul>
+<li>The member table has the information on majors but exec has the information on execs</li>
+</ul>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name, position, 
+(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, 
+(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major 
+FROM exec AS e;
+</code></pre>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[87]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name, position, </span><span class="se">\</span>
+<span class="s">(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, </span><span class="se">\</span>
+<span class="s">(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major </span><span class="se">\</span>
+<span class="s">FROM exec AS e&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[87]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>position</th>
+      <th>faulty</th>
+      <th>major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>    Darrell Aucoin</td>
+      <td>     President</td>
+      <td> Math</td>
+      <td>     Stats</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> Judith B. Gibbons</td>
+      <td>        Events</td>
+      <td> Math</td>
+      <td>   Act Sci</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>         Lamar Roy</td>
+      <td>       Finance</td>
+      <td> None</td>
+      <td>      None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>    Gilberto Cross</td>
+      <td>        Events</td>
+      <td> None</td>
+      <td>      None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>        Melba Lane</td>
+      <td>     President</td>
+      <td> None</td>
+      <td>      None</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>        Ruben Lamb</td>
+      <td>    Technology</td>
+      <td> Math</td>
+      <td>   Act Sci</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>      Hannah Mason</td>
+      <td> SeniorAdvisor</td>
+      <td> None</td>
+      <td>      None</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td> Patrick Robertson</td>
+      <td>        Events</td>
+      <td> Math</td>
+      <td>     Stats</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>     Dominick Byrd</td>
+      <td>        Events</td>
+      <td> Math</td>
+      <td> Pure Math</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Correlated-vs-Non-Correlated">Correlated vs Non-Correlated<a class="anchor-link" href="#Correlated-vs-Non-Correlated">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p>Correlated subquery is <strong>dependent</strong> on outer query, non-correlated is <strong>independent</strong>.</p>
+</li>
+<li><p>Correlated subquery is executed <strong>concurrently</strong> with outer query, non-correlated is executed before.</p>
+</li>
+<li><p>In general, for speed of execution:
+$$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}$$</p>
+</li>
+</ol>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>A:</strong> in the <strong>FROM</strong>, <strong>WHERE</strong>, and <strong>HAVING</strong> clauses</p>
+</div>
+</div>
+</div>
+    </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>A:</strong> in the <strong>SELECT</strong>, <strong>WHERE</strong>, and <strong>HAVING</strong> clauses</p>
+</div>
+</div>
 </div>
     </div></section>
     </section><section>
@@ -7115,11 +9224,11 @@ In&nbsp;[83]:
 <p><strong>INTERSECT operator:</strong> Returns only tuples that are in common between two result sets. Result sets must be equal in number and type of attributes.</p>
 <pre><code>SELECT ... FROM ...
 INTERSECT
-SELECT ... FROM ...
+SELECT ... FROM ...;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -7129,8 +9238,7 @@ SELECT ... FROM ...
 <p><strong>Example:</strong> What Stats Club execs have also signed up as Stats Club members?</p>
 </div>
 </div>
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -7476,403 +9584,6 @@ In&nbsp;[85]:
 </div>
 </div>
 
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Subqueries">Subqueries<a class="anchor-link" href="#Subqueries">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Subqueries are queries contained in queries. These subqueries are contained in &#39;(&#39;, &#39;)&#39;</p>
-<p>There are two types of subqueries:</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p><strong>Non-Correlated Subqueries:</strong> Can be run independently of the larger query.</p>
-</li>
-<li><p><strong>Correlated Subqueries:</strong> Must be run concurrently with the outer query. They are dependent on the outer query.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Non-Correlated-Subqueries">Non-Correlated Subqueries<a class="anchor-link" href="#Non-Correlated-Subqueries">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Non-Correlated Subquery:</strong> Any valid query within query that if executed by itself will produce a result (including empty set). These are enclosed in &#39;(&#39;, &#39;)&#39; in <strong>FROM</strong>, <strong>WHERE</strong>, or <strong>HAVING</strong> clauses.</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What Stats Club execs are in charge of making posters?</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT e.name, e.position 
-FROM exec AS e 
-WHERE e.questid IN (SELECT poster FROM event);
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[86]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT e.name, e.position </span><span class="se">\</span>
-<span class="s">FROM exec AS e </span><span class="se">\</span>
-<span class="s">WHERE e.questid IN (SELECT poster FROM event)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[86]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>position</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>     Dominick Byrd</td>
-      <td> Events</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>    Gilberto Cross</td>
-      <td> Events</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td> Judith B. Gibbons</td>
-      <td> Events</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Patrick Robertson</td>
-      <td> Events</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Correlated-Subqueries">Correlated Subqueries<a class="anchor-link" href="#Correlated-Subqueries">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Correlated  Subquery</strong> makes references to it&#39;s containing query, executing it for every candidate row referenced.</p>
-<ul>
-<li>Correlated subqueries can appear in the <strong>SELECT</strong>, <strong>WHERE</strong>, or <strong>HAVING</strong> clauses.</li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What majors are the current Stats Club execs enrolled in?</p>
-<ul>
-<li>The member table has the information on majors but exec has the information on execs</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name, position, 
-(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, 
-(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major 
-FROM exec AS e;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[87]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name, position, </span><span class="se">\</span>
-<span class="s">(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, </span><span class="se">\</span>
-<span class="s">(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major </span><span class="se">\</span>
-<span class="s">FROM exec AS e&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[87]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>position</th>
-      <th>faulty</th>
-      <th>major</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>    Darrell Aucoin</td>
-      <td>     President</td>
-      <td> Math</td>
-      <td>     Stats</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td> Judith B. Gibbons</td>
-      <td>        Events</td>
-      <td> Math</td>
-      <td>   Act Sci</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>         Lamar Roy</td>
-      <td>       Finance</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>    Gilberto Cross</td>
-      <td>        Events</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>        Melba Lane</td>
-      <td>     President</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>        Ruben Lamb</td>
-      <td>    Technology</td>
-      <td> Math</td>
-      <td>   Act Sci</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>      Hannah Mason</td>
-      <td> SeniorAdvisor</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td> Patrick Robertson</td>
-      <td>        Events</td>
-      <td> Math</td>
-      <td>     Stats</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>     Dominick Byrd</td>
-      <td>        Events</td>
-      <td> Math</td>
-      <td> Pure Math</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Correlated-vs-Non-Correlated">Correlated vs Non-Correlated<a class="anchor-link" href="#Correlated-vs-Non-Correlated">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p>Correlated subquery is <strong>dependent</strong> on outer query, non-correlated is <strong>independent</strong>.</p>
-</li>
-<li><p>Correlated subquery is executed <strong>concurrently</strong> with outer query, non-correlated is executed before.</p>
-</li>
-<li><p>In general, for speed of execution:
-$$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}$$</p>
-</li>
-</ol>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>A:</strong> in the <strong>FROM</strong>, <strong>WHERE</strong>, and <strong>HAVING</strong> clauses</p>
-</div>
-</div>
-</div>
-    </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>A:</strong> in the <strong>SELECT</strong>, <strong>WHERE</strong>, and <strong>HAVING</strong> clauses</p>
-</div>
-</div>
 </div>
     </div></section>
     </section><section>
@@ -8255,58 +9966,6 @@ In&nbsp;[89]:
 
 </div>
     </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="SQL-Functions">SQL Functions<a class="anchor-link" href="#SQL-Functions">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There are many functions in SQLite and each implementation of SQL have different functions. Here are some random functions in SQLite:  </p>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>ABS(col)</strong></td>
-<td>Absolute value of numeric column</td>
-</tr>
-<tr>
-<td><strong>LENGTH(col)</strong></td>
-<td>Return length of string column</td>
-</tr>
-<tr>
-<td><strong>LOWER(col)</strong></td>
-<td>Return the string column in lower case</td>
-</tr>
-<tr>
-<td><strong>UPPER(col)</strong></td>
-<td>Return the string column in upper case</td>
-</tr>
-<tr>
-<td><strong>RANDOM()</strong></td>
-<td>A pseudo-random integer between -9223372036854775808 and +9223372036854775807</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div></section>
     </section><section>
     <section>
     
