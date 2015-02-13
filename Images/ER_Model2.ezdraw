@@ -354,7 +354,7 @@
 	2Q==
 	</data>
 	<key>DKDChangeTimeStamp</key>
-	<string>2015-02-13 00:30:01 +0000</string>
+	<string>2015-02-13 02:26:32 +0000</string>
 	<key>DKDCreateTimeStamp</key>
 	<string>2014-12-31 02:12:19 +0000</string>
 	<key>DKDDisplayGraphicDetails</key>
@@ -467,7 +467,7 @@
 		<key>ExportContent</key>
 		<string>Just Graphics</string>
 		<key>ExportExpand</key>
-		<string>5.555555555556</string>
+		<string>1.777777777778</string>
 		<key>ExportFileExtension</key>
 		<string>png</string>
 		<key>ExportImageAntialias</key>
@@ -5522,7 +5522,7 @@
 		<string>NO</string>
 	</dict>
 	<key>DKDSaveTimeStamp</key>
-	<string>2015-02-13 00:30:06 +0000</string>
+	<string>2015-02-13 02:26:34 +0000</string>
 	<key>DKDTablet</key>
 	<dict>
 		<key>PenMax</key>
@@ -5659,7 +5659,7 @@
 		<key>CursorMode</key>
 		<string>Nothing</string>
 		<key>DocCenter</key>
-		<string>{285.481049563, 313.945945946}</string>
+		<string>{285.481049563, 384.405405405}</string>
 		<key>DocumentFileName</key>
 		<string>/Users/darrellaucoin/GitHub/IntroSQL/Images/ER_Model2.ezdraw</string>
 		<key>DrawersOnMainView</key>
