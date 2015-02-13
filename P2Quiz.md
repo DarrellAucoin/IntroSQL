@@ -291,11 +291,12 @@ below. What is the max cap for social expenses and is Stats Club over this
 limit?
 - Membership fee for Stats Club is 2 dollars
 
-$$\begin{aligned}\mbox{Social expenses} & = & \max\left\{
-250,\left(\mbox{MathSoc Members}\right)\times\left(5+\left(\mbox{Member
-fee}\right)\right)\right\} \\
- & = & \max\left\{ 250,\left(\mbox{MathSoc Members}\right)\times7\right\}
-\end{aligned}$$
+<center>
+Social expenses = max {250, (MathSoc Members) * (5 + (Member fee) )}   
+</center>
+<center>
+Social expenses = max {250, (MathSoc Members) * 7}
+</center>
 
 Break the problem into smaller problems:
 - What are the total expenses for social events?
@@ -306,8 +307,8 @@ Smaller Problems:
     - What events are social events?
 
 - What is the max cap for social events?
-    - What is the result of the formula
-    $$\left(\mbox{MathSoc Members}\right)\times7$$
+    - What is the result of the formula  
+    <center>(MathSoc Members) * 7</center>
         - What are the number of Stats Club members who are in the Math Faculty
 (aka MathSoc members)?
     - How do we find the max value between this number and 250?
@@ -485,7 +486,7 @@ WHERE faculty = 'Math';
 __Part 5:__ What is the max of this number and 250?
 
 ```sql
-SELECT Max(soc_budget)
+SELECT MAX(soc_budget)
 FROM (SELECT COUNT(*) * 7 AS soc_budget
       FROM member
       WHERE faculty = 'Math'

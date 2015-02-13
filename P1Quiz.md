@@ -446,7 +446,7 @@ WHERE name BETWEEN 'A' AND 'G';
 __Q:__ What events have dates specified?
 
 ```sql
-SELECT name
+SELECT name, start_time
 FROM event
 WHERE start_time IS NOT NULL;
 ```
