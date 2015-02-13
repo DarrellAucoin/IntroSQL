@@ -3369,7 +3369,7 @@ FROM table_name;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[100]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -11562,7 +11562,214 @@ ORDER BY column1, column2, .. columnN [ASC | DESC];
 <p><code>DESC</code> is descending</p>
 </div>
 </div>
-</div></section>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> What is the membership list ordered by name?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name 
+FROM member 
+ORDER BY name;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name </span><span class="se">\</span>
+<span class="s">FROM member </span><span class="se">\</span>
+<span class="s">ORDER BY name&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0 </th>
+      <td>     Ann W. McLaughlin</td>
+    </tr>
+    <tr>
+      <th>1 </th>
+      <td>      Arnold J. Fuller</td>
+    </tr>
+    <tr>
+      <th>2 </th>
+      <td>    Austin K. Gilliard</td>
+    </tr>
+    <tr>
+      <th>3 </th>
+      <td>       Billy L. Hunter</td>
+    </tr>
+    <tr>
+      <th>4 </th>
+      <td>     Bobbie D. Mathews</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td>       Daniel J. Moore</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td>        Darrell Aucoin</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td>   Deborah D. Helfrich</td>
+    </tr>
+    <tr>
+      <th>8 </th>
+      <td>         Dominick Byrd</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td>         Elaine S. Ott</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>     Frances A. Miller</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>         Fred E. Finch</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>         James A. Foxt</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>      James M. Eddings</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>      Janelle T. Smith</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>        Jeff M. Wright</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>       John J. Oquendo</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>        Joseph L. Wood</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>     Judith B. Gibbons</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>     Kelly S. Ferguson</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>   Melissa R. Anderson</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>      Melvin O. Martin</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>  Mildred F. Hottinger</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>      Mina W. Lawrence</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>      Nancy P. Jackson</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>     Patrick Robertson</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td> Phillip C. Mascarenas</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>      Ralph L. Waldrop</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>    Robert B. Williams</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>            Ruben Lamb</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>          Ryan T. Luby</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td> Stephanie R. Matthews</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>   Tameika M. McMaster</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>      Vivian R. Donley</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
     </section><section>
     <section>
     
@@ -11594,6 +11801,117 @@ LIMIT no_of_rows OFFSET row_num;
 </code></pre>
 </div>
 </div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> What is the first 10 members ordered by name?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name 
+FROM member 
+ORDER BY name 
+LIMIT 10;
+</code></pre>
+</div>
+</div>
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name </span><span class="se">\</span>
+<span class="s">FROM member </span><span class="se">\</span>
+<span class="s">ORDER BY name </span><span class="se">\</span>
+<span class="s">LIMIT 10&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[5]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>   Ann W. McLaughlin</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>    Arnold J. Fuller</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>  Austin K. Gilliard</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>     Billy L. Hunter</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>   Bobbie D. Mathews</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>     Daniel J. Moore</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>      Darrell Aucoin</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td> Deborah D. Helfrich</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>       Dominick Byrd</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>       Elaine S. Ott</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section>
     </section><section>
     <section>
