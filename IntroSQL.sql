@@ -1,7 +1,47 @@
 /* SELECT Clause */
 
+SELECT 1, 2, 'this is a string', 1/2;
+
+SELECT 1, 2, 'this is a string', 1/2, 4/2, 5/2, 1/2., 1./2, 1/CAST(2 AS FLOAT);
+
+/* The following two statements produce the same table. */
+
+SELECT 1, 2, 'this is a string', 1/2;
+
+SELECT 1,
+2,
+             'this is a string',   1/2;
+
+
+/* SQL Functions */
+
+SELECT ABS(-8), LENGTH('This is a String'), LOWER('ThIS Is A StRiNg'), RANDOM();
+
+/* FROM Clause */
+
 SELECT name, type, start_time, end_time, location 
 FROM event;
+
+/* Aggregate Functions */
+
+SELECT COUNT( 12 ), COUNT('ssdf'), COUNT(NULL), SUM(23), SUM(0), SUM(NULL),
+  AVG(0), AVG(NULL);
+
+SELECT COUNT(*), COUNT(string), COUNT(floating), AVG(number), SUM(number),
+GROUP_CONCAT(string, ' ')
+FROM example;
+
+/* DISTINCT */
+
+SELECT DISTINCT event
+FROM attendance;
+
+/* Aliases */
+
+SELECT COUNT(*) AS num_rows, COUNT(string) AS num_strings,
+  COUNT(floating) AS num_float, AVG(number) AS avg_integer,
+  SUM(number) AS sum_int, GROUP_CONCAT(string, ' ') AS cat_string
+FROM example;
 
 /* WHERE Clause */
 
@@ -15,6 +55,12 @@ SELECT *
 FROM member 
 WHERE name LIKE 'F%';
 
+/* AND, OR Operators */
+
+SELECT name
+FROM member
+WHERE name LIKE '_a%' OR  name LIKE '%b';
+
 /* GROUP BY Clause */
 
 SELECT type, COUNT(*) AS num_events 
@@ -27,6 +73,8 @@ SELECT faculty, major, COUNT(*)
 FROM member 
 GROUP BY faculty, major 
 HAVING COUNT(*) >= 2;
+
+/* GROUP BY WITH ROLLUP/CUBE not implemented in SQLite */
 
 /* CROSS JOIN */
 
@@ -56,6 +104,19 @@ ORDER BY events_attended;
 SELECT  e.name, e.position, ep.duties 
 FROM exec AS e NATURAL JOIN exec_position AS ep;
 
+/* Non-Correlated Subquery */
+
+SELECT e.name, e.position 
+FROM exec AS e 
+WHERE e.questid IN (SELECT poster FROM event);
+
+/* Correlated Subquery */
+
+SELECT name, position, 
+(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, 
+(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major 
+FROM exec AS e;
+
 /* UNION set Operation */
 
 SELECT name, email, NULL AS phone 
@@ -80,18 +141,6 @@ EXCEPT
 SELECT name, questid 
 FROM exec;
 
-/* Non-Correlated Subquery */
-
-SELECT e.name, e.position 
-FROM exec AS e 
-WHERE e.questid IN (SELECT poster FROM event);
-
-/* Correlated Subquery */
-
-SELECT name, position, 
-(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, 
-(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major 
-FROM exec AS e;
 
 /* WITH Clause */
 
@@ -114,3 +163,16 @@ SELECT e.name, e.type, e.budget, cost.expenses,
     ELSE 'On budget' 
     END AS warning 
 FROM event AS e INNER JOIN cost ON e.name = cost.event;
+
+/* ORDER BY Clause */
+
+SELECT name
+FROM member
+ORDER BY name;
+
+/* LIMIT Clause */
+
+SELECT name
+FROM member
+ORDER BY name
+LIMIT 10;
