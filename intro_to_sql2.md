@@ -1,8 +1,8 @@
-#Intro to SQL
+# Intro to SQL
 
-####Darrell Aucoin
+#### Presented by: Darrell Aucoin
 
-#####Stats Club
+##### Stats Club
 
 # How to Follow Along
 
@@ -11,7 +11,7 @@
 1. Go to [https://github.com/NormallySane/IntroSQL](https://github.com/NormallySane/IntroSQL)
 2. Download [zip
 file](https://github.com/NormallySane/IntroSQL/archive/master.zip)
-    ![alt text](Images/IntroSQLGithub.png)
+    ![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/IntroSQLGithub.png)
 3. Unzip downloaded file in your preferred directory
 
 #### Using SQLite Browser
@@ -31,15 +31,15 @@ in your favorite browser)
 
 - Lets you see the data structure of tables in the database
 
-![alt text](Images/dataStructure.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/dataStructure.png)
 
 - Explore the data entered in tables
 
-![alt text](Images/exploreData.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/exploreData.png)
 
 - Execute SQL statements and see results
 
-![alt text](Images/executeSQL.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/executeSQL.png)
 
 # Motivation
 
@@ -102,7 +102,7 @@ containing records (rows) related to other records in other tables. Each entity
 having attributes (columns also called fields) which give additional information
 on an entity.
 <center>
-![alt text](Images/RelationalDatabase.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/RelationalDatabase.png)
 </center>
 
 __Field, Attribute (Column)__: An individual piece of data stored in a table.
@@ -114,7 +114,7 @@ __Table:__ A collection of rows. Usually in reference a persistent table saved
 permanently to memory
 
 <center>
-![alt text](Images/RelationalDatabase.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/RelationalDatabase.png)
 </center>
 
 __Result set:__ A non-persistent table, usually the result of a query.
@@ -138,12 +138,12 @@ __R__ refers to _relationship_: As in how objects relate to each other.
 
 Each entity has properties associated with every instance of an object.
 <center>
-![alt text](Images/ER_Model.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/ER_Model.png)
 </center>
 
 Objects are related to each other through relationships:
 <center>
-![alt text](Images/ER_Model2.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/ER_Model2.png)
 </center>
 
 ### E-R Relationships
@@ -188,12 +188,12 @@ for the event, time and location of the event, and a budget,
 
 A report of the event would look something like:
 <center>
-![alt text](Images/Event_report.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Event_report.png)
 </center>
 
 We first need to tabulate the data:
 <center>
-![alt text](Images/Event_report_table.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Event_report_table.png)
 </center>
 However this is not enough, the data is not in a form that can be easily
 recognized by computers.
@@ -210,11 +210,11 @@ __Example:__ To bring the data into 1st normalized form we need to break the
 table into two tables: Event, and Expenses:
 
 <center>
-![alt text](Images/Event_report_table_1st.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Event_report_table_1st.png)
 </center>
 
 <center>
-![alt text](Images/Event_report_table_1st.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Event_report_table_1st.png)
 </center>
 - This contains all of the information before but is more organized for the
 computers to deal with
@@ -232,11 +232,11 @@ Let's break the table so we get important description of the events (name, type,
 presenter, organizer, etc.) and a list of members that attended each event.
 
 <center>
-![alt text](Images/Event_report_table_2nd.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Event_report_table_2nd.png)
 </center>
 
 <center>
-![alt text](Images/Event_report_table_2nd.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Event_report_table_2nd.png)
 </center>
 - Attendance is 2nd normalized form if we consider the primary key as the tuple
 of event and quest ID.
@@ -253,7 +253,7 @@ determined by the event. We need to break the attendance table to bring into 3rd
 normalized form: attendance and members.
 
 <center>
-![alt text](Images/Event_report_table_3rd.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Event_report_table_3rd.png)
 </center>
 
 ### Primary Keys and Foriegn Keys
@@ -270,14 +270,14 @@ __Primary key:__ A tuple of columns that uniquely define each row in a table.
 __Foreign key:__ A tuple of columns identifying a relationship to another table.
 (Blue items below)
 <center>
-![alt text](Images/primary_keys.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/primary_keys.png)
 </center>
 
 ### Quiz (5 mins)
 
 Normalize the following table:
 <center>
-![alt text](Images/quiz1.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz1.png)
 </center>
 
 ## Relational Algebra Operations
@@ -304,12 +304,12 @@ of tuples performed on tuples of different tables.
 
 __Q1:__ What kind of operation is performed on the following table?
 <center>
-![alt text](Images/quiz2a.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz2a.png)
 </center>
 
 __Q2:__ What kind of operation is performed on the following table?
 <center>
-![alt text](Images/quiz2b.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz2b.png)
 </center>
 
 __Q3:__ What kinds of joins can peform on tables?
@@ -343,7 +343,7 @@ and ends with a ';'
 
 - We will be used a database based on Stats Club, supplied with fake data:
 <center>
-![alt text](Images/StatClubTables.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/StatClubTables.png)
 </center>
 
 ## Data Types
@@ -629,7 +629,7 @@ SELECT ABS(-8), LENGTH('This is a String'), LOWER('ThIS Is A StRiNg'), RANDOM();
 
 ### Quiz
 
-Calculate the average of 2 random numbers.
+__Q:__ Calculate the average of 2 random numbers.
 
 
 __Q:__ What is the upper and lower case for the string __'UPPER or lower'__?
@@ -639,7 +639,8 @@ __Q:__ What is the upper and lower case for the string __'UPPER or lower'__?
 ## FROM Clause
 
 __FROM Clause:__ Specifies the table: either a persistant table, or a result
-set: a join of two or more tables or a subquery or some combination of the two.
+set: a join of two or more tables or a subquery or some combination of the two.  
+
 ```
 SELECT col1, col2, ...
 FROM table;
@@ -952,81 +953,10 @@ FROM attendance;
 
 __Q:__ What are the __distinct__ majors of Stats Club members?
 
-```
-SELECT DISTINCT major
-FROM member;
-```
-
-
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>major</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>        Stats</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>    Pure Math</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>           CS</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Applied Math</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>      Act Sci</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>        C &amp; O</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>         Econ</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
 
 __Q:__ How many __distinct__ majors of Stats Club members are there?
 
 - DISTINCT can be within aggregate functions
-
-```
-SELECT COUNT(DISTINCT major)
-FROM member;
-```
-
-
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>COUNT(DISTINCT major)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> 7</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -1355,7 +1285,7 @@ a function to each group
     - In the SELECT portion of the statement, you can only list the grouped
 column(s) and aggregate functions on them.
 <center>
-![alt text](Images/Group By.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/Group By.png)
 </center>
 
 ```
@@ -2914,7 +2844,7 @@ FROM exec AS e NATURAL JOIN exec_position AS ep;
 __Q:__ What are the email addresses and phone numbers of stats club execs who
 are in change or organizing at least one event?
 <center>
-![alt text](Images/StatClubTables2.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/StatClubTables2.png)
 </center>
 
 

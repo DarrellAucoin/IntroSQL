@@ -1753,12 +1753,7 @@ div.text_cell_render{
     margin-left:auto;
     margin-right:auto;
 }
-div.cell.code_cell {
-    background-color: rgba(171,165,131,0.3); 
-    border-radius: 10px; /* rounded borders */
-    padding: 1em;
-    margin-top: 1em;
-}
+
 </style>
 
 
@@ -1783,6 +1778,43 @@ div.cell.code_cell {
 }
 </style>
 Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://xkcd.com/327/</a></p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Content-(This-Presentation)">Content (This Presentation)<a class="anchor-link" href="#Content-(This-Presentation)">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Motivation</li>
+<li>Different Implementations of SQL<h4 id="theory">Theory</h4>
+</li>
+<li>Relational Databases</li>
+<li>The E-R Model</li>
+<li>Normalization</li>
+<li>Primary and Foreign Keys</li>
+<li>Relational Algebra Operations</li>
+<li>Constraints<h4 id="how-to-query-in-sql">How to Query in SQL</h4>
+</li>
+<li>Data Types</li>
+<li>Projection (SELECT Clause)</li>
+<li>FROM Clause</li>
+<li>Selection (WHERE Clause)</li>
+</ol>
 </div>
 </div>
 </div></section>
@@ -1903,7 +1935,46 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 <p><img src="Images/executeSQL.png" alt="alt text"></p>
 </div>
 </div>
-</div></section>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Easily construction tables from files  </li>
+</ul>
+<p><img src="Images/Import_tables.png" alt="alt text"></p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>If the table is already created it will just import the data into the table, otherwise it will create a new table</li>
+</ul>
+<p><img src="Images/import_tables2.png" alt="alt text"></p>
+</div>
+</div>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>SQLite functionality can also be extended by <a href="http://www.sqlite.org/contrib">various user created extensions</a></li>
+</ul>
+</div>
+</div>
+</div>
+    </aside></section>
     </section><section>
     <section>
     
@@ -2302,7 +2373,9 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </ol>
 </div>
 </div>
-</div></section><section>
+</div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2588,7 +2661,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz-(5-mins)">Quiz (5 mins)<a class="anchor-link" href="#Quiz-(5-mins)">&#182;</a></h3>
+<h3 id="Quiz:-Normalization">Quiz: Normalization<a class="anchor-link" href="#Quiz:-Normalization">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2598,10 +2671,27 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Normalize the following table:</p>
-<center>
-<img src="Images/quiz1.png" alt="alt text">
-</center>
+<p>Normalize the following table:  </p>
+<table>
+<thead>
+<tr>
+<th>Student Name</th>
+<th>Quest ID</th>
+<th>Course</th>
+<th>Description</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div><div class="fragment">
@@ -2679,8 +2769,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Θ<strong>-Join and Equijoin:</strong> Join tuples from two different tables where some binary condition (Θ = {≥, ≤, &gt;, &lt;, =}) between two tables attributes is true. When Θ is =, the join is called an equijoin.
-$$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
+<p>Θ<strong>-Join and Equijoin:</strong> Join tuples from two different tables where some binary condition (Θ = {≥, ≤, &gt;, &lt;, =}) between two tables attributes is true. When Θ is =, the join is called an equijoin.<br>$$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 </div>
 </div>
@@ -2702,7 +2791,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-Relational-Algebra">Quiz: Relational Algebra<a class="anchor-link" href="#Quiz:-Relational-Algebra">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2775,7 +2864,7 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Natural Join: Join based on common columns</li>
-<li>$\theta$-Join: Join based on a comparison operator between two columns<ul>
+<li>Θ-Join: Join based on a comparison operator between two columns<ul>
 <li>Equijoin: Join based on equality between columns</li>
 </ul>
 </li>
@@ -3023,10 +3112,6 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 <td>DECIMAL(p,s)</td>
 <td>Exact numerical. precision p, scale s</td>
 </tr>
-<tr>
-<td>NUMERIC(p,s)</td>
-<td>Exact numerical. precision p, scale s</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -3047,6 +3132,10 @@ $$\theta=\left\{ \ge,\le,&lt;,&gt;,=\right\}$$</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>NUMERIC(p,s)</td>
+<td>Exact numerical. precision p, scale s</td>
+</tr>
 <tr>
 <td>FLOAT(p)</td>
 <td>Floating point number. mantissa precision p</td>
@@ -3231,12 +3320,12 @@ $$x&gt;y\implies\mbox{NULL}$$</li>
 <p><strong>SELECT Statement:</strong> The SELECT statement returns a table of values (sometimes empty) as specified in the statement.  </p>
 <p><strong>SELECT Clause:</strong> The SELECT clause of a SELECT statement specifies the columns for the result set.</p>
 <pre><code>SELECT col1, col2, ...
-FROM table;
+FROM table_name;
 </code></pre><ul>
 <li>We can also specify all columns form a table  </li>
 </ul>
 <pre><code>SELECT *
-FROM table;
+FROM table_name;
 </code></pre><ul>
 <li>If we leave out &#39;<code>FROM table</code>&#39; we are effectively taking from an empty table</li>
 </ul>
@@ -3280,7 +3369,7 @@ FROM table;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[100]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3299,7 +3388,7 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[101]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3316,7 +3405,7 @@ In&nbsp;[2]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[2]:</div>
+    Out[101]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3378,7 +3467,7 @@ In&nbsp;[2]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[102]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3395,7 +3484,7 @@ In&nbsp;[3]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[3]:</div>
+    Out[102]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3476,7 +3565,7 @@ In&nbsp;[3]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[103]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3493,7 +3582,7 @@ In&nbsp;[2]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[2]:</div>
+    Out[103]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3545,7 +3634,7 @@ In&nbsp;[2]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[104]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3564,7 +3653,7 @@ In&nbsp;[4]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[4]:</div>
+    Out[104]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3664,7 +3753,7 @@ In&nbsp;[4]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[105]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3681,7 +3770,7 @@ In&nbsp;[5]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[5]:</div>
+    Out[105]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3701,7 +3790,7 @@ In&nbsp;[5]:
       <td> 8</td>
       <td> 16</td>
       <td> this is a string</td>
-      <td> 4203645934739683030</td>
+      <td> 1085249690759383083</td>
     </tr>
   </tbody>
 </table>
@@ -3721,7 +3810,51 @@ In&nbsp;[5]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<p>There are many more <a href="http://www.sqlite.org/lang_corefunc.html">core functions</a> within SQLite.</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[106]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s">&#39;&lt;iframe src=http://www.sqlite.org/lang_corefunc.html width=1000 height=600&gt;&lt;/iframe&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[106]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<iframe src=http://www.sqlite.org/lang_corefunc.html width=1000 height=600></iframe>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz:-SELECT-Clause">Quiz: SELECT Clause<a class="anchor-link" href="#Quiz:-SELECT-Clause">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -3751,7 +3884,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[107]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3768,7 +3901,7 @@ In&nbsp;[5]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[5]:</div>
+    Out[107]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3782,7 +3915,7 @@ In&nbsp;[5]:
   <tbody>
     <tr>
       <th>0</th>
-      <td>-2.249566e+18</td>
+      <td> 3.993871e+17</td>
     </tr>
   </tbody>
 </table>
@@ -3821,7 +3954,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[108]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3838,7 +3971,7 @@ In&nbsp;[6]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
+    Out[108]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3888,7 +4021,7 @@ In&nbsp;[6]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>FROM Clause:</strong> Specifies the table: either a persistant table, or a result set: a join of two or more tables or a subquery or some combination of the two. </p>
 <pre><code>SELECT col1, col2, ...
-FROM table;
+FROM table_name;
 </code></pre>
 </div>
 </div>
@@ -3921,7 +4054,7 @@ FROM event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[109]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3939,7 +4072,7 @@ In&nbsp;[7]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[109]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4037,7 +4170,7 @@ In&nbsp;[7]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-FROM-Clause">Quiz: FROM Clause<a class="anchor-link" href="#Quiz:-FROM-Clause">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -4071,7 +4204,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[110]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4089,7 +4222,7 @@ In&nbsp;[8]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[8]:</div>
+    Out[110]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4227,7 +4360,18 @@ In&nbsp;[8]:
 </ul>
 </div>
 </div>
-</div></section><section>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>More detailed descriptions of the aggregate functions within SQLite can be found <a href="http://www.sqlite.org/lang_aggfunc.html">here</a>.</p>
+</div>
+</div>
+</div>
+    </aside></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4244,7 +4388,7 @@ In&nbsp;[8]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[111]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4261,7 +4405,7 @@ In&nbsp;[9]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[111]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4316,7 +4460,7 @@ In&nbsp;[9]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[112]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4334,7 +4478,7 @@ In&nbsp;[10]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[112]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4406,7 +4550,7 @@ FROM example;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[113]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4424,7 +4568,7 @@ In&nbsp;[11]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[11]:</div>
+    Out[113]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4480,10 +4624,10 @@ In&nbsp;[11]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the SELECT clause we can specify to return only distinct tuples of columns</p>
 <pre><code>SELECT DISTINCT col1, col2, ...
-FROM table;
+FROM table_name;
 </code></pre><ul>
 <li>We can also use DISTINCT within aggregate functions making them only aggregate over distinct entries<pre><code>SELECT aggregate_function(DISTINCT column_name)
-FROM table;
+FROM table_name;
 </code></pre></li>
 </ul>
 </div>
@@ -4519,7 +4663,7 @@ FROM attendance;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[12]:
+In&nbsp;[114]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4537,7 +4681,7 @@ In&nbsp;[12]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[12]:</div>
+    Out[114]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4595,7 +4739,7 @@ In&nbsp;[12]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-DISTINCT">Quiz: DISTINCT<a class="anchor-link" href="#Quiz:-DISTINCT">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -4626,7 +4770,7 @@ FROM member;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[115]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4644,7 +4788,7 @@ In&nbsp;[13]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[13]:</div>
+    Out[115]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4736,7 +4880,7 @@ FROM member;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[116]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4754,7 +4898,7 @@ In&nbsp;[14]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[14]:</div>
+    Out[116]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4810,7 +4954,7 @@ In&nbsp;[14]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To increase the readability of SQL as well as the result set, we can give columns new names:</p>
 <pre><code>SELECT col AS new_name
-FROM table;
+FROM table_name;
 </code></pre><ul>
 <li>Column aliases make the final table more readiable and workiable for subqueries</li>
 </ul>
@@ -4866,7 +5010,7 @@ FROM example;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[117]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4886,7 +5030,7 @@ In&nbsp;[15]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
+    Out[117]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4930,7 +5074,7 @@ In&nbsp;[15]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-Aliases">Quiz: Aliases<a class="anchor-link" href="#Quiz:-Aliases">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -4964,7 +5108,7 @@ FROM event AS e;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[118]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4982,7 +5126,7 @@ In&nbsp;[16]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[16]:</div>
+    Out[118]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5085,7 +5229,7 @@ In&nbsp;[16]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>WHERE</strong> clauses filters the result set, removing rows where the condition returns either FALSE or NULL.</p>
 <pre><code>SELECT col1, col2, ...
-FROM table
+FROM table_name
 WHERE condition;
 </code></pre>
 </div>
@@ -5120,7 +5264,7 @@ WHERE type = &#39;social&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[119]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5139,7 +5283,7 @@ In&nbsp;[17]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[17]:</div>
+    Out[119]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5323,7 +5467,7 @@ WHERE name LIKE &#39;F%&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[18]:
+In&nbsp;[120]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5342,7 +5486,7 @@ In&nbsp;[18]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[18]:</div>
+    Out[120]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5410,7 +5554,7 @@ In&nbsp;[18]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A group of filter conditions can be linked together with AND or OR operators. </p>
 <pre><code>SELECT col1, col2, ...
-FROM table
+FROM table_name
 WHERE (condition1 AND condition2 ) OR condition3;
 </code></pre>
 </div>
@@ -5444,7 +5588,7 @@ WHERE name LIKE &#39;_a%&#39; OR  name LIKE &#39;%b&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[121]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5463,7 +5607,7 @@ In&nbsp;[19]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[19]:</div>
+    Out[121]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5533,7 +5677,7 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-Filtering-(WHERE-Clause)">Quiz: Filtering (WHERE Clause)<a class="anchor-link" href="#Quiz:-Filtering-(WHERE-Clause)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -5568,7 +5712,7 @@ WHERE name LIKE &#39;Intro%&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[122]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5587,7 +5731,7 @@ In&nbsp;[10]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[122]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5651,7 +5795,7 @@ WHERE name BETWEEN &#39;A&#39; AND &#39;G&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[123]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5670,7 +5814,7 @@ In&nbsp;[16]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[16]:</div>
+    Out[123]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5784,7 +5928,7 @@ In&nbsp;[16]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-Practice-Questions">Quiz: Practice Questions<a class="anchor-link" href="#Quiz:-Practice-Questions">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -5816,7 +5960,7 @@ WHERE start_time IS NOT NULL;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[124]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5835,7 +5979,7 @@ In&nbsp;[21]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[21]:</div>
+    Out[124]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5898,7 +6042,7 @@ WHERE start_time IS NULL;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[125]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5917,7 +6061,7 @@ In&nbsp;[22]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[22]:</div>
+    Out[125]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6003,7 +6147,7 @@ WHERE major in (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;);
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[126]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6022,7 +6166,7 @@ In&nbsp;[23]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[23]:</div>
+    Out[126]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6184,7 +6328,7 @@ FROM exec_position;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[24]:
+In&nbsp;[127]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6202,7 +6346,7 @@ In&nbsp;[24]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[24]:</div>
+    Out[127]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6276,7 +6420,7 @@ FROM exec_position;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[25]:
+In&nbsp;[128]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6294,7 +6438,7 @@ In&nbsp;[25]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[25]:</div>
+    Out[128]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6370,7 +6514,7 @@ In&nbsp;[25]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <pre><code>SELECT col1, col2, ..., aggregate_function
-FROM table
+FROM table_name
 GROUP BY col1, col2, ...;
 </code></pre>
 </div>
@@ -6466,7 +6610,7 @@ GROUP BY type;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[26]:
+In&nbsp;[129]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6485,7 +6629,7 @@ In&nbsp;[26]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[26]:</div>
+    Out[129]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6571,7 +6715,7 @@ HAVING COUNT(*) &gt;= 2;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[130]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6591,7 +6735,7 @@ In&nbsp;[6]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[6]:</div>
+    Out[130]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6684,7 +6828,7 @@ In&nbsp;[6]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <pre><code>SELECT col1, col2, ..., aggregate_function
-FROM table
+FROM table_name
 GROUP BY col1, col2, ... WITH ROLLUP;
 </code></pre>
 </div>
@@ -6719,7 +6863,7 @@ GROUP BY faculty, major WITH ROLLUP;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[16]:
+In&nbsp;[131]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6743,7 +6887,7 @@ In&nbsp;[16]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[16]:</div>
+    Out[131]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6847,7 +6991,7 @@ In&nbsp;[16]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-Aggregation-(GROUP-BY-Clause)">Quiz: Aggregation (GROUP BY Clause)<a class="anchor-link" href="#Quiz:-Aggregation-(GROUP-BY-Clause)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -6879,7 +7023,7 @@ GROUP BY event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[132]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6898,7 +7042,7 @@ In&nbsp;[28]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[28]:</div>
+    Out[132]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -7062,7 +7206,7 @@ FROM member AS m1 CROSS JOIN member AS m2;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[29]:
+In&nbsp;[133]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -7080,7 +7224,7 @@ In&nbsp;[29]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[29]:</div>
+    Out[133]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -7429,7 +7573,7 @@ WHERE m1.name &gt; m2.name;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[30]:
+In&nbsp;[134]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -7448,7 +7592,7 @@ In&nbsp;[30]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[30]:</div>
+    Out[134]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -7899,7 +8043,7 @@ ORDER BY events_attended;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[135]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -7919,7 +8063,7 @@ In&nbsp;[9]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[135]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8165,7 +8309,7 @@ ORDER BY events_attended;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[136]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8185,7 +8329,7 @@ In&nbsp;[7]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[136]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8428,7 +8572,7 @@ FROM exec AS e NATURAL JOIN exec_position AS ep;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[33]:
+In&nbsp;[137]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8446,7 +8590,7 @@ In&nbsp;[33]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[33]:</div>
+    Out[137]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8622,7 +8766,7 @@ In&nbsp;[33]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-Joining-Tables">Quiz: Joining Tables<a class="anchor-link" href="#Quiz:-Joining-Tables">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -8655,7 +8799,7 @@ FROM exec INNER JOIN event ON exec.questid = event.organizer;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[34]:
+In&nbsp;[138]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8673,7 +8817,7 @@ In&nbsp;[34]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[34]:</div>
+    Out[138]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8811,7 +8955,7 @@ WHERE e.questid IN (SELECT poster FROM event);
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[35]:
+In&nbsp;[139]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8830,7 +8974,7 @@ In&nbsp;[35]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[35]:</div>
+    Out[139]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -8930,7 +9074,7 @@ FROM exec AS e;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[36]:
+In&nbsp;[140]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -8950,7 +9094,7 @@ In&nbsp;[36]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[36]:</div>
+    Out[140]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -9074,7 +9218,7 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3>
+<h3 id="Quiz:-Subqueries">Quiz: Subqueries<a class="anchor-link" href="#Quiz:-Subqueries">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -9118,16 +9262,308 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}
 </div>
 </div>
 </div>
-    </div><div style=display:none>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="put-in-more-questions">Put in more questions</h1>
+<p><strong>Q:</strong> Using a non-correlated subquery, what are the names, locations, and descriptions of events that served pizza?</p>
+<ol>
+<li>Break the problem into smaller pieces: What are the events that served pizza?</li>
+<li>Only retrieve values from the table <code>event</code> that <code>event.name</code> matches those values</li>
+</ol>
 </div>
 </div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT event 
+FROM expenses 
+WHERE expense = &#39;pizza&#39;;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[141]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT event </span><span class="se">\</span>
+<span class="s">FROM expenses </span><span class="se">\</span>
+<span class="s">WHERE expense = &#39;pizza&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[141]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>event</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>          BOT</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> Intro to SQL</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>    Prof Talk</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>  Prof Talk 2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>  Prof Talk 3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Second, only retrieve values from the table <code>event</code> that <code>event.name</code> matches those values</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name, location, description 
+FROM event 
+WHERE name IN (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;);
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[142]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name, location, description </span><span class="se">\</span>
+<span class="s">FROM event  </span><span class="se">\</span>
+<span class="s">WHERE name IN (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[142]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>location</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>          BOT</td>
+      <td>   C &amp; D</td>
+      <td> Come and play games with your fellow stats Clu...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> Intro to SQL</td>
+      <td> MC-3003</td>
+      <td> SQL is a relational database language and alon...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>    Prof Talk</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>  Prof Talk 2</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>  Prof Talk 3</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or alternatively, using a join:</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT e.name, e.location, e.description 
+FROM (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;) AS exp INNER JOIN event AS e 
+  ON exp.event = e.name;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[143]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT e.name, e.location, e.description </span><span class="se">\</span>
+<span class="s">FROM (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;) AS exp INNER JOIN event AS e </span><span class="se">\</span>
+<span class="s">  ON exp.event = e.name&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[143]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e.name</th>
+      <th>e.location</th>
+      <th>e.description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>          BOT</td>
+      <td>   C &amp; D</td>
+      <td> Come and play games with your fellow stats Clu...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> Intro to SQL</td>
+      <td> MC-3003</td>
+      <td> SQL is a relational database language and alon...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>    Prof Talk</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>  Prof Talk 2</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>  Prof Talk 3</td>
+      <td>    None</td>
+      <td>                                              None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div></section>
     </section><section>
@@ -9229,7 +9665,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[37]:
+In&nbsp;[144]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -9250,7 +9686,7 @@ In&nbsp;[37]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[37]:</div>
+    Out[144]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -9588,7 +10024,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[38]:
+In&nbsp;[145]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -9609,7 +10045,7 @@ In&nbsp;[38]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[38]:</div>
+    Out[145]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -9724,7 +10160,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[39]:
+In&nbsp;[146]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -9745,7 +10181,7 @@ In&nbsp;[39]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[39]:</div>
+    Out[146]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -9977,7 +10413,7 @@ FROM event AS e INNER JOIN cost ON e.name = cost.event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[40]:
+In&nbsp;[147]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -9999,7 +10435,7 @@ In&nbsp;[40]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[40]:</div>
+    Out[147]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -10069,6 +10505,671 @@ In&nbsp;[40]:
       <td> educational</td>
       <td>  90.0</td>
       <td>  75.68</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz:-WITH-Clause-(HARD)">Quiz: WITH Clause (HARD)<a class="anchor-link" href="#Quiz:-WITH-Clause-(HARD)">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> MathSoc only provides a maximum cap on social events based on the formula below. What is the max cap for social expenses and is Stats Club over this limit?  </p>
+<ul>
+<li>Membership fee for Stats Club is 2 dollars</li>
+</ul>
+<p>$$\begin{aligned}\mbox{Social expenses} &amp; = &amp; \max\left\{ 250,\left(\mbox{MathSoc Members}\right)\times\left(5+\left(\mbox{Member fee}\right)\right)\right\} \\
+ &amp; = &amp; \max\left\{ 250,\left(\mbox{MathSoc Members}\right)\times7\right\} 
+\end{aligned}$$  </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Break the problem into smaller problems:</p>
+<ul>
+<li>What are the total expenses for social events?</li>
+<li>What is the max budget for social events?</li>
+</ul>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Smaller Problems:</p>
+<ul>
+<li>What are the total expenses for social events?<ul>
+<li>What events are social events?</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>What is the max cap for social events?<ul>
+<li>What is the result of the formula
+$$\left(\mbox{MathSoc Members}\right)\times7$$<ul>
+<li>What are the number of Stats Club members who are in the Math Faculty (aka MathSoc members)?</li>
+</ul>
+</li>
+<li>How do we find the max value between this number and 250?  </li>
+</ul>
+</li>
+</ul>
+<h3 id="think-about-how-to-solve-this-for-5-mins">Think about how to solve this for 5 mins</h3>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For total social expenses, we need to find the sum of expenses filtering out non-social expenses.<br><strong>Part 1:</strong> What events are social?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT name 
+FROM event 
+WHERE type = &#39;social&#39;;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[148]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT name </span><span class="se">\</span>
+<span class="s">FROM event </span><span class="se">\</span>
+<span class="s">WHERE type = &#39;social&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[148]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> BOT</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> EOT</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Part 2:</strong> What are the total social expenses?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT SUM(price) 
+FROM expenses 
+WHERE event IN (SELECT name FROM event WHERE type = &#39;social&#39;);
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[149]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT SUM(price) </span><span class="se">\</span>
+<span class="s">FROM expenses </span><span class="se">\</span>
+<span class="s">WHERE event IN (SELECT name FROM event WHERE type = &#39;social&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[149]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SUM(price)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 219.22</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or alternatively, we can join tables event and expenses and filter out non-social events:  </p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT SUM(exp.price) 
+FROM event AS e INNER JOIN expenses AS exp 
+  ON e.name = exp.event 
+WHERE e.type = &#39;social&#39;;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[150]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT SUM(exp.price) </span><span class="se">\</span>
+<span class="s">FROM event AS e INNER JOIN expenses AS exp </span><span class="se">\</span>
+<span class="s">  ON e.name = exp.event </span><span class="se">\</span>
+<span class="s">WHERE e.type = &#39;social&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[150]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SUM(exp.price)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 219.22</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>At this point we have one half of the problem solved, the final result would look a bit like:</p>
+<pre><code>WITH soc_cost (expense) AS 
+    (SELECT SUM(exp.price) 
+     FROM event AS e INNER JOIN expenses AS exp 
+       ON e.name = exp.event 
+     WHERE type = &#39;social&#39;),
+soc_budget (budget) AS
+     (SELECT statement)
+SELECT statement;
+</code></pre>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Part 3:</strong> We need to calculate the formula
+$$\left(\mbox{MathSoc Members}\right)\times7$$</p>
+<ul>
+<li>First, what is the number of MathSoc Members (aka number of members who are in the Math Faculty)?  </li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT COUNT(*) 
+FROM member 
+WHERE faculty = &#39;Math&#39;;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[151]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT COUNT(*) </span><span class="se">\</span>
+<span class="s">FROM member </span><span class="se">\</span>
+<span class="s">WHERE faculty = &#39;Math&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[151]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT(*)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 33</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Part 4:</strong> What is the result of the formula<br>$$\left(\mbox{MathSoc Members}\right)\times7$$</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT COUNT(*) * 7 
+FROM member 
+WHERE faculty = &#39;Math&#39;;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[152]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT COUNT(*) * 7 </span><span class="se">\</span>
+<span class="s">FROM member </span><span class="se">\</span>
+<span class="s">WHERE faculty = &#39;Math&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[152]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT(*) * 7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 231</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Part 5:</strong> What is the max of this number and 250?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT Max(soc_budget) 
+FROM (SELECT COUNT(*) * 7 AS soc_budget 
+      FROM member 
+      WHERE faculty = &#39;Math&#39; 
+      UNION 
+      SELECT 250);
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[153]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT Max(soc_budget) </span><span class="se">\</span>
+<span class="s">FROM (SELECT COUNT(*) * 7 AS soc_budget </span><span class="se">\</span>
+<span class="s">FROM member </span><span class="se">\</span>
+<span class="s">WHERE faculty = &#39;Math&#39; </span><span class="se">\</span>
+<span class="s">UNION </span><span class="se">\</span>
+<span class="s">SELECT 250)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[153]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Max(soc_budget)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 250</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Joining all of this up together:</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>WITH soc_cost (expense) AS 
+    (SELECT SUM(exp.price) 
+     FROM event AS e INNER JOIN expenses AS exp 
+       ON e.name = exp.event 
+     WHERE e.type = &#39;social&#39;),
+soc_budget (budget) AS 
+    (SELECT Max(soc_budget) 
+     FROM (SELECT COUNT(*) * 7 AS soc_budget 
+           FROM member 
+           WHERE faculty = &#39;Math&#39; 
+           UNION 
+           SELECT 250)
+    )
+SELECT expense, budget, budget - expense
+FROM soc_cost CROSS JOIN soc_budget;
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[154]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;WITH soc_cost (expense) AS </span><span class="se">\</span>
+<span class="s">    (SELECT SUM(exp.price) </span><span class="se">\</span>
+<span class="s">     FROM event AS e INNER JOIN expenses AS exp </span><span class="se">\</span>
+<span class="s">       ON e.name = exp.event </span><span class="se">\</span>
+<span class="s">     WHERE e.type = &#39;social&#39;), </span><span class="se">\</span>
+<span class="s">soc_budget (budget) AS </span><span class="se">\</span>
+<span class="s">    (SELECT Max(soc_budget) </span><span class="se">\</span>
+<span class="s">     FROM (SELECT COUNT(*) * 7 AS soc_budget </span><span class="se">\</span>
+<span class="s">           FROM member </span><span class="se">\</span>
+<span class="s">           WHERE faculty = &#39;Math&#39; </span><span class="se">\</span>
+<span class="s">           UNION </span><span class="se">\</span>
+<span class="s">           SELECT 250) </span><span class="se">\</span>
+<span class="s">    ) </span><span class="se">\</span>
+<span class="s">SELECT expense, budget, budget - expense </span><span class="se">\</span>
+<span class="s">FROM soc_cost CROSS JOIN soc_budget&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[154]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>expense</th>
+      <th>budget</th>
+      <th>budget - expense</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 219.22</td>
+      <td> 250</td>
+      <td> 30.78</td>
     </tr>
   </tbody>
 </table>
@@ -10166,7 +11267,7 @@ SELECT e.name, e.type, e.budget, cost.expenses,
     CASE 
     WHEN e.budget - cost.expenses &lt; 0 THEN &#39;Over budget&#39; 
     ELSE NULL
-    END AS warning 
+END AS warning 
 FROM event AS e INNER JOIN cost ON e.name = cost.event;
 </code></pre>
 </div>
@@ -10177,7 +11278,7 @@ FROM event AS e INNER JOIN cost ON e.name = cost.event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[41]:
+In&nbsp;[155]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -10203,7 +11304,7 @@ In&nbsp;[41]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[41]:</div>
+    Out[155]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -10294,6 +11395,146 @@ In&nbsp;[41]:
 </div>
 
 </div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz:-CASE-Expressions">Quiz: CASE Expressions<a class="anchor-link" href="#Quiz:-CASE-Expressions">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q:</strong> Suppose we are interested in the healthiness of our food options at Stats Club events. A score of various foods was given below. What is the average &#39;healthiness&#39; of Stats Club events?</p>
+<table>
+<thead>
+<tr>
+<th>Food</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>donuts</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>pop</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>fries</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>pizza</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>cookies</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>coffee</td>
+<td>0</td>
+</tr>
+<tr>
+<td>water</td>
+<td>2</td>
+</tr>
+<tr>
+<td>meals</td>
+<td>2</td>
+</tr>
+<tr>
+<td>veggie platter</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT AVG(CASE 
+    WHEN expense IN (&#39;donuts&#39;, &#39;pop&#39;, &#39;fries&#39;) THEN -2
+    WHEN expense IN (&#39;pizza&#39;, &#39;cookies&#39;) THEN -1
+    WHEN expense IN (&#39;coffee&#39;) THEN 0
+    WHEN expense IN (&#39;water&#39;, &#39;meals&#39;) THEN 2
+    WHEN expense IN (&#39;veggie platter&#39;) THEN 3
+END) AS avg_score
+FROM expenses;
+</code></pre>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[156]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT AVG(CASE </span><span class="se">\</span>
+<span class="s">    WHEN expense IN (&#39;donuts&#39;, &#39;pop&#39;, &#39;fries&#39;) THEN -2 </span><span class="se">\</span>
+<span class="s">    WHEN expense IN (&#39;pizza&#39;, &#39;cookies&#39;) THEN -1 </span><span class="se">\</span>
+<span class="s">    WHEN expense IN (&#39;coffee&#39;) THEN 0 </span><span class="se">\</span>
+<span class="s">    WHEN expense IN (&#39;water&#39;, &#39;meals&#39;) THEN 2 </span><span class="se">\</span>
+<span class="s">    WHEN expense IN (&#39;veggie platter&#39;) THEN 3 </span><span class="se">\</span>
+<span class="s">END) AS avg_score </span><span class="se">\</span>
+<span class="s">FROM expenses&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[156]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>avg_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.818182</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
     </div></section>
     </section><section>
     <section>
@@ -10314,7 +11555,7 @@ In&nbsp;[41]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>ORDER BY Clause:</strong> Rearranges the rows of a result set according to a tuple of columns.</p>
-<pre><code>SELECT column-list 
+<pre><code>SELECT column_list 
 FROM table_name 
 ORDER BY column1, column2, .. columnN [ASC | DESC];
 </code></pre><p><code>ASC</code> is ascending (default)  </p>
@@ -10391,7 +11632,7 @@ LIMIT no_of_rows OFFSET row_num;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[157]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -10407,7 +11648,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[43]:
+In&nbsp;[158]:
 </div>
 <div class="inner_cell">
     <div class="input_area">

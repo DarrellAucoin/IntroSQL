@@ -91,6 +91,18 @@ in your favorite browser)
 
 ![alt text](Images/executeSQL.png)
 
+- Easily construction tables from files
+
+![alt text](Images/Import_tables.png)
+
+- If the table is already created it will just import the data into the table,
+otherwise it will create a new table
+
+![alt text](Images/import_tables2.png)
+
+- SQLite functionality can also be extended by [various user created
+extensions](http://www.sqlite.org/contrib)
+
 # Motivation
 
 __Q:__ Why learn a database lanugage?
@@ -323,7 +335,7 @@ __Foreign key:__ A tuple of columns identifying a relationship to another table
 ![alt text](Images/primary_keys.png)
 </center>
 
-### Quiz (5 mins)
+### Quiz: Normalization
 
 Normalize the following table:
 <center>
@@ -349,12 +361,13 @@ values is common between them)
 Θ__-Join and Equijoin:__ Join tuples from two different tables where some binary
 condition (Θ = {≥, ≤, >, <, =}) between two tables attributes is true. When Θ is
 =, the join is called an equijoin.
+
 $$\theta=\left\{ \ge,\le,<,>,=\right\}$$
 
 __Set Operations:__ Set theory's unions, set difference, and cartesian product
 of tuples performed on tuples of different tables.
 
-### Quiz
+### Quiz: Relational Algebra
 
 __Q1:__ What kind of operation is performed on the following table?
 <center>
@@ -486,13 +499,13 @@ __SELECT Clause:__ The SELECT clause of a SELECT statement specifies the columns
 for the result set.
 ```
 SELECT col1, col2, ...
-FROM table;
+FROM table_name;
 ```
 - We can also specify all columns form a table
 
 ```
 SELECT *
-FROM table;
+FROM table_name;
 ```
 - If we leave out '`FROM table`' we are effectively taking from an empty table
 
@@ -728,7 +741,21 @@ SELECT ABS(-8), LENGTH('This is a String'), LOWER('ThIS Is A StRiNg'), RANDOM();
 
 
 
-### Quiz
+There are many more [core functions](http://www.sqlite.org/lang_corefunc.html)
+within SQLite.
+
+
+    from IPython.display import HTML
+    HTML('<iframe src=http://www.sqlite.org/lang_corefunc.html width=1000 height=400></iframe>')
+
+
+
+
+<iframe src=http://www.sqlite.org/lang_corefunc.html width=1000 height=400></iframe>
+
+
+
+### Quiz: SELECT Clause
 
 Calculate the average of 2 random numbers.
 
@@ -802,7 +829,7 @@ __FROM Clause:__ Specifies the table: either a persistant table, or a result
 set: a join of two or more tables or a subquery or some combination of the two.
 ```
 SELECT col1, col2, ...
-FROM table;
+FROM table_name;
 ```
 
 __Example:__ What are the names, type, times and locations for Stats Club?
@@ -903,7 +930,7 @@ FROM event;
 
 
 
-### Quiz
+### Quiz: FROM Clause
 
 __Q:__ Who are the execs for Stats Club, and what are their positions, and
 emails?
@@ -1008,6 +1035,9 @@ entries.
 | GROUP_CONCAT(column) | Concatenation of column strings |
 
 - There are more aggregate functions for other implementations of SQL
+
+More detailed descriptions of the aggregate functions within SQLite can be found
+[here](http://www.sqlite.org/lang_aggfunc.html).
 
 ```
 SELECT COUNT( 12 ), COUNT('ssdf'), COUNT(NULL), SUM(23), SUM(0), SUM(NULL),
@@ -1159,13 +1189,13 @@ FROM example;
 In the SELECT clause we can specify to return only distinct tuples of columns
 ```
 SELECT DISTINCT col1, col2, ...
-FROM table;
+FROM table_name;
 ```
 - We can also use DISTINCT within aggregate functions making them only aggregate
 over distinct entries
 ```
 SELECT aggregate_function(DISTINCT column_name)
-FROM table;
+FROM table_name;
 ```
 
 __Example:__ What events have members attended?
@@ -1227,7 +1257,7 @@ FROM attendance;
 
 
 
-### Quiz
+### Quiz: DISTINCT
 
 __Q:__ What are the __distinct__ majors of Stats Club members?
 
@@ -1331,7 +1361,7 @@ To increase the readability of SQL as well as the result set, we can give
 columns new names:
 ```
 SELECT col AS new_name
-FROM table;
+FROM table_name;
 ```
 - Column aliases make the final table more readiable and workiable for
 subqueries
@@ -1398,7 +1428,7 @@ FROM example;
 
 
 
-### Quiz
+###  Quiz: Aliases
 
 Perform a query using a table alias, and use this table alias when referencing
 the column i.e. `table_alias.column_name`
@@ -1498,7 +1528,7 @@ returns either FALSE or NULL.
 
 ```
 SELECT col1, col2, ...
-FROM table
+FROM table_name
 WHERE condition;
 ```
 
@@ -1642,7 +1672,7 @@ A group of filter conditions can be linked together with AND or OR operators.
 
 ```
 SELECT col1, col2, ...
-FROM table
+FROM table_name
 WHERE (condition1 AND condition2 ) OR condition3;
 ```
 
@@ -1719,7 +1749,7 @@ WHERE name LIKE '_a%' OR  name LIKE '%b';
 
 
 
-### Quiz
+### Quiz: Filtering (WHERE Clause)
 
 __Q:__ What events for Stats Club are introductory talks?
 - Introductory talk names start with 'Intro'
@@ -1860,7 +1890,7 @@ WHERE name BETWEEN 'A' AND 'G';
 
 ## Further Practice Questions?
 
-### Quiz
+### Quiz: Practice Questions
 
 __Q:__ What events have dates specified?
 
@@ -2209,7 +2239,7 @@ column(s) and aggregate functions on them.
 
 ```
 SELECT col1, col2, ..., aggregate_function
-FROM table
+FROM table_name
 GROUP BY col1, col2, ...;
 ```
 
@@ -2363,7 +2393,7 @@ applied to each level of the GROUP BY hierachy.
 
 ```
 SELECT col1, col2, ..., aggregate_function
-FROM table
+FROM table_name
 GROUP BY col1, col2, ... WITH ROLLUP;
 ```
 
@@ -2473,7 +2503,7 @@ This is a total for those groups.
 There is also one row with NULL values for faculty and major, this is the grand
 total of all members.
 
-### Quiz
+### Quiz: Aggregation (GROUP BY Clause)
 
 __Q:__ What is the attendance for each Stats Club event?
 
@@ -3888,7 +3918,7 @@ FROM exec AS e NATURAL JOIN exec_position AS ep;
 
 
 
-### Quiz
+### Quiz: Joining Tables
 
 __Q:__ What are the email addresses and phone numbers of stats club execs who
 are in change or organizing at least one event?
@@ -4143,7 +4173,7 @@ $$\mbox{Correlated subquery}\prec\mbox{Non-Correlated
 subquery}\prec\mbox{Joins}$$
 
 
-### Quiz
+### Quiz: Subqueries
 
 __Q:__ Where can a Non-Correlated subquery can be placed?
 
@@ -4153,7 +4183,174 @@ __Q:__ Where can a Non-Correlated subquery can be placed?
 
 __A:__ in the __SELECT__, __WHERE__, and __HAVING__ clauses
 
-#Put in more questions
+__Q:__ Using a non-correlated subquery, what are the names, locations, and
+descriptions of events that served pizza?
+- First, break the problem into smaller pieces: What are the events that served
+pizza?
+
+```
+SELECT event
+FROM expenses
+WHERE expense = 'pizza';
+```
+
+
+    pd.read_sql_query(
+    "SELECT event \
+    FROM expenses \
+    WHERE expense = 'pizza'", con)
+
+
+
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>event</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>         BOT</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>   Prof Talk</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> Prof Talk 2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> Prof Talk 3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+- Second, only retrieve values from the table `event` that `event.name` matches
+those values
+
+```
+SELECT name, location, description
+FROM event AS e
+WHERE e.name in (SELECT event FROM expenses WHERE expense = 'pizza');
+```
+
+
+    pd.read_sql_query(
+    "SELECT name, location, description \
+    FROM event AS e \
+    WHERE e.name in (SELECT event FROM expenses WHERE expense = 'pizza')", con)
+
+
+
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>location</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>         BOT</td>
+      <td> C &amp; D</td>
+      <td> Come and play games with your fellow stats Clu...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>   Prof Talk</td>
+      <td>  None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> Prof Talk 2</td>
+      <td>  None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> Prof Talk 3</td>
+      <td>  None</td>
+      <td>                                              None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Or alternatively, using a join:
+
+```
+SELECT e.name, e.location, e.description
+FROM (SELECT event FROM expenses WHERE expense = 'pizza') AS exp INNER JOIN
+event AS e
+  ON exp.event = e.name;
+```
+
+
+    pd.read_sql_query(
+    "SELECT e.name, e.location, e.description \
+    FROM (SELECT event FROM expenses WHERE expense = 'pizza') AS exp INNER JOIN event AS e \
+      ON exp.event = e.name", con)
+
+
+
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e.name</th>
+      <th>e.location</th>
+      <th>e.description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>         BOT</td>
+      <td> C &amp; D</td>
+      <td> Come and play games with your fellow stats Clu...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>   Prof Talk</td>
+      <td>  None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> Prof Talk 2</td>
+      <td>  None</td>
+      <td>                                              None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> Prof Talk 3</td>
+      <td>  None</td>
+      <td>                                              None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 ## Set Operations
 
