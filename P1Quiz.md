@@ -1,3 +1,37 @@
+### Quiz: Normalization
+
+Normalize the following table:
+
+| Student Name | Quest ID | Course | Description | Section |
+|--------------|----------|--------|-------------|---------|
+| | | | | |
+
+<center>
+![alt text](Images/quiz1sol.png)
+</center>
+
+### Quiz: Relational Algebra
+
+__Q1:__ What kind of operation is performed on the following table?
+<center>
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz2a.png)
+</center>
+
+-Projection
+
+__Q2:__ What kind of operation is performed on the following table?
+<center>
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz2b.png)
+</center>
+
+- Selection
+
+__Q3:__ What kinds of joins can performed on tables?
+
+- Natural Join: Join based on common columns
+- Θ-Join: Join based on a comparison operator between two columns
+    - Equijoin: Join based on equality between columns
+
 ### Quiz: SELECT Clause
 
 Calculate the average of 2 random numbers.
