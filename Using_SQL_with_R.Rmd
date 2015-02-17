@@ -128,6 +128,8 @@ dbDisconnect(con)
 
 ## Connecting to Local File System using MySQL
 
+I transferred the data in stats_club.db to MySQL on my laptop.
+
 ```{r}
 library("RMySQL") 
 m = dbDriver("MySQL")

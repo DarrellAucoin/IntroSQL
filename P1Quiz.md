@@ -712,6 +712,8 @@ FROM exec_position;
 
 __Q:__ How many different Stats Club exec positions are there?
 - Note that we can use DISTINCT within aggregate functions
+- There is a one-to-many relationship between exec and exec_positions
+
 
 ```sql
 SELECT COUNT(DISTINCT position) AS num_exec_positions
