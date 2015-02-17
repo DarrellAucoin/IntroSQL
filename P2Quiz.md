@@ -566,8 +566,9 @@ FROM soc_cost CROSS JOIN soc_budget;
 
 __Q:__ Suppose we are interested in the healthiness of our food options at Stats
 Club events. A score of various foods was given below. What is the average
-'healthiness' of Stats Club events?
+'healthiness' of Stats Club events?  
 
+- The average of the score values for all of the foods at Stats Club events.
 
 | Food | Score |
 |------|-------|

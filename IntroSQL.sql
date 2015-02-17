@@ -160,7 +160,7 @@ WITH cost (event, expenses) AS
 SELECT e.name, e.type, e.budget, cost.expenses, 
     CASE 
     WHEN e.budget - cost.expenses < 0 THEN 'Over budget' 
-    ELSE 'On budget' 
+    ELSE NULL
     END AS warning 
 FROM event AS e INNER JOIN cost ON e.name = cost.event;
 
