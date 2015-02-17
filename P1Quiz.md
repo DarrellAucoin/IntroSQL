@@ -17,19 +17,19 @@ __Q1:__ What kind of operation is performed on the following table?
 ![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz2a.png)
 </center>
 
--Projection
+- Projection: Projection is returning a subset of the columns in a table
 
 __Q2:__ What kind of operation is performed on the following table?
 <center>
 ![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz2b.png)
 </center>
 
-- Selection
+- Selection: Selection is a returning a subset of the rows in a table.
 
 __Q3:__ What kinds of joins can performed on tables?
 
-- Natural Join: Join based on common columns
-- Θ-Join: Join based on a comparison operator between two columns
+- Natural Join: Join based on common columns (names and datatypes have to be the same)
+- Θ-Join: Join based on a comparison operator between two columns 
     - Equijoin: Join based on equality between columns
 
 ### Quiz: SELECT Clause

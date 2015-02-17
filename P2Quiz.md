@@ -316,7 +316,8 @@ Smaller Problems:
 ### Think about how to solve this for 5 mins
 
 For total social expenses, we need to find the sum of expenses filtering out
-non-social expenses.
+non-social expenses.  
+
 __Part 1:__ What events are social?
 
 ```sql
@@ -377,7 +378,8 @@ WHERE event IN (SELECT name FROM event WHERE type = 'social');
 
 
 Or alternatively, we can join tables event and expenses and filter out non-
-social events:
+social events:  
+
 
 ```sql
 SELECT SUM(exp.price)
@@ -420,8 +422,11 @@ soc_budget (budget) AS
 SELECT statement;
 ```
 
-__Part 3:__ We need to calculate the formula
-$$\left(\mbox{MathSoc Members}\right)\times7$$
+__Part 3:__ We need to calculate the formula  
+
+<center>
+(MathSoc Members) * 7
+</center>
 - First, what is the number of MathSoc Members (aka number of members who are in
 the Math Faculty)?
 

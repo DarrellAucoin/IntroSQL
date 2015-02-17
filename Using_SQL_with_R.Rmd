@@ -120,7 +120,7 @@ library(RSQLite)
 m = dbDriver("SQLite")
 con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
 result = dbGetQuery(con,
-                   "SELECT name, type, start_time, end_time, location
+                   "SELECT name, start_time, location
                    FROM event;")
 result
 dbDisconnect(con)
@@ -128,23 +128,24 @@ dbDisconnect(con)
 
 ## Connecting to Local File System using MySQL
 
-```r
+```{r}
 library("RMySQL") 
 m = dbDriver("MySQL")
-conn = dbConnect(m, user="user_name", db="database_name",
-				host="localhost",
-				password="password")
+conn = dbConnect(m, user="darrell", db="stats_club",
+                 host="localhost",
+                 password="pass")
 query = dbSendQuery(conn,
-                   "select *
-                   from table_name;")
+                    "SELECT name, start_time, location
+                   FROM event")
 result = fetch(query)
-head(result)
+dbClearResult(query)
+print(result)
 dbDisconnect(conn)
 ```
 
 ## Connecting to Remote Server using MySQL
 
-```r
+```{r}
 hg19 = dbConnect(MySQL(), user="genome", db="hg19", 
 	host="genome-mysql.cse.ucsc.edu")
 result = dbGetQuery(hg19, 
