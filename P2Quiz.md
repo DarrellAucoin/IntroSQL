@@ -612,3 +612,78 @@ FROM expenses;
 </div>
 
 
+### Quiz: ORDER BY and LIMIT Clause
+
+__Q:__ What are the top 10 highest priced items in expenses?
+
+```
+SELECT expense, price
+FROM expenses
+ORDER BY price
+LIMIT 10;
+```
+
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>expense</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>   water</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>   water</td>
+      <td> 10.52</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>   water</td>
+      <td> 10.52</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>     pop</td>
+      <td> 13.23</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>     pop</td>
+      <td> 13.23</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>     pop</td>
+      <td> 15.34</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>     pop</td>
+      <td> 15.65</td>
+    </tr>
+  </tbody>
+</table>
+</div>

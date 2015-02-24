@@ -1,0 +1,168 @@
+---
+title: "Using SQL with R"
+author: "Darrell Aucoin (Stats Club)"
+date: "February 24, 2015"
+output: ioslides_presentation
+---
+
+## Required Packages
+For SQL within R, we usually need two packages:
+
+1. __DBI__: R Database Interface
+
+2. Specific package for the individual SQL implementation (MySQL, SQLite, Oracle, etc.).  
+  - Package `RSQLite` for SQLite
+
+## DBI Functions: Driver Specification
+
+DBI contains various virtual classes and functions in connecting and querying a database:
+
+__dbDriver__ Driver specifying the operations for creating connections to SQL Servers   
+
+For SQLite:
+```r
+m = dbDriver("RSQLite") # equivalent to SQLite()
+```
+
+For MySQL:  
+```r
+m = dbDriver("MySQL") # equivalent to MySQL()
+```
+
+## DBI Functions: Connecting to DBMS 
+
+__dbConnect__ Connect to a DBMS.  
+
+For SQLite:
+```r
+conn = dbConnect(m, "path_to_file")
+```
+
+For MySQL:
+```r
+conn = dbConnect(m, user="user_name", db="database_name", host="SQL_server", password="password")
+```
+
+__dbDisconnect__ Disconnect from a DBMS. You should always disconnect after you no longer need it
+
+```r
+dbDisconnect(conn)
+```
+
+## DBI Functions: Submit Queries
+
+__dbSendQuery__ Submits and executes SQL statement (information retrieved using fetch)  
+
+```r
+query = dbSendQuery(conn, "SELECT statement;")
+```
+
+__fetch__ Get records from a dbSendQuery
+
+```r
+res = fetch(query)
+```
+
+__dbClearResult__ _Free all resources_ (local and remote) from a query.
+
+```r
+dbClearResult(query)
+```
+
+## DBI Functions: Other Functions
+
+__dbGetQuery__ Submits, executes SQL statement and retrieves information  
+
+```r
+res = dbGetQuery(conn, "SELECT statement;")
+```
+
+__dbListTables__ List tables in database connection
+
+```r
+tables = dbListTables(conn)
+```
+
+__dbGetInfo__ Get meta-data for DBIObjects
+
+```r
+meta.data = dbGetInfo(query)
+```
+
+---
+
+__dbReadTable__ Fetch the data from a table.
+
+```r
+res = dbReadTable(conn, "table_name")
+```
+
+__dbListFields__ Return the column names for a given table
+
+```r
+columns = dbListFields(conn, "table_name")
+```
+
+## Connecting a SQLite Database
+
+```{r}
+library(RSQLite)
+m = dbDriver("SQLite")
+con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
+query = dbSendQuery(con, "SELECT * FROM exec;")
+result = fetch(query)
+dbClearResult(query)
+dbDisconnect(con)
+```
+
+---
+```{r}
+result
+```
+
+---
+```{r}
+library(RSQLite)
+m = dbDriver("SQLite")
+con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
+result = dbGetQuery(con,
+                   "SELECT name, start_time, location
+                   FROM event;")
+result
+dbDisconnect(con)
+```
+
+## Connecting to Local File System using MySQL
+
+I transferred the data in stats_club.db to MySQL on my laptop.
+
+```{r}
+library("RMySQL") 
+m = dbDriver("MySQL")
+conn = dbConnect(m, user="darrell", db="stats_club",
+                 host="localhost",
+                 password="pass")
+```
+---
+```{r}
+query = dbSendQuery(conn, "SELECT name, start_time, location
+                          FROM event")
+result = fetch(query)
+dbClearResult(query)
+dbDisconnect(conn)
+```
+---
+```{r}
+print(result)
+```
+
+## Connecting to Remote Server using MySQL
+
+```{r}
+hg19 = dbConnect(MySQL(), user="genome", db="hg19", 
+  host="genome-mysql.cse.ucsc.edu")
+result = dbGetQuery(hg19, 
+		"SELECT COUNT(*) FROM affyU133Plus2")
+dbDisconnect(hg19)
+print(result)
+```
