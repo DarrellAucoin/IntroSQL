@@ -21,7 +21,7 @@ __dbDriver__ Driver specifying the operations for creating connections to SQL Se
 
 For SQLite:
 ```r
-m = dbDriver("RSQLite") # equivalent to SQLite()
+m = dbDriver("SQLite") # equivalent to SQLite()
 ```
 
 For MySQL:  
@@ -40,7 +40,8 @@ conn = dbConnect(m, "path_to_file")
 
 For MySQL:
 ```r
-conn = dbConnect(m, user="user_name", db="database_name", host="SQL_server", password="password")
+conn = dbConnect(m, user="user_name", db="database_name", 
+  host="SQL_server", password="password")
 ```
 
 __dbDisconnect__ Disconnect from a DBMS. You should always disconnect after you no longer need it
@@ -109,7 +110,7 @@ columns = dbListFields(conn, "table_name")
 library(RSQLite)
 m = dbDriver("SQLite")
 con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
-query = dbSendQuery(con, "SELECT * FROM exec;")
+query = dbSendQuery(con, "SELECT name, position FROM exec;")
 result = fetch(query)
 dbClearResult(query)
 dbDisconnect(con)

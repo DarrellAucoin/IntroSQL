@@ -1875,7 +1875,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 <li>Open SQLite browser</li>
 <li>Open <code>stats_club.db</code> database file in the downloaded directory</li>
 <li>Click on &#39;Execute SQL&#39; tab<ol>
-<li>Open SQL file <code>IntroSQL.sql</code> file in the downloaded directory</li>
+<li>Open SQL file <code>IntroSQL_Presentation1.sql</code> file in the downloaded directory</li>
 <li>Follow along with file, executing statement as topics dictate</li>
 </ol>
 </li>
@@ -2208,17 +2208,6 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Table:</strong> A collection of rows. Usually in reference a persistent table saved permanently to memory</p>
-</div>
-</div>
-</div>
     </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -2237,10 +2226,21 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Result set:</strong> A non-persistent table, usually the result of a query.</p>
+<p><strong>Table:</strong> A collection of rows. Usually in reference a persistent table saved permanently to memory</p>
 </div>
 </div>
 </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Result set:</strong> A non-persistent table, usually the result of a query.</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2262,7 +2262,19 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 </div>
 </div>
-    </div><div class="fragment">
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<img src="Images/RelationalDatabase.png" alt="alt text">
+</center>
+</div>
+</div>
+</div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2602,7 +2614,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 <p><strong>Example:</strong> The information on each member (name, email, etc.) is not determined by the event. We need to break the attendance table to bring into 3rd normalized form: attendance and members.</p>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2614,8 +2626,7 @@ Let&#39;s break the table so we get important description of the events (name, t
 </center>
 </div>
 </div>
-</div>
-    </div></section><section>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3184,13 +3195,25 @@ Let&#39;s break the table so we get important description of the events (name, t
 <p><strong>NULL</strong> A NULL can be thought of as an unknown value.</p>
 <ul>
 <li>Any datatype can have NULL values</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>if either x or y is NULL:
 $$x+y\implies\mbox{NULL}$$
 $$x&gt;y\implies\mbox{NULL}$$</li>
 </ul>
 </div>
 </div>
-</div></section><section>
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3391,7 +3414,7 @@ FROM table_name;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[62]:
+In&nbsp;[34]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3410,7 +3433,7 @@ In&nbsp;[62]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[63]:
+In&nbsp;[35]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3427,7 +3450,7 @@ In&nbsp;[63]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[63]:</div>
+    Out[35]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3490,7 +3513,7 @@ In&nbsp;[63]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[64]:
+In&nbsp;[36]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3507,7 +3530,7 @@ In&nbsp;[64]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[64]:</div>
+    Out[36]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3588,7 +3611,7 @@ In&nbsp;[64]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[65]:
+In&nbsp;[37]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3605,7 +3628,7 @@ In&nbsp;[65]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[65]:</div>
+    Out[37]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3657,7 +3680,7 @@ In&nbsp;[65]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[66]:
+In&nbsp;[38]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3676,7 +3699,7 @@ In&nbsp;[66]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[66]:</div>
+    Out[38]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3777,7 +3800,7 @@ In&nbsp;[66]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[67]:
+In&nbsp;[39]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3794,7 +3817,7 @@ In&nbsp;[67]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[67]:</div>
+    Out[39]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3814,7 +3837,7 @@ In&nbsp;[67]:
       <td> 8</td>
       <td> 16</td>
       <td> this is a string</td>
-      <td> 6520083107639650250</td>
+      <td> 7748998019887413662</td>
     </tr>
   </tbody>
 </table>
@@ -3842,7 +3865,7 @@ In&nbsp;[67]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[68]:
+In&nbsp;[40]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3859,7 +3882,7 @@ In&nbsp;[68]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[68]:</div>
+    Out[40]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <iframe src=http://www.sqlite.org/lang_corefunc.html width=1000 height=600></iframe>
@@ -3908,7 +3931,7 @@ In&nbsp;[68]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[69]:
+In&nbsp;[41]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3925,7 +3948,7 @@ In&nbsp;[69]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[69]:</div>
+    Out[41]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3939,7 +3962,7 @@ In&nbsp;[69]:
   <tbody>
     <tr>
       <th>0</th>
-      <td> 1.657418e+18</td>
+      <td>-5.422052e+18</td>
     </tr>
   </tbody>
 </table>
@@ -3978,7 +4001,7 @@ In&nbsp;[69]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[70]:
+In&nbsp;[42]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3995,7 +4018,7 @@ In&nbsp;[70]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[70]:</div>
+    Out[42]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4049,7 +4072,7 @@ FROM table_name;
 </code></pre>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4059,8 +4082,7 @@ FROM table_name;
 <p><strong>Example:</strong> What are the names, type, times and locations for Stats Club?</p>
 </div>
 </div>
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4078,7 +4100,7 @@ FROM event;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[71]:
+In&nbsp;[43]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4096,7 +4118,7 @@ In&nbsp;[71]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[71]:</div>
+    Out[43]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4148,9 +4170,9 @@ In&nbsp;[71]:
       <th>4</th>
       <td>                      Prof Talk</td>
       <td> educational</td>
-      <td>                None</td>
-      <td>                None</td>
-      <td>    None</td>
+      <td> 2015-03-03 15:00:00</td>
+      <td> 2015-03-03 16:00:00</td>
+      <td> M3-2134</td>
     </tr>
     <tr>
       <th>5</th>
@@ -4236,7 +4258,7 @@ FROM exec;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[72]:
+In&nbsp;[44]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4254,7 +4276,7 @@ In&nbsp;[72]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[72]:</div>
+    Out[44]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4420,7 +4442,7 @@ In&nbsp;[72]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[73]:
+In&nbsp;[45]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4437,7 +4459,7 @@ In&nbsp;[73]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[73]:</div>
+    Out[45]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4492,7 +4514,7 @@ In&nbsp;[73]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[74]:
+In&nbsp;[46]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4510,7 +4532,7 @@ In&nbsp;[74]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[74]:</div>
+    Out[46]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4582,7 +4604,7 @@ FROM example;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[75]:
+In&nbsp;[47]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4600,7 +4622,7 @@ In&nbsp;[75]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[75]:</div>
+    Out[47]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4695,7 +4717,7 @@ FROM attendance;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[76]:
+In&nbsp;[48]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4713,7 +4735,7 @@ In&nbsp;[76]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[76]:</div>
+    Out[48]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4806,7 +4828,7 @@ FROM member;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[77]:
+In&nbsp;[49]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4824,7 +4846,7 @@ In&nbsp;[77]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[77]:</div>
+    Out[49]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4916,7 +4938,7 @@ FROM member;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[78]:
+In&nbsp;[50]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4934,7 +4956,7 @@ In&nbsp;[78]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[78]:</div>
+    Out[50]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5026,7 +5048,7 @@ FROM example;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[79]:
+In&nbsp;[51]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5046,7 +5068,7 @@ In&nbsp;[79]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[79]:</div>
+    Out[51]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5144,7 +5166,7 @@ FROM table_1 AS table_alias_1, table_2 AS table_alias_2;
 </ul>
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -5156,13 +5178,12 @@ FROM event AS e;
 </code></pre>
 </div>
 </div>
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[80]:
+In&nbsp;[52]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5180,7 +5201,7 @@ In&nbsp;[80]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[80]:</div>
+    Out[52]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5226,9 +5247,9 @@ In&nbsp;[80]:
     <tr>
       <th>4</th>
       <td>                      Prof Talk</td>
-      <td>                None</td>
-      <td>    None</td>
-      <td>                                              None</td>
+      <td> 2015-03-03 15:00:00</td>
+      <td> M3-2134</td>
+      <td> Machine Learning and Data Mining: How We can C...</td>
     </tr>
     <tr>
       <th>5</th>
@@ -5325,7 +5346,7 @@ WHERE type = &#39;social&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[81]:
+In&nbsp;[53]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5344,7 +5365,7 @@ In&nbsp;[81]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[81]:</div>
+    Out[53]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5528,7 +5549,7 @@ WHERE name LIKE &#39;F%&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[82]:
+In&nbsp;[54]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5547,7 +5568,7 @@ In&nbsp;[82]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[82]:</div>
+    Out[54]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5603,7 +5624,275 @@ In&nbsp;[82]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="AND,-OR-Operators">AND, OR Operators<a class="anchor-link" href="#AND,-OR-Operators">&#182;</a></h3>
+<h4 id="Operator-Modifiers">Operator Modifiers<a class="anchor-link" href="#Operator-Modifiers">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="ALL,-ANY-or-SOME-Operator-Modifiers">ALL, ANY or SOME Operator Modifiers<a class="anchor-link" href="#ALL,-ANY-or-SOME-Operator-Modifiers">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The operators =, &lt;&gt;, !=, &gt;, &lt;, &gt;=, &lt;= can be used with a list of values and the operators <code>ALL</code> or <code>ANY / SOME</code>.  </p>
+<ul>
+<li>SQLite does <strong>NOT</strong> have <code>ALL</code> or <code>ANY / SOME</code> implemented</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>ANY, SOME</strong> Operator returns true, if operator is true for <strong>any</strong> value in the set.  </p>
+<p>$$E_{1}\vee E_{2}\vee E_{3}\vee\cdots\vee E_{n}$$</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>ALL</strong> Operator returns true, if operator is true for <strong>all</strong> values in the set.  </p>
+<p>$$E_{1}\vee E_{2}\vee E_{3}\vee\cdots\vee E_{n}$$</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT *
+FROM table_name
+WHERE column_name &lt; ALL (subquery_returning_one_column);
+</code></pre>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Example:</strong> What are the expenses for non-social events?</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>SELECT * 
+FROM expenses 
+WHERE event != ALL (SELECT name 
+                    FROM event
+                    WHERE type = &#39;social&#39;);
+</code></pre>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[55]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
+<span class="s">&quot;SELECT * </span><span class="se">\</span>
+<span class="s">FROM expenses </span><span class="se">\</span>
+<span class="s">WHERE event NOT IN (SELECT name </span><span class="se">\</span>
+<span class="s">                    FROM event </span><span class="se">\</span>
+<span class="s">                    WHERE type = &#39;social&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[55]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>event</th>
+      <th>expense</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0 </th>
+      <td>                   Intro to SQL</td>
+      <td>   pizza</td>
+      <td> 87.43</td>
+    </tr>
+    <tr>
+      <th>1 </th>
+      <td>                   Intro to SQL</td>
+      <td>     pop</td>
+      <td> 15.34</td>
+    </tr>
+    <tr>
+      <th>2 </th>
+      <td>                Intro to Hadoop</td>
+      <td>  coffee</td>
+      <td> 23.12</td>
+    </tr>
+    <tr>
+      <th>3 </th>
+      <td>                Intro to Hadoop</td>
+      <td>   water</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>4 </th>
+      <td>                Intro to Hadoop</td>
+      <td>  donuts</td>
+      <td> 53.23</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td>                Intro to Hadoop</td>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td>  donuts</td>
+      <td> 20.34</td>
+    </tr>
+    <tr>
+      <th>8 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td>     pop</td>
+      <td> 21.54</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td>   water</td>
+      <td> 10.52</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>                      Prof Talk</td>
+      <td>     pop</td>
+      <td> 20.31</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>                      Prof Talk</td>
+      <td>   pizza</td>
+      <td> 62.56</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>                    Prof Talk 2</td>
+      <td>   pizza</td>
+      <td> 61.56</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>                    Prof Talk 2</td>
+      <td>     pop</td>
+      <td> 15.65</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>                    Prof Talk 3</td>
+      <td>   pizza</td>
+      <td> 62.45</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>                    Prof Talk 3</td>
+      <td>     pop</td>
+      <td> 13.23</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td>  donuts</td>
+      <td> 20.34</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td>     pop</td>
+      <td> 21.54</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td>   water</td>
+      <td> 10.52</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="AND,-OR-Operators">AND, OR Operators<a class="anchor-link" href="#AND,-OR-Operators">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -5649,7 +5938,7 @@ WHERE name LIKE &#39;_a%&#39; OR  name LIKE &#39;%b&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[83]:
+In&nbsp;[56]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5668,7 +5957,7 @@ In&nbsp;[83]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[83]:</div>
+    Out[56]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5773,7 +6062,7 @@ WHERE name LIKE &#39;Intro%&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[84]:
+In&nbsp;[57]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5792,7 +6081,7 @@ In&nbsp;[84]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[84]:</div>
+    Out[57]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -5860,7 +6149,7 @@ WHERE name BETWEEN &#39;A&#39; AND &#39;G&#39;;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[85]:
+In&nbsp;[58]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5879,7 +6168,7 @@ In&nbsp;[85]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[85]:</div>
+    Out[58]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6025,7 +6314,7 @@ WHERE start_time IS NOT NULL;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[86]:
+In&nbsp;[59]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6044,7 +6333,7 @@ In&nbsp;[86]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[86]:</div>
+    Out[59]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6069,11 +6358,16 @@ In&nbsp;[86]:
     </tr>
     <tr>
       <th>2</th>
+      <td>                      Prof Talk</td>
+      <td> 2015-03-03 15:00:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
       <td>    Intro to SQL: Basic Queries</td>
       <td> 2015-03-09 18:00:00</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td> Intro to SQL: Advanced Queries</td>
       <td> 2015-03-12 18:00:00</td>
     </tr>
@@ -6117,7 +6411,7 @@ WHERE start_time IS NULL;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[87]:
+In&nbsp;[60]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6136,7 +6430,7 @@ In&nbsp;[87]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[87]:</div>
+    Out[60]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6161,16 +6455,11 @@ In&nbsp;[87]:
     </tr>
     <tr>
       <th>2</th>
-      <td>       Prof Talk</td>
-      <td> None</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>     Prof Talk 2</td>
       <td> None</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>3</th>
       <td>     Prof Talk 3</td>
       <td> None</td>
     </tr>
@@ -6207,7 +6496,7 @@ In&nbsp;[87]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <pre><code>SELECT name 
 FROM member 
-WHERE major in (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;);
+WHERE major IN (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;);
 </code></pre>
 </div>
 </div>
@@ -6217,14 +6506,14 @@ WHERE major in (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;);
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[88]:
+In&nbsp;[61]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
 <span class="s">&quot;SELECT name </span><span class="se">\</span>
 <span class="s">FROM member </span><span class="se">\</span>
-<span class="s">WHERE major in (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="s">WHERE major IN (&#39;Stats&#39;, &#39;Act Sci&#39;, &#39;CS&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -6236,7 +6525,7 @@ In&nbsp;[88]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[88]:</div>
+    Out[61]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6398,7 +6687,7 @@ FROM exec_position;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[89]:
+In&nbsp;[62]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6416,7 +6705,7 @@ In&nbsp;[89]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[89]:</div>
+    Out[62]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6490,7 +6779,7 @@ FROM exec_position;
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[90]:
+In&nbsp;[63]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -6508,7 +6797,7 @@ In&nbsp;[90]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[90]:</div>
+    Out[63]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -6535,5519 +6824,11 @@ In&nbsp;[90]:
 </div>
 
 </div>
-    </div><aside class="notes">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Start-of-Second-Presentation">Start of Second Presentation<a class="anchor-link" href="#Start-of-Second-Presentation">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-    </aside></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="GROUP-BY-Clause">GROUP BY Clause<a class="anchor-link" href="#GROUP-BY-Clause">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>GROUP BY clause groups the table by a column (or tuple of columns) and applies a function to each group<ul>
-<li>In the SELECT portion of the statement, you can only list the grouped column(s) and aggregate functions on them.  <center>
-<img src="Images/Group By.png" alt="alt text">
-</center></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT col1, col2, ..., aggregate_function
-FROM table_name
-GROUP BY col1, col2, ...;
-</code></pre>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aggregate-Functions">Aggregate Functions<a class="anchor-link" href="#Aggregate-Functions">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Recall:
-<strong>Aggregate Functions:</strong> Takes in the columns of a table and aggregates over the entries. </p>
-<ul>
-<li>If we use a GROUP BY clause, the aggregation will be over those groups</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Return value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AVG(column)</td>
-<td>Average of non-null values</td>
-</tr>
-<tr>
-<td>COUNT(column)</td>
-<td>Count of non-null values</td>
-</tr>
-<tr>
-<td>MAX(column)</td>
-<td>Maximum of values</td>
-</tr>
-<tr>
-<td>MIN(column)</td>
-<td>Minimum of values</td>
-</tr>
-<tr>
-<td>SUM(column)</td>
-<td>Sum of values</td>
-</tr>
-<tr>
-<td>GROUP_CONCAT(column)</td>
-<td>Concatenation of column strings</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>There are more aggregate functions for other implementations of SQL  </li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What are the number of each type of event for Stats Club?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT type, COUNT(*) AS num_events 
-FROM event 
-GROUP BY type;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[91]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT type, COUNT(*) AS num_events </span><span class="se">\</span>
-<span class="s">FROM event </span><span class="se">\</span>
-<span class="s">GROUP BY type&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[91]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>type</th>
-      <th>num_events</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> educational</td>
-      <td> 7</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>      social</td>
-      <td> 2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="HAVING-Clause">HAVING Clause<a class="anchor-link" href="#HAVING-Clause">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>HAVING clauses are very similar to WHERE clauses but can have aggregate function in their conditions.</p>
-<p>You can have a WHERE and HAVING clause in the same statement.</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> How many Stats Club members are in each major where the major has at least 2 members?</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT faculty, major, COUNT(*) 
-FROM member 
-GROUP BY faculty, major 
-HAVING COUNT(*) &gt;= 2;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[92]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT faculty, major, COUNT(*) </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">GROUP BY faculty, major </span><span class="se">\</span>
-<span class="s">HAVING COUNT(*) &gt;= 2&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[92]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>faculty</th>
-      <th>major</th>
-      <th>COUNT(*)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> Math</td>
-      <td>      Act Sci</td>
-      <td> 10</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td> Math</td>
-      <td> Applied Math</td>
-      <td>  2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td> Math</td>
-      <td>        C &amp; O</td>
-      <td>  2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Math</td>
-      <td>           CS</td>
-      <td>  3</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Math</td>
-      <td>    Pure Math</td>
-      <td>  2</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td> Math</td>
-      <td>        Stats</td>
-      <td> 14</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="GROUP-BY-with-ROLLUP-/-CUBE">GROUP BY with ROLLUP / CUBE<a class="anchor-link" href="#GROUP-BY-with-ROLLUP-/-CUBE">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The ROLLUP operator produces a result set where the aggregate function is applied to each level of the GROUP BY hierachy.</p>
-<ul>
-<li>The ROLLUP operator is <strong>NOT</strong> implemented in SQLite</li>
-<li>Useful for making reports with totals and subtotals</li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT col1, col2, ..., aggregate_function
-FROM table_name
-GROUP BY col1, col2, ... WITH ROLLUP;
-</code></pre>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What are the number of Stats Club members in each faculty and major, including subtotals?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT faculty, major, COUNT(*) AS num_members
-FROM member
-GROUP BY faculty, major WITH ROLLUP;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[93]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT faculty, major, num_members FROM (  </span><span class="se">\</span>
-<span class="s">SELECT &#39;1&#39; orderCol, faculty, major, COUNT(*) AS num_members FROM member GROUP BY faculty, major </span><span class="se">\</span>
-<span class="s">UNION </span><span class="se">\</span>
-<span class="s">SELECT &#39;2&#39; orderCol, faculty, NULL as major, COUNT(*) AS num_members FROM member </span><span class="se">\</span>
-<span class="s">GROUP BY faculty </span><span class="se">\</span>
-<span class="s">UNION </span><span class="se">\</span>
-<span class="s">SELECT &#39;99&#39; orderCol, NULL AS faculty, NULL AS major, COUNT(*) AS num_members FROM member) AS t1 </span><span class="se">\</span>
-<span class="s">ORDER BY CASE when orderCol=&#39;99&#39; then 1 else 0 end, faculty, orderCol&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[93]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>faculty</th>
-      <th>major</th>
-      <th>num_members</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>  Art</td>
-      <td>         Econ</td>
-      <td>  1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>  Art</td>
-      <td>         None</td>
-      <td>  1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td> Math</td>
-      <td>      Act Sci</td>
-      <td> 10</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Math</td>
-      <td> Applied Math</td>
-      <td>  2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Math</td>
-      <td>        C &amp; O</td>
-      <td>  2</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td> Math</td>
-      <td>           CS</td>
-      <td>  3</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td> Math</td>
-      <td>    Pure Math</td>
-      <td>  2</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td> Math</td>
-      <td>        Stats</td>
-      <td> 14</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td> Math</td>
-      <td>         None</td>
-      <td> 33</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td> None</td>
-      <td>         None</td>
-      <td> 34</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div><aside class="notes">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that for Art and Math in faculty there is a row which has a NULL value. This is a total for those groups.  </p>
-<p>There is also one row with NULL values for faculty and major, this is the grand total of all members.</p>
-</div>
-</div>
-</div>
-    </aside></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz:-Aggregation-(GROUP-BY-Clause)">Quiz: Aggregation (GROUP BY Clause)<a class="anchor-link" href="#Quiz:-Aggregation-(GROUP-BY-Clause)">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> What is the attendance for each Stats Club event?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT event, COUNT(*) AS attendance 
-FROM attendance 
-GROUP BY event;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[94]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT event, COUNT(*) AS attendance </span><span class="se">\</span>
-<span class="s">FROM attendance </span><span class="se">\</span>
-<span class="s">GROUP BY event&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[94]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>event</th>
-      <th>attendance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>                            BOT</td>
-      <td> 12</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>                            EOT</td>
-      <td> 18</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>                Intro to Hadoop</td>
-      <td> 17</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>                   Intro to SQL</td>
-      <td> 22</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Intro to SQL: Advanced Queries</td>
-      <td> 23</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>    Intro to SQL: Basic Queries</td>
-      <td> 23</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>                      Prof Talk</td>
-      <td> 20</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>                    Prof Talk 2</td>
-      <td> 16</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Joins">Joins<a class="anchor-link" href="#Joins">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>At times, we need information from multiple tables, to do this we need to join tables together. We can do this several ways:</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><strong>CROSS JOIN:</strong> The cartesian product of rows from each table.</li>
-<li><strong>INNER JOIN:</strong> Join two tables on a join-predicate, losing rows when evaluated false/null.</li>
-<li><p><strong>OUTER JOIN:</strong> Retains each record for the table(s) even when it has no matching rows from the other table. The returning table has null values for missing records.</p>
-<ol>
-<li><p><strong>LEFT OUTER JOIN:</strong> Keep each record for first table but not the table it&#39;s joining with.</p>
-</li>
-<li><p><strong>RIGHT OUTER JOIN:</strong> Keep each record for second table but not the table it&#39;s joining with.</p>
-</li>
-<li><p><strong>FULL OUTER JOIN:</strong> Keep all record for all tables.</p>
-</li>
-</ol>
-</li>
-<li><p><strong>NATURAL JOIN:</strong> Tables with the exact same column name and datatype are joined along that column.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="CROSS-JOIN">CROSS JOIN<a class="anchor-link" href="#CROSS-JOIN">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>CROSS JOIN</strong> is the cartesian product of two tables</p>
-<pre><code>SELECT col1, col2, ...
-FROM table1 CROSS JOIN table2;
-</code></pre><ul>
-<li>if table1 has n rows and table2 has m rows, then the result set has n * m rows  </li>
-</ul>
-<p>We can also get a CROSS JOIN by listing the tables seperated by a &#39;,&#39;</p>
-<pre><code>SELECT col1, col2, ...
-FROM table1, table2;
-</code></pre>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> Suppose we are creating a games tourtament between Stats Club members where every member play every other member once. How can we create such a table? </p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT m1.name AS Player_1, m2.name  AS Player_2 
-FROM member AS m1 CROSS JOIN member AS m2;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[95]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT m1.name AS Player_1, m2.name  AS Player_2 </span><span class="se">\</span>
-<span class="s">FROM member AS m1 CROSS JOIN member AS m2&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[95]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Player_1</th>
-      <th>Player_2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0   </th>
-      <td>    Darrell Aucoin</td>
-      <td>        Darrell Aucoin</td>
-    </tr>
-    <tr>
-      <th>1   </th>
-      <td>    Darrell Aucoin</td>
-      <td>         Fred E. Finch</td>
-    </tr>
-    <tr>
-      <th>2   </th>
-      <td>    Darrell Aucoin</td>
-      <td>          Ryan T. Luby</td>
-    </tr>
-    <tr>
-      <th>3   </th>
-      <td>    Darrell Aucoin</td>
-      <td>       Billy L. Hunter</td>
-    </tr>
-    <tr>
-      <th>4   </th>
-      <td>    Darrell Aucoin</td>
-      <td>       John J. Oquendo</td>
-    </tr>
-    <tr>
-      <th>5   </th>
-      <td>    Darrell Aucoin</td>
-      <td> Stephanie R. Matthews</td>
-    </tr>
-    <tr>
-      <th>6   </th>
-      <td>    Darrell Aucoin</td>
-      <td>    Robert B. Williams</td>
-    </tr>
-    <tr>
-      <th>7   </th>
-      <td>    Darrell Aucoin</td>
-      <td>    Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>8   </th>
-      <td>    Darrell Aucoin</td>
-      <td>      James M. Eddings</td>
-    </tr>
-    <tr>
-      <th>9   </th>
-      <td>    Darrell Aucoin</td>
-      <td>         Elaine S. Ott</td>
-    </tr>
-    <tr>
-      <th>10  </th>
-      <td>    Darrell Aucoin</td>
-      <td>         James A. Foxt</td>
-    </tr>
-    <tr>
-      <th>11  </th>
-      <td>    Darrell Aucoin</td>
-      <td>       Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>12  </th>
-      <td>    Darrell Aucoin</td>
-      <td>     Kelly S. Ferguson</td>
-    </tr>
-    <tr>
-      <th>13  </th>
-      <td>    Darrell Aucoin</td>
-      <td>        Joseph L. Wood</td>
-    </tr>
-    <tr>
-      <th>14  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Vivian R. Donley</td>
-    </tr>
-    <tr>
-      <th>15  </th>
-      <td>    Darrell Aucoin</td>
-      <td>     Frances A. Miller</td>
-    </tr>
-    <tr>
-      <th>16  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Mina W. Lawrence</td>
-    </tr>
-    <tr>
-      <th>17  </th>
-      <td>    Darrell Aucoin</td>
-      <td> Phillip C. Mascarenas</td>
-    </tr>
-    <tr>
-      <th>18  </th>
-      <td>    Darrell Aucoin</td>
-      <td>        Jeff M. Wright</td>
-    </tr>
-    <tr>
-      <th>19  </th>
-      <td>    Darrell Aucoin</td>
-      <td>   Deborah D. Helfrich</td>
-    </tr>
-    <tr>
-      <th>20  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Nancy P. Jackson</td>
-    </tr>
-    <tr>
-      <th>21  </th>
-      <td>    Darrell Aucoin</td>
-      <td>     Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>22  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>23  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Melvin O. Martin</td>
-    </tr>
-    <tr>
-      <th>24  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Ralph L. Waldrop</td>
-    </tr>
-    <tr>
-      <th>25  </th>
-      <td>    Darrell Aucoin</td>
-      <td>  Mildred F. Hottinger</td>
-    </tr>
-    <tr>
-      <th>26  </th>
-      <td>    Darrell Aucoin</td>
-      <td>   Tameika M. McMaster</td>
-    </tr>
-    <tr>
-      <th>27  </th>
-      <td>    Darrell Aucoin</td>
-      <td>   Melissa R. Anderson</td>
-    </tr>
-    <tr>
-      <th>28  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Janelle T. Smith</td>
-    </tr>
-    <tr>
-      <th>29  </th>
-      <td>    Darrell Aucoin</td>
-      <td>     Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1126</th>
-      <td> Patrick Robertson</td>
-      <td>       John J. Oquendo</td>
-    </tr>
-    <tr>
-      <th>1127</th>
-      <td> Patrick Robertson</td>
-      <td> Stephanie R. Matthews</td>
-    </tr>
-    <tr>
-      <th>1128</th>
-      <td> Patrick Robertson</td>
-      <td>    Robert B. Williams</td>
-    </tr>
-    <tr>
-      <th>1129</th>
-      <td> Patrick Robertson</td>
-      <td>    Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>1130</th>
-      <td> Patrick Robertson</td>
-      <td>      James M. Eddings</td>
-    </tr>
-    <tr>
-      <th>1131</th>
-      <td> Patrick Robertson</td>
-      <td>         Elaine S. Ott</td>
-    </tr>
-    <tr>
-      <th>1132</th>
-      <td> Patrick Robertson</td>
-      <td>         James A. Foxt</td>
-    </tr>
-    <tr>
-      <th>1133</th>
-      <td> Patrick Robertson</td>
-      <td>       Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>1134</th>
-      <td> Patrick Robertson</td>
-      <td>     Kelly S. Ferguson</td>
-    </tr>
-    <tr>
-      <th>1135</th>
-      <td> Patrick Robertson</td>
-      <td>        Joseph L. Wood</td>
-    </tr>
-    <tr>
-      <th>1136</th>
-      <td> Patrick Robertson</td>
-      <td>      Vivian R. Donley</td>
-    </tr>
-    <tr>
-      <th>1137</th>
-      <td> Patrick Robertson</td>
-      <td>     Frances A. Miller</td>
-    </tr>
-    <tr>
-      <th>1138</th>
-      <td> Patrick Robertson</td>
-      <td>      Mina W. Lawrence</td>
-    </tr>
-    <tr>
-      <th>1139</th>
-      <td> Patrick Robertson</td>
-      <td> Phillip C. Mascarenas</td>
-    </tr>
-    <tr>
-      <th>1140</th>
-      <td> Patrick Robertson</td>
-      <td>        Jeff M. Wright</td>
-    </tr>
-    <tr>
-      <th>1141</th>
-      <td> Patrick Robertson</td>
-      <td>   Deborah D. Helfrich</td>
-    </tr>
-    <tr>
-      <th>1142</th>
-      <td> Patrick Robertson</td>
-      <td>      Nancy P. Jackson</td>
-    </tr>
-    <tr>
-      <th>1143</th>
-      <td> Patrick Robertson</td>
-      <td>     Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>1144</th>
-      <td> Patrick Robertson</td>
-      <td>      Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>1145</th>
-      <td> Patrick Robertson</td>
-      <td>      Melvin O. Martin</td>
-    </tr>
-    <tr>
-      <th>1146</th>
-      <td> Patrick Robertson</td>
-      <td>      Ralph L. Waldrop</td>
-    </tr>
-    <tr>
-      <th>1147</th>
-      <td> Patrick Robertson</td>
-      <td>  Mildred F. Hottinger</td>
-    </tr>
-    <tr>
-      <th>1148</th>
-      <td> Patrick Robertson</td>
-      <td>   Tameika M. McMaster</td>
-    </tr>
-    <tr>
-      <th>1149</th>
-      <td> Patrick Robertson</td>
-      <td>   Melissa R. Anderson</td>
-    </tr>
-    <tr>
-      <th>1150</th>
-      <td> Patrick Robertson</td>
-      <td>      Janelle T. Smith</td>
-    </tr>
-    <tr>
-      <th>1151</th>
-      <td> Patrick Robertson</td>
-      <td>     Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>1152</th>
-      <td> Patrick Robertson</td>
-      <td>     Judith B. Gibbons</td>
-    </tr>
-    <tr>
-      <th>1153</th>
-      <td> Patrick Robertson</td>
-      <td>            Ruben Lamb</td>
-    </tr>
-    <tr>
-      <th>1154</th>
-      <td> Patrick Robertson</td>
-      <td>         Dominick Byrd</td>
-    </tr>
-    <tr>
-      <th>1155</th>
-      <td> Patrick Robertson</td>
-      <td>     Patrick Robertson</td>
-    </tr>
-  </tbody>
-</table>
-<p>1156 rows × 2 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>However we have have players playing themselves, and rounds with  the same players in opposite roles. We just need to filter these out.</p>
-<pre><code>SELECT m1.name AS Player_1, m2.name  AS Player_2 
-FROM member AS m1 CROSS JOIN member AS m2 
-WHERE m1.name &gt; m2.name;
-</code></pre>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[96]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT m1.name AS Player_1, m2.name  AS Player_2 </span><span class="se">\</span>
-<span class="s">FROM member AS m1 CROSS JOIN member AS m2 </span><span class="se">\</span>
-<span class="s">WHERE m1.name &gt; m2.name&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[96]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Player_1</th>
-      <th>Player_2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Billy L. Hunter</td>
-    </tr>
-    <tr>
-      <th>1  </th>
-      <td>    Darrell Aucoin</td>
-      <td>   Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>2  </th>
-      <td>    Darrell Aucoin</td>
-      <td>      Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>3  </th>
-      <td>    Darrell Aucoin</td>
-      <td>    Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>4  </th>
-      <td>    Darrell Aucoin</td>
-      <td>     Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>5  </th>
-      <td>    Darrell Aucoin</td>
-      <td>    Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>6  </th>
-      <td>     Fred E. Finch</td>
-      <td>       Darrell Aucoin</td>
-    </tr>
-    <tr>
-      <th>7  </th>
-      <td>     Fred E. Finch</td>
-      <td>      Billy L. Hunter</td>
-    </tr>
-    <tr>
-      <th>8  </th>
-      <td>     Fred E. Finch</td>
-      <td>   Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>9  </th>
-      <td>     Fred E. Finch</td>
-      <td>        Elaine S. Ott</td>
-    </tr>
-    <tr>
-      <th>10 </th>
-      <td>     Fred E. Finch</td>
-      <td>      Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>11 </th>
-      <td>     Fred E. Finch</td>
-      <td>    Frances A. Miller</td>
-    </tr>
-    <tr>
-      <th>12 </th>
-      <td>     Fred E. Finch</td>
-      <td>  Deborah D. Helfrich</td>
-    </tr>
-    <tr>
-      <th>13 </th>
-      <td>     Fred E. Finch</td>
-      <td>    Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>14 </th>
-      <td>     Fred E. Finch</td>
-      <td>     Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>15 </th>
-      <td>     Fred E. Finch</td>
-      <td>    Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>16 </th>
-      <td>     Fred E. Finch</td>
-      <td>        Dominick Byrd</td>
-    </tr>
-    <tr>
-      <th>17 </th>
-      <td>      Ryan T. Luby</td>
-      <td>       Darrell Aucoin</td>
-    </tr>
-    <tr>
-      <th>18 </th>
-      <td>      Ryan T. Luby</td>
-      <td>        Fred E. Finch</td>
-    </tr>
-    <tr>
-      <th>19 </th>
-      <td>      Ryan T. Luby</td>
-      <td>      Billy L. Hunter</td>
-    </tr>
-    <tr>
-      <th>20 </th>
-      <td>      Ryan T. Luby</td>
-      <td>      John J. Oquendo</td>
-    </tr>
-    <tr>
-      <th>21 </th>
-      <td>      Ryan T. Luby</td>
-      <td>   Robert B. Williams</td>
-    </tr>
-    <tr>
-      <th>22 </th>
-      <td>      Ryan T. Luby</td>
-      <td>   Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>23 </th>
-      <td>      Ryan T. Luby</td>
-      <td>     James M. Eddings</td>
-    </tr>
-    <tr>
-      <th>24 </th>
-      <td>      Ryan T. Luby</td>
-      <td>        Elaine S. Ott</td>
-    </tr>
-    <tr>
-      <th>25 </th>
-      <td>      Ryan T. Luby</td>
-      <td>        James A. Foxt</td>
-    </tr>
-    <tr>
-      <th>26 </th>
-      <td>      Ryan T. Luby</td>
-      <td>      Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>27 </th>
-      <td>      Ryan T. Luby</td>
-      <td>    Kelly S. Ferguson</td>
-    </tr>
-    <tr>
-      <th>28 </th>
-      <td>      Ryan T. Luby</td>
-      <td>       Joseph L. Wood</td>
-    </tr>
-    <tr>
-      <th>29 </th>
-      <td>      Ryan T. Luby</td>
-      <td>    Frances A. Miller</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>531</th>
-      <td>     Dominick Byrd</td>
-      <td>      Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>532</th>
-      <td>     Dominick Byrd</td>
-      <td>  Deborah D. Helfrich</td>
-    </tr>
-    <tr>
-      <th>533</th>
-      <td>     Dominick Byrd</td>
-      <td>    Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>534</th>
-      <td>     Dominick Byrd</td>
-      <td>     Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>535</th>
-      <td>     Dominick Byrd</td>
-      <td>    Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>536</th>
-      <td> Patrick Robertson</td>
-      <td>       Darrell Aucoin</td>
-    </tr>
-    <tr>
-      <th>537</th>
-      <td> Patrick Robertson</td>
-      <td>        Fred E. Finch</td>
-    </tr>
-    <tr>
-      <th>538</th>
-      <td> Patrick Robertson</td>
-      <td>      Billy L. Hunter</td>
-    </tr>
-    <tr>
-      <th>539</th>
-      <td> Patrick Robertson</td>
-      <td>      John J. Oquendo</td>
-    </tr>
-    <tr>
-      <th>540</th>
-      <td> Patrick Robertson</td>
-      <td>   Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>541</th>
-      <td> Patrick Robertson</td>
-      <td>     James M. Eddings</td>
-    </tr>
-    <tr>
-      <th>542</th>
-      <td> Patrick Robertson</td>
-      <td>        Elaine S. Ott</td>
-    </tr>
-    <tr>
-      <th>543</th>
-      <td> Patrick Robertson</td>
-      <td>        James A. Foxt</td>
-    </tr>
-    <tr>
-      <th>544</th>
-      <td> Patrick Robertson</td>
-      <td>      Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>545</th>
-      <td> Patrick Robertson</td>
-      <td>    Kelly S. Ferguson</td>
-    </tr>
-    <tr>
-      <th>546</th>
-      <td> Patrick Robertson</td>
-      <td>       Joseph L. Wood</td>
-    </tr>
-    <tr>
-      <th>547</th>
-      <td> Patrick Robertson</td>
-      <td>    Frances A. Miller</td>
-    </tr>
-    <tr>
-      <th>548</th>
-      <td> Patrick Robertson</td>
-      <td>     Mina W. Lawrence</td>
-    </tr>
-    <tr>
-      <th>549</th>
-      <td> Patrick Robertson</td>
-      <td>       Jeff M. Wright</td>
-    </tr>
-    <tr>
-      <th>550</th>
-      <td> Patrick Robertson</td>
-      <td>  Deborah D. Helfrich</td>
-    </tr>
-    <tr>
-      <th>551</th>
-      <td> Patrick Robertson</td>
-      <td>     Nancy P. Jackson</td>
-    </tr>
-    <tr>
-      <th>552</th>
-      <td> Patrick Robertson</td>
-      <td>    Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>553</th>
-      <td> Patrick Robertson</td>
-      <td>     Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>554</th>
-      <td> Patrick Robertson</td>
-      <td>     Melvin O. Martin</td>
-    </tr>
-    <tr>
-      <th>555</th>
-      <td> Patrick Robertson</td>
-      <td> Mildred F. Hottinger</td>
-    </tr>
-    <tr>
-      <th>556</th>
-      <td> Patrick Robertson</td>
-      <td>  Melissa R. Anderson</td>
-    </tr>
-    <tr>
-      <th>557</th>
-      <td> Patrick Robertson</td>
-      <td>     Janelle T. Smith</td>
-    </tr>
-    <tr>
-      <th>558</th>
-      <td> Patrick Robertson</td>
-      <td>    Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>559</th>
-      <td> Patrick Robertson</td>
-      <td>    Judith B. Gibbons</td>
-    </tr>
-    <tr>
-      <th>560</th>
-      <td> Patrick Robertson</td>
-      <td>        Dominick Byrd</td>
-    </tr>
-  </tbody>
-</table>
-<p>561 rows × 2 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="INNER-JOIN">INNER JOIN<a class="anchor-link" href="#INNER-JOIN">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>INNER JOIN</strong> Joins two tables where the join condition returns true. Discarded when returning false or NULL.</p>
-<pre><code>SELECT col1, col2, ...
-FROM table1 INNER JOIN table2 ON condition;
-</code></pre>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ON-Clause">ON Clause<a class="anchor-link" href="#ON-Clause">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The <strong>ON</strong> clause specifies the join condition:</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>The ON clause can use a multiple set of conditions connected by AND, OR</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>USING(<join col>) can also be used if both tables have the same column name and type</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Some SQL implementations constructs the ON clause from the WHERE clause (DB2)<ul>
-<li>filtering by the WHERE clause gives the same result but in some implementations will product an intermediate cross product of tables (making the query slower)</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> How many events does each member attend?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Note that this query does not include members who attended no events<ul>
-<li>Query is ordered by events_attended to show a comparison with a latter query  </li>
-</ul>
-</li>
-</ul>
-<pre><code>SELECT m.name, COUNT(a.event) AS events_attended 
-FROM member AS m INNER JOIN attendance AS a ON m.quest_id = a.member
-GROUP BY m.name
-ORDER BY events_attended;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[97]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT m.name, COUNT(a.event) AS events_attended </span><span class="se">\</span>
-<span class="s">FROM member AS m INNER JOIN attendance AS a ON m.quest_id = a.member </span><span class="se">\</span>
-<span class="s">GROUP BY m.name </span><span class="se">\</span>
-<span class="s">ORDER BY events_attended&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[97]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>events_attended</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0 </th>
-      <td>       John J. Oquendo</td>
-      <td> 1</td>
-    </tr>
-    <tr>
-      <th>1 </th>
-      <td>   Melissa R. Anderson</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th>2 </th>
-      <td>      Melvin O. Martin</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th>3 </th>
-      <td>      Mina W. Lawrence</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th>4 </th>
-      <td>     Ann W. McLaughlin</td>
-      <td> 3</td>
-    </tr>
-    <tr>
-      <th>5 </th>
-      <td>     Bobbie D. Mathews</td>
-      <td> 3</td>
-    </tr>
-    <tr>
-      <th>6 </th>
-      <td>      James M. Eddings</td>
-      <td> 3</td>
-    </tr>
-    <tr>
-      <th>7 </th>
-      <td>    Austin K. Gilliard</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>8 </th>
-      <td>      Janelle T. Smith</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>9 </th>
-      <td>        Jeff M. Wright</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>  Mildred F. Hottinger</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td> Phillip C. Mascarenas</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>          Ryan T. Luby</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>      Vivian R. Donley</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>      Arnold J. Fuller</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>         Dominick Byrd</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>     Kelly S. Ferguson</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>      Nancy P. Jackson</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>      Ralph L. Waldrop</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>            Ruben Lamb</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>       Billy L. Hunter</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>   Deborah D. Helfrich</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>     Frances A. Miller</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>         Fred E. Finch</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>        Joseph L. Wood</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>     Judith B. Gibbons</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>    Robert B. Williams</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td> Stephanie R. Matthews</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>   Tameika M. McMaster</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>         Elaine S. Ott</td>
-      <td> 7</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>       Daniel J. Moore</td>
-      <td> 8</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>     Patrick Robertson</td>
-      <td> 8</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="OUTER-JOIN">OUTER JOIN<a class="anchor-link" href="#OUTER-JOIN">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>OUTER JOIN</strong> A join that returns all rows for 1 or 2 tables, even when there is no corresponding value. In these cases, NULL values are entered for these corresponding rows.</p>
-<p>There are 3 types of OUTER JOINs:</p>
-<ol>
-<li><p><strong>LEFT OUTER JOIN</strong>: An OUTER JOIN returning all rows of the table first mentioned.</p>
-</li>
-<li><p><strong>RIGHT OUTER JOIN</strong>: An OUTER JOIN returning all rows of the table second mentioned.</p>
-</li>
-<li><p><strong>FULL OUTER JOIN</strong>: An OUTER JOIN returning all rows of both tables.  </p>
-</li>
-</ol>
-<ul>
-<li>Only LEFT OUTER JOIN is implemented in SQLite</li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What are the names of Stat Club members and how many events they attended?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT m.name, COUNT(a.event) AS events_attended 
-FROM member AS m LEFT OUTER JOIN attendance AS a ON m.quest_id = a.member
-GROUP BY m.name
-ORDER BY events_attended;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[98]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT m.name, COUNT(a.event) AS events_attended </span><span class="se">\</span>
-<span class="s">FROM member AS m LEFT OUTER JOIN attendance AS a ON m.quest_id = a.member </span><span class="se">\</span>
-<span class="s">GROUP BY m.name </span><span class="se">\</span>
-<span class="s">ORDER BY events_attended&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[98]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>events_attended</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0 </th>
-      <td>        Darrell Aucoin</td>
-      <td> 0</td>
-    </tr>
-    <tr>
-      <th>1 </th>
-      <td>         James A. Foxt</td>
-      <td> 0</td>
-    </tr>
-    <tr>
-      <th>2 </th>
-      <td>       John J. Oquendo</td>
-      <td> 1</td>
-    </tr>
-    <tr>
-      <th>3 </th>
-      <td>   Melissa R. Anderson</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th>4 </th>
-      <td>      Melvin O. Martin</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th>5 </th>
-      <td>      Mina W. Lawrence</td>
-      <td> 2</td>
-    </tr>
-    <tr>
-      <th>6 </th>
-      <td>     Ann W. McLaughlin</td>
-      <td> 3</td>
-    </tr>
-    <tr>
-      <th>7 </th>
-      <td>     Bobbie D. Mathews</td>
-      <td> 3</td>
-    </tr>
-    <tr>
-      <th>8 </th>
-      <td>      James M. Eddings</td>
-      <td> 3</td>
-    </tr>
-    <tr>
-      <th>9 </th>
-      <td>    Austin K. Gilliard</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>      Janelle T. Smith</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>        Jeff M. Wright</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>  Mildred F. Hottinger</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td> Phillip C. Mascarenas</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>          Ryan T. Luby</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>      Vivian R. Donley</td>
-      <td> 4</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>      Arnold J. Fuller</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>         Dominick Byrd</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>     Kelly S. Ferguson</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>      Nancy P. Jackson</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>      Ralph L. Waldrop</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>            Ruben Lamb</td>
-      <td> 5</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>       Billy L. Hunter</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>   Deborah D. Helfrich</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>     Frances A. Miller</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>         Fred E. Finch</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>        Joseph L. Wood</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>     Judith B. Gibbons</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>    Robert B. Williams</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td> Stephanie R. Matthews</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>   Tameika M. McMaster</td>
-      <td> 6</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>         Elaine S. Ott</td>
-      <td> 7</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>       Daniel J. Moore</td>
-      <td> 8</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>     Patrick Robertson</td>
-      <td> 8</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Natural-Join">Natural Join<a class="anchor-link" href="#Natural-Join">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>NATURAL JOIN</strong> A join condition that lets the server decide on the join conditions based on the same column names and types across columns for the tables.</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What are the position and duties of each Stats Club exec?</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT  e.name, e.position, ep.duties 
-FROM exec AS e NATURAL JOIN exec_position AS ep;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[99]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT  e.name, e.position, ep.duties </span><span class="se">\</span>
-<span class="s">FROM exec AS e NATURAL JOIN exec_position AS ep&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[99]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>position</th>
-      <th>duties</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0 </th>
-      <td>    Darrell Aucoin</td>
-      <td>  President</td>
-      <td> To be aware of MathSoc's Policies and Bylaws i...</td>
-    </tr>
-    <tr>
-      <th>1 </th>
-      <td>    Darrell Aucoin</td>
-      <td>  President</td>
-      <td>        To call and preside over general meetings.</td>
-    </tr>
-    <tr>
-      <th>2 </th>
-      <td>    Darrell Aucoin</td>
-      <td>  President</td>
-      <td> To manage the executive team and the strategic...</td>
-    </tr>
-    <tr>
-      <th>3 </th>
-      <td>    Darrell Aucoin</td>
-      <td>  President</td>
-      <td> To post announcements of all club meetings, an...</td>
-    </tr>
-    <tr>
-      <th>4 </th>
-      <td> Judith B. Gibbons</td>
-      <td>     Events</td>
-      <td> To assist the president and other vice-preside...</td>
-    </tr>
-    <tr>
-      <th>5 </th>
-      <td> Judith B. Gibbons</td>
-      <td>     Events</td>
-      <td> To chair the organization and promotion of lea...</td>
-    </tr>
-    <tr>
-      <th>6 </th>
-      <td>         Lamar Roy</td>
-      <td>    Finance</td>
-      <td> To ensure membership fees are collected and ma...</td>
-    </tr>
-    <tr>
-      <th>7 </th>
-      <td>         Lamar Roy</td>
-      <td>    Finance</td>
-      <td> To keep an up-to-date record of financial tran...</td>
-    </tr>
-    <tr>
-      <th>8 </th>
-      <td>         Lamar Roy</td>
-      <td>    Finance</td>
-      <td> To prepare a summary of the financial records ...</td>
-    </tr>
-    <tr>
-      <th>9 </th>
-      <td>         Lamar Roy</td>
-      <td>    Finance</td>
-      <td>   To prepare the budget at the beginning of term.</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>         Lamar Roy</td>
-      <td>    Finance</td>
-      <td> To volunteer as president in the absence of th...</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>    Gilberto Cross</td>
-      <td>     Events</td>
-      <td> To assist the president and other vice-preside...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>    Gilberto Cross</td>
-      <td>     Events</td>
-      <td> To chair the organization and promotion of lea...</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>        Melba Lane</td>
-      <td>  President</td>
-      <td> To be aware of MathSoc's Policies and Bylaws i...</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>        Melba Lane</td>
-      <td>  President</td>
-      <td>        To call and preside over general meetings.</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>        Melba Lane</td>
-      <td>  President</td>
-      <td> To manage the executive team and the strategic...</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>        Melba Lane</td>
-      <td>  President</td>
-      <td> To post announcements of all club meetings, an...</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>        Ruben Lamb</td>
-      <td> Technology</td>
-      <td>             Maintain and update the club website.</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>        Ruben Lamb</td>
-      <td> Technology</td>
-      <td> Maintain any hardware, software, or technology...</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>        Ruben Lamb</td>
-      <td> Technology</td>
-      <td> Perform the duties of a Vice President - Event...</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td> Patrick Robertson</td>
-      <td>     Events</td>
-      <td> To assist the president and other vice-preside...</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td> Patrick Robertson</td>
-      <td>     Events</td>
-      <td> To chair the organization and promotion of lea...</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>     Dominick Byrd</td>
-      <td>     Events</td>
-      <td> To assist the president and other vice-preside...</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>     Dominick Byrd</td>
-      <td>     Events</td>
-      <td> To chair the organization and promotion of lea...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz:-Joining-Tables">Quiz: Joining Tables<a class="anchor-link" href="#Quiz:-Joining-Tables">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> What are the email addresses and phone numbers of stats club execs who are in change or organizing at least one event?</p>
-<center>
-<img src="Images/StatClubTables2.png" alt="alt text">
-</center>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT DISTINCT exec.name, exec.email, exec.phone 
-FROM exec INNER JOIN event ON exec.questid = event.organizer;
-</code></pre>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[100]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT DISTINCT exec.name, exec.email, exec.phone </span><span class="se">\</span>
-<span class="s">FROM exec INNER JOIN event ON exec.questid = event.organizer&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[100]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>email</th>
-      <th>phone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> Judith B. Gibbons</td>
-      <td>      judith@uwaterloo.ca</td>
-      <td> 519-555-2343</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>     Dominick Byrd</td>
-      <td>    dominick@uwaterloo.ca</td>
-      <td> 519-555-2325</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>    Darrell Aucoin</td>
-      <td> darrell.aucoin@gmail.com</td>
-      <td> 519-555-1424</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Patrick Robertson</td>
-      <td>     patrick@uwaterloo.ca</td>
-      <td> 519-555-2312</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Subqueries">Subqueries<a class="anchor-link" href="#Subqueries">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Subqueries are queries contained in queries. These subqueries are contained in &#39;(&#39;, &#39;)&#39;</p>
-<p>There are two types of subqueries:</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p><strong>Non-Correlated Subqueries:</strong> Can be run independently of the larger query.</p>
-</li>
-<li><p><strong>Correlated Subqueries:</strong> Must be run concurrently with the outer query. They are dependent on the outer query.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Non-Correlated-Subqueries">Non-Correlated Subqueries<a class="anchor-link" href="#Non-Correlated-Subqueries">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Non-Correlated Subquery:</strong> Any valid query within query that if executed by itself will produce a result (including empty set). These are enclosed in &#39;(&#39;, &#39;)&#39; in <strong>FROM</strong>, <strong>WHERE</strong>, or <strong>HAVING</strong> clauses.</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What Stats Club execs are in charge of making posters?</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT e.name, e.position 
-FROM exec AS e 
-WHERE e.questid IN (SELECT poster FROM event);
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[101]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT e.name, e.position </span><span class="se">\</span>
-<span class="s">FROM exec AS e </span><span class="se">\</span>
-<span class="s">WHERE e.questid IN (SELECT poster FROM event)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[101]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>position</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>    Darrell Aucoin</td>
-      <td> President</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>     Dominick Byrd</td>
-      <td>    Events</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>    Gilberto Cross</td>
-      <td>    Events</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Judith B. Gibbons</td>
-      <td>    Events</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Patrick Robertson</td>
-      <td>    Events</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Correlated-Subqueries">Correlated Subqueries<a class="anchor-link" href="#Correlated-Subqueries">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Correlated  Subquery</strong> makes references to it&#39;s containing query, executing it for every candidate row referenced.</p>
-<ul>
-<li>Correlated subqueries can appear in the <strong>SELECT</strong>, <strong>WHERE</strong>, or <strong>HAVING</strong> clauses.</li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What majors are the current Stats Club execs enrolled in?</p>
-<ul>
-<li>The member table has the information on majors but exec has the information on execs</li>
-</ul>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name, position, 
-(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, 
-(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major 
-FROM exec AS e;
-</code></pre>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[102]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name, position, </span><span class="se">\</span>
-<span class="s">(SELECT faculty FROM member AS m WHERE m.quest_id = e.questid) AS faulty, </span><span class="se">\</span>
-<span class="s">(SELECT major FROM member AS m WHERE m.quest_id = e.questid) AS major </span><span class="se">\</span>
-<span class="s">FROM exec AS e&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[102]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>position</th>
-      <th>faulty</th>
-      <th>major</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>    Darrell Aucoin</td>
-      <td>     President</td>
-      <td> Math</td>
-      <td>     Stats</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td> Judith B. Gibbons</td>
-      <td>        Events</td>
-      <td> Math</td>
-      <td>   Act Sci</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>         Lamar Roy</td>
-      <td>       Finance</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>    Gilberto Cross</td>
-      <td>        Events</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>        Melba Lane</td>
-      <td>     President</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>        Ruben Lamb</td>
-      <td>    Technology</td>
-      <td> Math</td>
-      <td>   Act Sci</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>      Hannah Mason</td>
-      <td> SeniorAdvisor</td>
-      <td> None</td>
-      <td>      None</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td> Patrick Robertson</td>
-      <td>        Events</td>
-      <td> Math</td>
-      <td>     Stats</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>     Dominick Byrd</td>
-      <td>        Events</td>
-      <td> Math</td>
-      <td> Pure Math</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Correlated-vs-Non-Correlated">Correlated vs Non-Correlated<a class="anchor-link" href="#Correlated-vs-Non-Correlated">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p>Correlated subquery is <strong>dependent</strong> on outer query, non-correlated is <strong>independent</strong>.</p>
-</li>
-<li><p>Correlated subquery is executed <strong>concurrently</strong> with outer query, non-correlated is executed before.</p>
-</li>
-<li><p>In general, for speed of execution:
-$$\mbox{Correlated subquery}\prec\mbox{Non-Correlated subquery}\prec\mbox{Joins}$$</p>
-</li>
-</ol>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz:-Subqueries">Quiz: Subqueries<a class="anchor-link" href="#Quiz:-Subqueries">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>A:</strong> in the <strong>FROM</strong>, <strong>WHERE</strong>, and <strong>HAVING</strong> clauses</p>
-</div>
-</div>
-</div>
-    </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> Where can a Non-Correlated subquery can be placed?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>A:</strong> in the <strong>SELECT</strong>, <strong>WHERE</strong>, and <strong>HAVING</strong> clauses</p>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> Using a non-correlated subquery, what are the names, locations, and descriptions of events that served pizza?</p>
-<ol>
-<li>Break the problem into smaller pieces: What are the events that served pizza?</li>
-<li>Only retrieve values from the table <code>event</code> that <code>event.name</code> matches those values</li>
-</ol>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT event 
-FROM expenses 
-WHERE expense = &#39;pizza&#39;;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[103]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT event </span><span class="se">\</span>
-<span class="s">FROM expenses </span><span class="se">\</span>
-<span class="s">WHERE expense = &#39;pizza&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[103]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>event</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>          BOT</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td> Intro to SQL</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>    Prof Talk</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>  Prof Talk 2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>  Prof Talk 3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Second, only retrieve values from the table <code>event</code> that <code>event.name</code> matches those values</li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name, location, description 
-FROM event 
-WHERE name IN (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;);
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[104]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name, location, description </span><span class="se">\</span>
-<span class="s">FROM event  </span><span class="se">\</span>
-<span class="s">WHERE name IN (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[104]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>location</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>          BOT</td>
-      <td>   C &amp; D</td>
-      <td> Come and play games with your fellow stats Clu...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td> Intro to SQL</td>
-      <td> MC-3003</td>
-      <td> SQL is a relational database language and alon...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>    Prof Talk</td>
-      <td>    None</td>
-      <td>                                              None</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>  Prof Talk 2</td>
-      <td>    None</td>
-      <td>                                              None</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>  Prof Talk 3</td>
-      <td>    None</td>
-      <td>                                              None</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Or alternatively, using a join:</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT e.name, e.location, e.description 
-FROM (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;) AS exp INNER JOIN event AS e 
-  ON exp.event = e.name;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[105]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT e.name, e.location, e.description </span><span class="se">\</span>
-<span class="s">FROM (SELECT event FROM expenses WHERE expense = &#39;pizza&#39;) AS exp INNER JOIN event AS e </span><span class="se">\</span>
-<span class="s">  ON exp.event = e.name&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[105]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>e.name</th>
-      <th>e.location</th>
-      <th>e.description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>          BOT</td>
-      <td>   C &amp; D</td>
-      <td> Come and play games with your fellow stats Clu...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td> Intro to SQL</td>
-      <td> MC-3003</td>
-      <td> SQL is a relational database language and alon...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>    Prof Talk</td>
-      <td>    None</td>
-      <td>                                              None</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>  Prof Talk 2</td>
-      <td>    None</td>
-      <td>                                              None</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>  Prof Talk 3</td>
-      <td>    None</td>
-      <td>                                              None</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Set-Operations">Set Operations<a class="anchor-link" href="#Set-Operations">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Set operations create a combination of rows from 2 tables into one result set.</p>
-<ul>
-<li>The tables (or the projection of those tables) have to have the same number of columns and datatypes<ul>
-<li>if one column appears in a table but not in another, supply the value NULL for the missing column</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><strong>UNION</strong>: For tables A and B, combines the rows for A and B into one result set.</li>
-<li><strong>INTERSECT</strong>: For tables A and B, returns the rows for A and B that they have in common.</li>
-<li><strong>Difference (EXCEPT)</strong>: For tables A and B, return only the rows in A that are not in common with B.</li>
-</ol>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="UNION">UNION<a class="anchor-link" href="#UNION">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>UNION operator:</strong> Addition of one result set to another result set with the same number of attributes and types.</p>
-<pre><code>SELECT ... FROM ... 
-UNION [ALL]
-SELECT ... FROM ...
-</code></pre><ul>
-<li>Just <strong>UNION</strong> removes duplicates, while <strong>UNION ALL</strong> keeps all rows from both result sets.</li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> Suppose are you need to contact everyone involved in Stats Club: members and execs.<br>What are the names, email addresses, and phone numbers (if you have them) of all Stats Club members and execs?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name, email, NULL AS phone 
-FROM member 
-UNION 
-SELECT name, email, phone 
-FROM exec;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[106]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name, email, NULL AS phone </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">UNION </span><span class="se">\</span>
-<span class="s">SELECT name, email, phone </span><span class="se">\</span>
-<span class="s">FROM exec&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[106]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>email</th>
-      <th>phone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0 </th>
-      <td>     Ann W. McLaughlin</td>
-      <td>         ann@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>1 </th>
-      <td>      Arnold J. Fuller</td>
-      <td>      arnold@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>2 </th>
-      <td>    Austin K. Gilliard</td>
-      <td>      austin@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>3 </th>
-      <td>       Billy L. Hunter</td>
-      <td>       billy@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>4 </th>
-      <td>     Bobbie D. Mathews</td>
-      <td>      bobbie@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>5 </th>
-      <td>       Daniel J. Moore</td>
-      <td>      daniel@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>6 </th>
-      <td>        Darrell Aucoin</td>
-      <td> darrell.aucoin@gmail.com</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>7 </th>
-      <td>        Darrell Aucoin</td>
-      <td> darrell.aucoin@gmail.com</td>
-      <td> 519-555-1424</td>
-    </tr>
-    <tr>
-      <th>8 </th>
-      <td>   Deborah D. Helfrich</td>
-      <td>     deborah@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>9 </th>
-      <td>         Dominick Byrd</td>
-      <td>    dominick@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>         Dominick Byrd</td>
-      <td>    dominick@uwaterloo.ca</td>
-      <td> 519-555-2325</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>         Elaine S. Ott</td>
-      <td>      elaine@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>     Frances A. Miller</td>
-      <td>     frances@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>         Fred E. Finch</td>
-      <td>        fred@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>        Gilberto Cross</td>
-      <td>    gilberto@uwaterloo.ca</td>
-      <td> 519-555-3453</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>          Hannah Mason</td>
-      <td>      hannah@uwaterloo.ca</td>
-      <td> 519-555-2342</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>         James A. Foxt</td>
-      <td>   james.fox@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>      James M. Eddings</td>
-      <td>       james@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>      Janelle T. Smith</td>
-      <td>     janelle@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>        Jeff M. Wright</td>
-      <td>        jeff@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>       John J. Oquendo</td>
-      <td>        john@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>        Joseph L. Wood</td>
-      <td>      joseph@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>     Judith B. Gibbons</td>
-      <td>      judith@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>     Judith B. Gibbons</td>
-      <td>      judith@uwaterloo.ca</td>
-      <td> 519-555-2343</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>     Kelly S. Ferguson</td>
-      <td>       kelly@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>             Lamar Roy</td>
-      <td>       lamar@uwaterloo.ca</td>
-      <td> 519-555-3432</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>            Melba Lane</td>
-      <td>       melba@uwaterloo.ca</td>
-      <td> 519-555-2322</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>   Melissa R. Anderson</td>
-      <td>     melissa@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>      Melvin O. Martin</td>
-      <td>      melvin@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>  Mildred F. Hottinger</td>
-      <td>     mildred@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>      Mina W. Lawrence</td>
-      <td>        mina@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>      Nancy P. Jackson</td>
-      <td>       nancy@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>     Patrick Robertson</td>
-      <td>     patrick@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>     Patrick Robertson</td>
-      <td>     patrick@uwaterloo.ca</td>
-      <td> 519-555-2312</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td> Phillip C. Mascarenas</td>
-      <td>     phillip@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>      Ralph L. Waldrop</td>
-      <td>       ralph@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>    Robert B. Williams</td>
-      <td>      robert@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>            Ruben Lamb</td>
-      <td>       ruben@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>            Ruben Lamb</td>
-      <td>       ruben@uwaterloo.ca</td>
-      <td> 519-555-5232</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>          Ryan T. Luby</td>
-      <td>        ryan@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td> Stephanie R. Matthews</td>
-      <td>        step@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>   Tameika M. McMaster</td>
-      <td>     tameika@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>      Vivian R. Donley</td>
-      <td>      vivian@uwaterloo.ca</td>
-      <td>         None</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Intersection-(INTERSECT-Operator)">Intersection (INTERSECT Operator)<a class="anchor-link" href="#Intersection-(INTERSECT-Operator)">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>INTERSECT operator:</strong> Returns only tuples that are in common between two result sets. Result sets must be equal in number and type of attributes.</p>
-<pre><code>SELECT ... FROM ...
-INTERSECT
-SELECT ... FROM ...;
-</code></pre>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What Stats Club execs have also signed up as Stats Club members?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name, quest_id 
-FROM member 
-INTERSECT 
-SELECT name, questid 
-FROM exec;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[107]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name, quest_id </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">INTERSECT </span><span class="se">\</span>
-<span class="s">SELECT name, questid </span><span class="se">\</span>
-<span class="s">FROM exec&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[107]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>quest_id</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>    Darrell Aucoin</td>
-      <td>  darrell</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>     Dominick Byrd</td>
-      <td> dominick</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td> Judith B. Gibbons</td>
-      <td>   judith</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Patrick Robertson</td>
-      <td>  patrick</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>        Ruben Lamb</td>
-      <td>    ruben</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Difference-(EXCEPT-Operator)">Difference (EXCEPT Operator)<a class="anchor-link" href="#Difference-(EXCEPT-Operator)">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>EXCEPT operator:</strong> Returns the first result set minus anything it has in common with the second result set.</p>
-<pre><code>SELECT ... FROM ...
-EXCEPT [ALL]
-SELECT ... FROM ...
-</code></pre><ul>
-<li><p>Just EXCEPT uses set theory version of minus. </p>
-<ul>
-<li>If B has a row in common with A then all rows matching that row is removed</li>
-</ul>
-</li>
-<li><p>The optional ALL uses the bag semantics version.</p>
-<ul>
-<li>If B has a row in common with A then only the number of common rows in B rows matching that row is removed</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What Stats Club members are not execs?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name, quest_id 
-FROM member 
-EXCEPT 
-SELECT name, questid 
-FROM exec;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[108]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name, quest_id </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">EXCEPT </span><span class="se">\</span>
-<span class="s">SELECT name, questid </span><span class="se">\</span>
-<span class="s">FROM exec&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[108]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>quest_id</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0 </th>
-      <td>     Ann W. McLaughlin</td>
-      <td>       ann</td>
-    </tr>
-    <tr>
-      <th>1 </th>
-      <td>      Arnold J. Fuller</td>
-      <td>    arnold</td>
-    </tr>
-    <tr>
-      <th>2 </th>
-      <td>    Austin K. Gilliard</td>
-      <td>    austin</td>
-    </tr>
-    <tr>
-      <th>3 </th>
-      <td>       Billy L. Hunter</td>
-      <td>     billy</td>
-    </tr>
-    <tr>
-      <th>4 </th>
-      <td>     Bobbie D. Mathews</td>
-      <td>    bobbie</td>
-    </tr>
-    <tr>
-      <th>5 </th>
-      <td>       Daniel J. Moore</td>
-      <td>    daniel</td>
-    </tr>
-    <tr>
-      <th>6 </th>
-      <td>   Deborah D. Helfrich</td>
-      <td>   deborah</td>
-    </tr>
-    <tr>
-      <th>7 </th>
-      <td>         Elaine S. Ott</td>
-      <td>    elaine</td>
-    </tr>
-    <tr>
-      <th>8 </th>
-      <td>     Frances A. Miller</td>
-      <td>   frances</td>
-    </tr>
-    <tr>
-      <th>9 </th>
-      <td>         Fred E. Finch</td>
-      <td>      fred</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>         James A. Foxt</td>
-      <td> james.fox</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>      James M. Eddings</td>
-      <td>     james</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>      Janelle T. Smith</td>
-      <td>   janelle</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>        Jeff M. Wright</td>
-      <td>      jeff</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>       John J. Oquendo</td>
-      <td>      john</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>        Joseph L. Wood</td>
-      <td>    joseph</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>     Kelly S. Ferguson</td>
-      <td>     kelly</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>   Melissa R. Anderson</td>
-      <td>   melissa</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>      Melvin O. Martin</td>
-      <td>    melvin</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>  Mildred F. Hottinger</td>
-      <td>   mildred</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>      Mina W. Lawrence</td>
-      <td>      mina</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>      Nancy P. Jackson</td>
-      <td>     nancy</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td> Phillip C. Mascarenas</td>
-      <td>   phillip</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>      Ralph L. Waldrop</td>
-      <td>     ralph</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>    Robert B. Williams</td>
-      <td>    robert</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>          Ryan T. Luby</td>
-      <td>      ryan</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td> Stephanie R. Matthews</td>
-      <td>      step</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>   Tameika M. McMaster</td>
-      <td>   tameika</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>      Vivian R. Donley</td>
-      <td>    vivian</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="WITH-Clause">WITH Clause<a class="anchor-link" href="#WITH-Clause">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>WITH clause:</strong> Makes a non-correlated subquery look like a table in the executed statement:</p>
-<ul>
-<li>Increases readability of the query as well as ensure that if it is used in several different places, it will only be executed once  </li>
-</ul>
-<pre><code>WITH subquery_name [(colname1, ...)] AS
-    (SELECT ...),
-    subquery_name2 [(colname1, ...)] AS
-    (SELECT ...)
-SELECT ...
-</code></pre>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> Suppose you are doing a report for MathSoc detailing Stats Club events, budget, and expenses. </p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>WITH cost (event, expenses) AS 
-    (SELECT event, SUM(price) 
-    FROM expenses 
-    GROUP BY event) 
-SELECT e.name, e.type, e.budget, cost.expenses 
-FROM event AS e INNER JOIN cost ON e.name = cost.event;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[109]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;WITH cost (event, expenses) AS </span><span class="se">\</span>
-<span class="s">    (SELECT event, SUM(price) </span><span class="se">\</span>
-<span class="s">    FROM expenses </span><span class="se">\</span>
-<span class="s">    GROUP BY event) </span><span class="se">\</span>
-<span class="s">SELECT e.name, e.type, e.budget, cost.expenses </span><span class="se">\</span>
-<span class="s">FROM event AS e INNER JOIN cost ON e.name = cost.event&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[109]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>type</th>
-      <th>budget</th>
-      <th>expenses</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>                            BOT</td>
-      <td>      social</td>
-      <td>  90.0</td>
-      <td>  58.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>                            EOT</td>
-      <td>      social</td>
-      <td> 160.0</td>
-      <td> 160.65</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>                Intro to Hadoop</td>
-      <td> educational</td>
-      <td>  90.0</td>
-      <td>  96.81</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>                   Intro to SQL</td>
-      <td> educational</td>
-      <td>  90.0</td>
-      <td> 102.77</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Intro to SQL: Advanced Queries</td>
-      <td> educational</td>
-      <td> 100.0</td>
-      <td>  62.63</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>    Intro to SQL: Basic Queries</td>
-      <td> educational</td>
-      <td> 100.0</td>
-      <td>  62.63</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>                      Prof Talk</td>
-      <td> educational</td>
-      <td>  90.0</td>
-      <td>  82.87</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>                    Prof Talk 2</td>
-      <td> educational</td>
-      <td>  90.0</td>
-      <td>  77.21</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>                    Prof Talk 3</td>
-      <td> educational</td>
-      <td>  90.0</td>
-      <td>  75.68</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz:-WITH-Clause-(HARD)">Quiz: WITH Clause (HARD)<a class="anchor-link" href="#Quiz:-WITH-Clause-(HARD)">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> MathSoc only provides a maximum cap on social events based on the formula below. What is the max cap for social expenses and is Stats Club over this limit?  </p>
-<ul>
-<li>Membership fee for Stats Club is 2 dollars</li>
-</ul>
-<p>$$\begin{aligned}\mbox{Social expenses} &amp; = &amp; \max\left\{ 250,\left(\mbox{MathSoc Members}\right)\times\left(5+\left(\mbox{Member fee}\right)\right)\right\} \\
- &amp; = &amp; \max\left\{ 250,\left(\mbox{MathSoc Members}\right)\times7\right\} 
-\end{aligned}$$  </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Break the problem into smaller problems:</p>
-<ul>
-<li>What are the total expenses for social events?</li>
-<li>What is the max budget for social events?</li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Smaller Problems:</p>
-<ul>
-<li>What are the total expenses for social events?<ul>
-<li>What events are social events?</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>What is the max cap for social events?<ul>
-<li>What is the result of the formula
-$$\left(\mbox{MathSoc Members}\right)\times7$$<ul>
-<li>What are the number of Stats Club members who are in the Math Faculty (aka MathSoc members)?</li>
-</ul>
-</li>
-<li>How do we find the max value between this number and 250?  </li>
-</ul>
-</li>
-</ul>
-<h3 id="think-about-how-to-solve-this-for-5-mins">Think about how to solve this for 5 mins</h3>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For total social expenses, we need to find the sum of expenses filtering out non-social expenses.<br><strong>Part 1:</strong> What events are social?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name 
-FROM event 
-WHERE type = &#39;social&#39;;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[110]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name </span><span class="se">\</span>
-<span class="s">FROM event </span><span class="se">\</span>
-<span class="s">WHERE type = &#39;social&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[110]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> BOT</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td> EOT</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Part 2:</strong> What are the total social expenses?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT SUM(price) 
-FROM expenses 
-WHERE event IN (SELECT name FROM event WHERE type = &#39;social&#39;);
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[111]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT SUM(price) </span><span class="se">\</span>
-<span class="s">FROM expenses </span><span class="se">\</span>
-<span class="s">WHERE event IN (SELECT name FROM event WHERE type = &#39;social&#39;)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[111]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>SUM(price)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> 219.22</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Or alternatively, we can join tables event and expenses and filter out non-social events:  </p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT SUM(exp.price) 
-FROM event AS e INNER JOIN expenses AS exp 
-  ON e.name = exp.event 
-WHERE e.type = &#39;social&#39;;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[112]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT SUM(exp.price) </span><span class="se">\</span>
-<span class="s">FROM event AS e INNER JOIN expenses AS exp </span><span class="se">\</span>
-<span class="s">  ON e.name = exp.event </span><span class="se">\</span>
-<span class="s">WHERE e.type = &#39;social&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[112]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>SUM(exp.price)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> 219.22</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>At this point we have one half of the problem solved, the final result would look a bit like:</p>
-<pre><code>WITH soc_cost (expense) AS 
-    (SELECT SUM(exp.price) 
-     FROM event AS e INNER JOIN expenses AS exp 
-       ON e.name = exp.event 
-     WHERE type = &#39;social&#39;),
-soc_budget (budget) AS
-     (SELECT statement)
-SELECT statement;
-</code></pre>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Part 3:</strong> We need to calculate the formula
-$$\left(\mbox{MathSoc Members}\right)\times7$$</p>
-<ul>
-<li>First, what is the number of MathSoc Members (aka number of members who are in the Math Faculty)?  </li>
-</ul>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT COUNT(*) 
-FROM member 
-WHERE faculty = &#39;Math&#39;;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[113]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT COUNT(*) </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">WHERE faculty = &#39;Math&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[113]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>COUNT(*)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> 33</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Part 4:</strong> What is the result of the formula<br>$$\left(\mbox{MathSoc Members}\right)\times7$$</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT COUNT(*) * 7 
-FROM member 
-WHERE faculty = &#39;Math&#39;;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[114]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT COUNT(*) * 7 </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">WHERE faculty = &#39;Math&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[114]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>COUNT(*) * 7</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> 231</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Part 5:</strong> What is the max of this number and 250?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT MAX(soc_budget) 
-FROM (SELECT COUNT(*) * 7 AS soc_budget 
-      FROM member 
-      WHERE faculty = &#39;Math&#39; 
-      UNION 
-      SELECT 250);
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[115]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT MAX(soc_budget) </span><span class="se">\</span>
-<span class="s">FROM (SELECT COUNT(*) * 7 AS soc_budget </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">WHERE faculty = &#39;Math&#39; </span><span class="se">\</span>
-<span class="s">UNION </span><span class="se">\</span>
-<span class="s">SELECT 250)&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[115]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>MAX(soc_budget)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> 250</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Joining all of this up together:</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>WITH soc_cost (expense) AS 
-    (SELECT SUM(exp.price) 
-     FROM event AS e INNER JOIN expenses AS exp 
-       ON e.name = exp.event 
-     WHERE e.type = &#39;social&#39;),
-soc_budget (budget) AS 
-    (SELECT Max(soc_budget) 
-     FROM (SELECT COUNT(*) * 7 AS soc_budget 
-           FROM member 
-           WHERE faculty = &#39;Math&#39; 
-           UNION 
-           SELECT 250)
-    )
-SELECT expense, budget, budget - expense
-FROM soc_cost CROSS JOIN soc_budget;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[116]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;WITH soc_cost (expense) AS </span><span class="se">\</span>
-<span class="s">    (SELECT SUM(exp.price) </span><span class="se">\</span>
-<span class="s">     FROM event AS e INNER JOIN expenses AS exp </span><span class="se">\</span>
-<span class="s">       ON e.name = exp.event </span><span class="se">\</span>
-<span class="s">     WHERE e.type = &#39;social&#39;), </span><span class="se">\</span>
-<span class="s">soc_budget (budget) AS </span><span class="se">\</span>
-<span class="s">    (SELECT Max(soc_budget) </span><span class="se">\</span>
-<span class="s">     FROM (SELECT COUNT(*) * 7 AS soc_budget </span><span class="se">\</span>
-<span class="s">           FROM member </span><span class="se">\</span>
-<span class="s">           WHERE faculty = &#39;Math&#39; </span><span class="se">\</span>
-<span class="s">           UNION </span><span class="se">\</span>
-<span class="s">           SELECT 250) </span><span class="se">\</span>
-<span class="s">    ) </span><span class="se">\</span>
-<span class="s">SELECT expense, budget, budget - expense </span><span class="se">\</span>
-<span class="s">FROM soc_cost CROSS JOIN soc_budget&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[116]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>expense</th>
-      <th>budget</th>
-      <th>budget - expense</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td> 219.22</td>
-      <td> 250</td>
-      <td> 30.78</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="CASE-Expressions">CASE Expressions<a class="anchor-link" href="#CASE-Expressions">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>CASE expressions:</strong> Similar to a series of if else statements executed for every entry in a table. A new value is returned for every row in the table.</p>
-<pre><code>CASE [column]
-    WHEN condition1 THEN result1
-    WHEN condition2 THEN result2
-    ...
-    WHEN condition_n THEN result_n
-    [ELSE result]
-END
-</code></pre>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>The result can be of any datatype or the result of a correlated or non-correlated subquery (if the result is a single value)</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>CASE expressions are performed by themselves in the <strong>SELECT</strong> clause or within a function or aggregate function</p>
-<ul>
-<li>CASE expressions within aggregate functions allow us to do counts, sums, averages, etc. of particular occurrences</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> Suppose like before we are preparing a report for MathSoc, but now we want to give a warning if the event is over budget or not.</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>WITH cost (event, expenses) AS 
-    (SELECT event, SUM(price) 
-    FROM expenses 
-    GROUP BY event) 
-SELECT e.name, e.type, e.budget, cost.expenses, 
-    CASE 
-    WHEN e.budget - cost.expenses &lt; 0 THEN &#39;Over budget&#39; 
-    ELSE NULL
-END AS warning 
-FROM event AS e INNER JOIN cost ON e.name = cost.event;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[117]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;WITH cost (event, expenses) AS </span><span class="se">\</span>
-<span class="s">    (SELECT event, SUM(price) </span><span class="se">\</span>
-<span class="s">    FROM expenses </span><span class="se">\</span>
-<span class="s">    GROUP BY event) </span><span class="se">\</span>
-<span class="s">SELECT e.name, e.type, e.budget, cost.expenses, </span><span class="se">\</span>
-<span class="s">    CASE </span><span class="se">\</span>
-<span class="s">    WHEN e.budget - cost.expenses &lt; 0 THEN &#39;Over budget&#39; </span><span class="se">\</span>
-<span class="s">    ELSE NULL </span><span class="se">\</span>
-<span class="s">    END AS warning </span><span class="se">\</span>
-<span class="s">FROM event AS e INNER JOIN cost ON e.name = cost.event&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[117]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>type</th>
-      <th>budget</th>
-      <th>expenses</th>
-      <th>warning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>                            BOT</td>
-      <td>      social</td>
-      <td>  90</td>
-      <td>  58.57</td>
-      <td>        None</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>                            EOT</td>
-      <td>      social</td>
-      <td> 160</td>
-      <td> 160.65</td>
-      <td> Over budget</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>                Intro to Hadoop</td>
-      <td> educational</td>
-      <td>  90</td>
-      <td>  96.81</td>
-      <td> Over budget</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>                   Intro to SQL</td>
-      <td> educational</td>
-      <td>  90</td>
-      <td> 102.77</td>
-      <td> Over budget</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Intro to SQL: Advanced Queries</td>
-      <td> educational</td>
-      <td> 100</td>
-      <td>  62.63</td>
-      <td>        None</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>    Intro to SQL: Basic Queries</td>
-      <td> educational</td>
-      <td> 100</td>
-      <td>  62.63</td>
-      <td>        None</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>                      Prof Talk</td>
-      <td> educational</td>
-      <td>  90</td>
-      <td>  82.87</td>
-      <td>        None</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>                    Prof Talk 2</td>
-      <td> educational</td>
-      <td>  90</td>
-      <td>  77.21</td>
-      <td>        None</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>                    Prof Talk 3</td>
-      <td> educational</td>
-      <td>  90</td>
-      <td>  75.68</td>
-      <td>        None</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quiz:-CASE-Expressions">Quiz: CASE Expressions<a class="anchor-link" href="#Quiz:-CASE-Expressions">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q:</strong> Suppose we are interested in the healthiness of our food options at Stats Club events. A score of various foods was given below. What is the average &#39;healthiness&#39; of Stats Club events?</p>
-<table>
-<thead>
-<tr>
-<th>Food</th>
-<th>Score</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>donuts</td>
-<td>-2</td>
-</tr>
-<tr>
-<td>pop</td>
-<td>-2</td>
-</tr>
-<tr>
-<td>fries</td>
-<td>-2</td>
-</tr>
-<tr>
-<td>pizza</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>cookies</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>coffee</td>
-<td>0</td>
-</tr>
-<tr>
-<td>water</td>
-<td>2</td>
-</tr>
-<tr>
-<td>meals</td>
-<td>2</td>
-</tr>
-<tr>
-<td>veggie platter</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT AVG(CASE 
-    WHEN expense IN (&#39;donuts&#39;, &#39;pop&#39;, &#39;fries&#39;) THEN -2
-    WHEN expense IN (&#39;pizza&#39;, &#39;cookies&#39;) THEN -1
-    WHEN expense IN (&#39;coffee&#39;) THEN 0
-    WHEN expense IN (&#39;water&#39;, &#39;meals&#39;) THEN 2
-    WHEN expense IN (&#39;veggie platter&#39;) THEN 3
-END) AS avg_score
-FROM expenses;
-</code></pre>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[118]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT AVG(CASE </span><span class="se">\</span>
-<span class="s">    WHEN expense IN (&#39;donuts&#39;, &#39;pop&#39;, &#39;fries&#39;) THEN -2 </span><span class="se">\</span>
-<span class="s">    WHEN expense IN (&#39;pizza&#39;, &#39;cookies&#39;) THEN -1 </span><span class="se">\</span>
-<span class="s">    WHEN expense IN (&#39;coffee&#39;) THEN 0 </span><span class="se">\</span>
-<span class="s">    WHEN expense IN (&#39;water&#39;, &#39;meals&#39;) THEN 2 </span><span class="se">\</span>
-<span class="s">    WHEN expense IN (&#39;veggie platter&#39;) THEN 3 </span><span class="se">\</span>
-<span class="s">END) AS avg_score </span><span class="se">\</span>
-<span class="s">FROM expenses&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[118]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>avg_score</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>-0.807692</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ORDER-BY-Clause">ORDER BY Clause<a class="anchor-link" href="#ORDER-BY-Clause">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>ORDER BY Clause:</strong> Rearranges the rows of a result set according to a tuple of columns.</p>
-<pre><code>SELECT column_list 
-FROM table_name 
-ORDER BY column1, column2, .. columnN [ASC | DESC];
-</code></pre><p><code>ASC</code> is ascending (default)  </p>
-<p><code>DESC</code> is descending</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What is the membership list ordered by name?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name 
-FROM member 
-ORDER BY name;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[119]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">ORDER BY name&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[119]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0 </th>
-      <td>     Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>1 </th>
-      <td>      Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>2 </th>
-      <td>    Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>3 </th>
-      <td>       Billy L. Hunter</td>
-    </tr>
-    <tr>
-      <th>4 </th>
-      <td>     Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>5 </th>
-      <td>       Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>6 </th>
-      <td>        Darrell Aucoin</td>
-    </tr>
-    <tr>
-      <th>7 </th>
-      <td>   Deborah D. Helfrich</td>
-    </tr>
-    <tr>
-      <th>8 </th>
-      <td>         Dominick Byrd</td>
-    </tr>
-    <tr>
-      <th>9 </th>
-      <td>         Elaine S. Ott</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>     Frances A. Miller</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>         Fred E. Finch</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>         James A. Foxt</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>      James M. Eddings</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>      Janelle T. Smith</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>        Jeff M. Wright</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>       John J. Oquendo</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>        Joseph L. Wood</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>     Judith B. Gibbons</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>     Kelly S. Ferguson</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>   Melissa R. Anderson</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>      Melvin O. Martin</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>  Mildred F. Hottinger</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>      Mina W. Lawrence</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>      Nancy P. Jackson</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>     Patrick Robertson</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td> Phillip C. Mascarenas</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>      Ralph L. Waldrop</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>    Robert B. Williams</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>            Ruben Lamb</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>          Ryan T. Luby</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td> Stephanie R. Matthews</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>   Tameika M. McMaster</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>      Vivian R. Donley</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="LIMIT-Clause">LIMIT Clause<a class="anchor-link" href="#LIMIT-Clause">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>LIMIT Clause:</strong> Restrict the result set to the first n of rows.</p>
-<pre><code>SELECT column1, column2, columnN 
-FROM table_name
-LIMIT no_of_rows;
-</code></pre><ul>
-<li>We can also offset where the restriction begins  </li>
-</ul>
-<pre><code>SELECT column1, column2, columnN 
-FROM table_name
-LIMIT no_of_rows OFFSET row_num;
-</code></pre>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Example:</strong> What is the first 10 members ordered by name?</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>SELECT name 
-FROM member 
-ORDER BY name 
-LIMIT 10;
-</code></pre>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[120]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span>
-<span class="s">&quot;SELECT name </span><span class="se">\</span>
-<span class="s">FROM member </span><span class="se">\</span>
-<span class="s">ORDER BY name </span><span class="se">\</span>
-<span class="s">LIMIT 10&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[120]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>   Ann W. McLaughlin</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>    Arnold J. Fuller</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>  Austin K. Gilliard</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>     Billy L. Hunter</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>   Bobbie D. Mathews</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>     Daniel J. Moore</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>      Darrell Aucoin</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td> Deborah D. Helfrich</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>       Dominick Byrd</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>       Elaine S. Ott</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="topics-not-covered">Topics Not Covered</h3>
-<ul>
-<li>How to create a database<ul>
-<li>Creating tables</li>
-<li>Creating constraints</li>
-<li>Indices</li>
-<li>Views</li>
-<li>How to insert, delete, alter, drop, etc. data in a table</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
     </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[121]:
+In&nbsp;[64]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -12063,7 +6844,7 @@ In&nbsp;[121]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[122]:
+In&nbsp;[65]:
 </div>
 <div class="inner_cell">
     <div class="input_area">

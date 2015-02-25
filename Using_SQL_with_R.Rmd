@@ -21,7 +21,7 @@ __dbDriver__ Driver specifying the operations for creating connections to SQL Se
 For SQLite:
 
 ```r
-m = dbDriver("RSQLite") # equivalent to SQLite()
+m = dbDriver("SQLite") # equivalent to SQLite()
 ```
 
 For MySQL:  

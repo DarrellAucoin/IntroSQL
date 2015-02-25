@@ -86,7 +86,8 @@ file](https://github.com/NormallySane/IntroSQL/archive/master.zip)
 1. Open SQLite browser
 2. Open `stats_club.db` database file in the downloaded directory
 3. Click on 'Execute SQL' tab
-    1. Open SQL file `IntroSQL.sql` file in the downloaded directory
+    1. Open SQL file `IntroSQL_Presentation1.sql` file in the downloaded
+directory
     2. Follow along with file, executing statement as topics dictate
 4. Content of the talk is on https://github.com/NormallySane/IntroSQL/wiki (open
 in your favorite browser)
@@ -759,7 +760,7 @@ SELECT ABS(-8), LENGTH('This is a String'), LOWER('ThIS Is A StRiNg'),
       <td> 8</td>
       <td> 16</td>
       <td> this is a string</td>
-      <td> 678548158552057334</td>
+      <td> 7748998019887413662</td>
     </tr>
   </tbody>
 </table>
@@ -807,7 +808,7 @@ SELECT (RANDOM() + RANDOM())/2.;
   <tbody>
     <tr>
       <th>0</th>
-      <td> 3.292534e+18</td>
+      <td>-5.422052e+18</td>
     </tr>
   </tbody>
 </table>
@@ -922,9 +923,9 @@ FROM event;
       <th>4</th>
       <td>                      Prof Talk</td>
       <td> educational</td>
-      <td>                None</td>
-      <td>                None</td>
-      <td>    None</td>
+      <td> 2015-03-03 15:00:00</td>
+      <td> 2015-03-03 16:00:00</td>
+      <td> M3-2134</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1529,9 +1530,9 @@ FROM event AS e;
     <tr>
       <th>4</th>
       <td>                      Prof Talk</td>
-      <td>                None</td>
-      <td>    None</td>
-      <td>                                              None</td>
+      <td> 2015-03-03 15:00:00</td>
+      <td> M3-2134</td>
+      <td> Machine Learning and Data Mining: How We can C...</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1721,12 +1722,13 @@ operators `ALL` or `ANY / SOME`.
 
 - SQLite does __NOT__ have `ALL` or `ANY / SOME` implemented
 
-__ANY, SOME__ Operator returns true, if operator is true for any value in the
-set.
+__ANY, SOME__ Operator returns true, if operator is true for __any__ value in
+the set.
 
 $$E_{1}\vee E_{2}\vee E_{3}\vee\cdots\vee E_{n}$$
 
-__ALL__ Operator returns true, if operator is true for any value in the set.
+__ALL__ Operator returns true, if operator is true for __all__ values in the
+set.
 
 $$E_{1}\vee E_{2}\vee E_{3}\vee\cdots\vee E_{n}$$
 
@@ -1736,7 +1738,166 @@ FROM table_name
 WHERE column_name < ALL (subquery_returning_one_column);
 ```
 
-##### AND, OR Operators
+__Example:__ What are the expenses for non-social events? (`ALL`, `ANY`, and
+`SOME` are not implmented in SQLite)
+
+```
+SELECT *
+FROM expenses
+WHERE event != ALL (SELECT name
+                    FROM event
+                    WHERE type = 'social');
+```
+
+
+    pd.read_sql_query(
+    "SELECT * \
+    FROM expenses \
+    WHERE event NOT IN (SELECT name \
+                        FROM event \
+                        WHERE type = 'social')", con)
+
+
+
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>event</th>
+      <th>expense</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0 </th>
+      <td>                   Intro to SQL</td>
+      <td>   pizza</td>
+      <td> 87.43</td>
+    </tr>
+    <tr>
+      <th>1 </th>
+      <td>                   Intro to SQL</td>
+      <td>     pop</td>
+      <td> 15.34</td>
+    </tr>
+    <tr>
+      <th>2 </th>
+      <td>                Intro to Hadoop</td>
+      <td>  coffee</td>
+      <td> 23.12</td>
+    </tr>
+    <tr>
+      <th>3 </th>
+      <td>                Intro to Hadoop</td>
+      <td>   water</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>4 </th>
+      <td>                Intro to Hadoop</td>
+      <td>  donuts</td>
+      <td> 53.23</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td>                Intro to Hadoop</td>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td>  donuts</td>
+      <td> 20.34</td>
+    </tr>
+    <tr>
+      <th>8 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td>     pop</td>
+      <td> 21.54</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td>    Intro to SQL: Basic Queries</td>
+      <td>   water</td>
+      <td> 10.52</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>                      Prof Talk</td>
+      <td>     pop</td>
+      <td> 20.31</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>                      Prof Talk</td>
+      <td>   pizza</td>
+      <td> 62.56</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>                    Prof Talk 2</td>
+      <td>   pizza</td>
+      <td> 61.56</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>                    Prof Talk 2</td>
+      <td>     pop</td>
+      <td> 15.65</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>                    Prof Talk 3</td>
+      <td>   pizza</td>
+      <td> 62.45</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>                    Prof Talk 3</td>
+      <td>     pop</td>
+      <td> 13.23</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td> cookies</td>
+      <td> 10.23</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td>  donuts</td>
+      <td> 20.34</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td>     pop</td>
+      <td> 21.54</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td> Intro to SQL: Advanced Queries</td>
+      <td>   water</td>
+      <td> 10.52</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+#### AND, OR Operators
 
 A group of filter conditions can be linked together with AND or OR operators.
 
@@ -2005,11 +2166,16 @@ WHERE start_time IS NOT NULL;
     </tr>
     <tr>
       <th>2</th>
+      <td>                      Prof Talk</td>
+      <td> 2015-03-03 15:00:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
       <td>    Intro to SQL: Basic Queries</td>
       <td> 2015-03-09 18:00:00</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td> Intro to SQL: Advanced Queries</td>
       <td> 2015-03-12 18:00:00</td>
     </tr>
@@ -2058,16 +2224,11 @@ WHERE start_time IS NULL;
     </tr>
     <tr>
       <th>2</th>
-      <td>       Prof Talk</td>
-      <td> None</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>     Prof Talk 2</td>
       <td> None</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>3</th>
       <td>     Prof Talk 3</td>
       <td> None</td>
     </tr>
@@ -2083,14 +2244,14 @@ __Q:__ What Stats Club members are in Stats, Act Sci, or CS?
 ```
 SELECT name
 FROM member
-WHERE major in ('Stats', 'Act Sci', 'CS');
+WHERE major IN ('Stats', 'Act Sci', 'CS');
 ```
 
 
     pd.read_sql_query(
     "SELECT name \
     FROM member \
-    WHERE major in ('Stats', 'Act Sci', 'CS')", con)
+    WHERE major IN ('Stats', 'Act Sci', 'CS')", con)
 
 
 

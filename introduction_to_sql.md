@@ -1,13 +1,4 @@
 
-<head>
-
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-
-MML_HTMLorMML">
-</script>
-
-</head>
-
 #Introduction to SQL
 ###Presented by: Darrell Aucoin
 
@@ -1204,9 +1195,29 @@ WHERE name LIKE 'F%';
 </table>
 </div>
 
+#### Operator Modifiers
+
+##### ALL, ANY or SOME Operator Modifiers
+
+The operators =, <>, !=, >, <, >=, <= can be used with a list of values and the
+operators `ALL` or `ANY / SOME`.
+
+- SQLite does __NOT__ have `ALL` or `ANY / SOME` implemented
+
+__ANY, SOME__ Operator returns true, if operator is true for any value in the
+set.
 
 
-### AND, OR Operators
+__ALL__ Operator returns true, if operator is true for any value in the set.
+
+
+```sql
+SELECT *
+FROM table_name
+WHERE column_name < ALL (subquery_returning_one_column);
+```
+
+##### AND, OR Operators
 
 A group of filter conditions can be linked together with AND or OR operators.
 
@@ -4182,6 +4193,9 @@ LIMIT 10;
 </table>
 </div>
 
+### Quiz: ORDER BY and LIMIT Clause
+
+__Q:__ What are the top 10 highest priced items in expenses?
 
 
 

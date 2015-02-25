@@ -109,7 +109,7 @@
 
 <p>For SQLite:</p>
 
-<pre class = 'prettyprint lang-r'>m = dbDriver(&quot;RSQLite&quot;) # equivalent to SQLite()</pre>
+<pre class = 'prettyprint lang-r'>m = dbDriver(&quot;SQLite&quot;) # equivalent to SQLite()</pre>
 
 <p>For MySQL:</p>
 
@@ -125,7 +125,8 @@
 
 <p>For MySQL:</p>
 
-<pre class = 'prettyprint lang-r'>conn = dbConnect(m, user=&quot;user_name&quot;, db=&quot;database_name&quot;, host=&quot;SQL_server&quot;, password=&quot;password&quot;)</pre>
+<pre class = 'prettyprint lang-r'>conn = dbConnect(m, user=&quot;user_name&quot;, db=&quot;database_name&quot;, 
+  host=&quot;SQL_server&quot;, password=&quot;password&quot;)</pre>
 
 <p><strong>dbDisconnect</strong> Disconnect from a DBMS. You should always disconnect after you no longer need it</p>
 
@@ -177,7 +178,7 @@
 
 <pre class = 'prettyprint lang-r'>m = dbDriver(&quot;SQLite&quot;)
 con = dbConnect(m, &quot;/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db&quot;)
-query = dbSendQuery(con, &quot;SELECT * FROM exec;&quot;)
+query = dbSendQuery(con, &quot;SELECT name, position FROM exec;&quot;)
 result = fetch(query)
 dbClearResult(query)</pre>
 
@@ -191,26 +192,16 @@ dbClearResult(query)</pre>
 
 <pre class = 'prettyprint lang-r'>result</pre>
 
-<pre >##   stud_num              name  questid      position
-## 1 20434557    Darrell Aucoin  darrell     President
-## 2 20334532 Judith B. Gibbons   judith        Events
-## 3 20345524         Lamar Roy    lamar       Finance
-## 4 20565526    Gilberto Cross gilberto        Events
-## 5 20344527        Melba Lane    melba     President
-## 6 20554329        Ruben Lamb    ruben    Technology
-## 7 20893434      Hannah Mason   hannah SeniorAdvisor
-## 8 20343532 Patrick Robertson  patrick        Events
-## 9 20334321     Dominick Byrd dominick        Events
-##                      email        phone key_fob
-## 1 darrell.aucoin@gmail.com 519-555-1424       Y
-## 2      judith@uwaterloo.ca 519-555-2343       N
-## 3       lamar@uwaterloo.ca 519-555-3432       Y
-## 4    gilberto@uwaterloo.ca 519-555-3453       Y
-## 5       melba@uwaterloo.ca 519-555-2322       Y
-## 6       ruben@uwaterloo.ca 519-555-5232       Y
-## 7      hannah@uwaterloo.ca 519-555-2342       N
-## 8     patrick@uwaterloo.ca 519-555-2312       N
-## 9    dominick@uwaterloo.ca 519-555-2325       N</pre>
+<pre >##                name      position
+## 1    Darrell Aucoin     President
+## 2 Judith B. Gibbons        Events
+## 3         Lamar Roy       Finance
+## 4    Gilberto Cross        Events
+## 5        Melba Lane     President
+## 6        Ruben Lamb    Technology
+## 7      Hannah Mason SeniorAdvisor
+## 8 Patrick Robertson        Events
+## 9     Dominick Byrd        Events</pre>
 
 </article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
 
