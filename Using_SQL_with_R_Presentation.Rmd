@@ -58,6 +58,12 @@ __dbSendQuery__ Submits and executes SQL statement (information retrieved using 
 query = dbSendQuery(conn, "SELECT statement;")
 ```
 
+__dbColumnInfo__ Describes the meta-data of a query (data types ect.)
+
+```r
+dbColumnInfo(query)
+```
+
 __fetch__ Get records from a dbSendQuery
 
 ```r
@@ -84,6 +90,12 @@ __dbListTables__ List tables in database connection
 tables = dbListTables(conn)
 ```
 
+__dbListFields__ Return the column names for a given table
+
+```r
+columns = dbListFields(conn, "table_name")
+```
+
 __dbGetInfo__ Get meta-data for DBIObjects
 
 ```r
@@ -98,38 +110,42 @@ __dbReadTable__ Fetch the data from a table.
 res = dbReadTable(conn, "table_name")
 ```
 
-__dbListFields__ Return the column names for a given table
+__dbWriteTable__ Write a dataframe to SQL database.
 
 ```r
-columns = dbListFields(conn, "table_name")
+dbWriteTable(conn, "DBMS_table_name", data.frame.name)
 ```
+
+
 
 ## Connecting a SQLite Database
 
 ```{r}
 library(RSQLite)
 m = dbDriver("SQLite")
-con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
-query = dbSendQuery(con, "SELECT name, position FROM exec;")
+con = dbConnect(m, "~/GitHub/IntroSQL/stats_club.db")
+query = dbSendQuery(con, "SELECT name, position FROM exec")
 result = fetch(query)
 dbClearResult(query)
 dbDisconnect(con)
 ```
 
 ---
+
 ```{r}
 result
 ```
 
 ---
+
 ```{r}
 library(RSQLite)
 m = dbDriver("SQLite")
-con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
-result = dbGetQuery(con,
-                   "SELECT name, start_time, location
-                   FROM event;")
-result
+con = dbConnect(m, "~/GitHub/IntroSQL/stats_club.db")
+event_table = dbGetQuery(con,
+                   "SELECT name, type, start_time, location
+                   FROM event")
+event_table
 dbDisconnect(con)
 ```
 
@@ -144,15 +160,19 @@ conn = dbConnect(m, user="darrell", db="stats_club",
                  host="localhost",
                  password="pass")
 ```
+
 ---
+
 ```{r}
-query = dbSendQuery(conn, "SELECT name, start_time, location
+query = dbSendQuery(conn, "SELECT name, type, start_time, location
                           FROM event")
 result = fetch(query)
 dbClearResult(query)
 dbDisconnect(conn)
 ```
+
 ---
+
 ```{r}
 print(result)
 ```
@@ -166,4 +186,24 @@ result = dbGetQuery(hg19,
 		"SELECT COUNT(*) FROM affyU133Plus2")
 dbDisconnect(hg19)
 print(result)
+```
+
+## Using SQL Statements with Native R Data-Frames
+
+It is even possible to do SQL-like queries on native R Data-Frames. 
+
+- We can do some quick and dirty data manipulation without using the `dplyr` package
+- Note that we still have the R dataframe event_table
+
+```{r}
+event_table
+```
+
+---  
+
+```{r}
+library(sqldf)
+sqldf('SELECT type, COUNT(*) 
+      FROM event_table
+      GROUP BY type')
 ```

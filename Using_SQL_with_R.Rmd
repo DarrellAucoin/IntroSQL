@@ -102,6 +102,7 @@ columns = dbListFields(conn, "table_name")
 
 ```{r}
 library(RSQLite)
+library(xtable)
 m = dbDriver("SQLite")
 con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
 query = dbSendQuery(con,

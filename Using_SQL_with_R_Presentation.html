@@ -138,6 +138,10 @@
 
 <pre class = 'prettyprint lang-r'>query = dbSendQuery(conn, &quot;SELECT statement;&quot;)</pre>
 
+<p><strong>dbColumnInfo</strong> Describes the meta-data of a query (data types ect.)</p>
+
+<pre class = 'prettyprint lang-r'>dbColumnInfo(query)</pre>
+
 <p><strong>fetch</strong> Get records from a dbSendQuery</p>
 
 <pre class = 'prettyprint lang-r'>res = fetch(query)</pre>
@@ -156,6 +160,10 @@
 
 <pre class = 'prettyprint lang-r'>tables = dbListTables(conn)</pre>
 
+<p><strong>dbListFields</strong> Return the column names for a given table</p>
+
+<pre class = 'prettyprint lang-r'>columns = dbListFields(conn, &quot;table_name&quot;)</pre>
+
 <p><strong>dbGetInfo</strong> Get meta-data for DBIObjects</p>
 
 <pre class = 'prettyprint lang-r'>meta.data = dbGetInfo(query)</pre>
@@ -166,9 +174,9 @@
 
 <pre class = 'prettyprint lang-r'>res = dbReadTable(conn, &quot;table_name&quot;)</pre>
 
-<p><strong>dbListFields</strong> Return the column names for a given table</p>
+<p><strong>dbWriteTable</strong> Write a dataframe to SQL database.</p>
 
-<pre class = 'prettyprint lang-r'>columns = dbListFields(conn, &quot;table_name&quot;)</pre>
+<pre class = 'prettyprint lang-r'>dbWriteTable(conn, &quot;DBMS_table_name&quot;, data.frame.name)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Connecting a SQLite Database</h2></hgroup><article  id="connecting-a-sqlite-database">
 
@@ -177,7 +185,7 @@
 <pre >## Loading required package: DBI</pre>
 
 <pre class = 'prettyprint lang-r'>m = dbDriver(&quot;SQLite&quot;)
-con = dbConnect(m, &quot;/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db&quot;)
+con = dbConnect(m, &quot;~/GitHub/IntroSQL/stats_club.db&quot;)
 query = dbSendQuery(con, &quot;SELECT name, position FROM exec;&quot;)
 result = fetch(query)
 dbClearResult(query)</pre>
@@ -207,7 +215,7 @@ dbClearResult(query)</pre>
 
 <pre class = 'prettyprint lang-r'>library(RSQLite)
 m = dbDriver(&quot;SQLite&quot;)
-con = dbConnect(m, &quot;/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db&quot;)
+con = dbConnect(m, &quot;~/GitHub/IntroSQL/stats_club.db&quot;)
 result = dbGetQuery(con,
                    &quot;SELECT name, start_time, location
                    FROM event;&quot;)
@@ -216,9 +224,9 @@ result</pre>
 <pre >##                             name          start_time location
 ## 1                            BOT 2015-01-28 19:00:00    C &amp; D
 ## 2                            EOT                &lt;NA&gt;     &lt;NA&gt;
-## 3                Intro to Hadoop                &lt;NA&gt;     &lt;NA&gt;
+## 3                Intro to Hadoop          2015-03-19     &lt;NA&gt;
 ## 4                   Intro to SQL 2015-02-05 18:00:00  MC-3003
-## 5                      Prof Talk                &lt;NA&gt;     &lt;NA&gt;
+## 5                      Prof Talk 2015-03-03 15:00:00  M3-2134
 ## 6                    Prof Talk 2                &lt;NA&gt;     &lt;NA&gt;
 ## 7                    Prof Talk 3                &lt;NA&gt;     &lt;NA&gt;
 ## 8    Intro to SQL: Basic Queries 2015-03-09 18:00:00  MC-3003
