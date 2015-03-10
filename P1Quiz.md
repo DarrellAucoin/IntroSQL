@@ -7,7 +7,7 @@ Normalize the following table:
 | | | | | |
 
 <center>
-![alt text](Images/quiz1sol.png)
+![alt text](https://github.com/NormallySane/IntroSQL/blob/master/Images/quiz1sol.png)
 </center>
 
 ### Quiz: Relational Algebra
