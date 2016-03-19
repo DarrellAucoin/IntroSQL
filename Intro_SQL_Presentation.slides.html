@@ -1019,20 +1019,19 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 
 </div>
 </div>
-</div><div style=display:none>
+</div></section>
+    </section><section>
+    <section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Normalization">Normalization<a class="anchor-link" href="#Normalization">&#182;</a></h2><p>Leave Normalization out, the defintion is not quite right</p>
-
+<h2 id="Normalization">Normalization<a class="anchor-link" href="#Normalization">&#182;</a></h2>
 </div>
 </div>
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1043,8 +1042,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1052,15 +1050,31 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li><strong>First Normalized Form:</strong> Each attribute contains only atomic values and only a single value from that domain. i.e. The data is in the form of a table with no merged columns or rows.</li>
-<li><strong>Second Normalized Form:</strong> Each attribute in the table is dependent on the entity it is describing (dependent on the primary key).</li>
-<li><strong>Third Normalized Form:</strong> All non-primary key attributes are not determined by any other non-primary key attributes.</li>
+<li><strong>First Normalized Form:</strong> <ul>
+<li>A two-dimensional table</li>
+<li>All entries are the same datatype</li>
+<li>Each row, column pair contains only a single value</li>
+<li>Each row is unique</li>
+</ul>
+</li>
+<li><strong>Second Normalized Form:</strong> <ul>
+<li>Each attribute in the table is dependent on the entity it is describing (dependent on the primary key)
+$$A\rightarrow B,C $$</li>
+</ul>
+</li>
+<li><strong>Third Normalized Form:</strong> <ul>
+<li>All non-primary key attributes are not determined by any other non-primary key attributes
+$$\begin{cases}
+A\rightarrow B,C\\
+A,B\rightarrow D
+\end{cases}\implies\mbox{Need at least 2 tables}$$</li>
+</ul>
+</li>
 </ol>
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1078,8 +1092,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1099,8 +1112,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1111,8 +1123,6 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 </div>
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1122,8 +1132,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div><div class="fragment" data-fragment-index="61">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1135,7 +1144,7 @@ Source for picture: XKCD (Randall Munroe) <a href="http://xkcd.com/327/">http://
 </div>
 </div>
 </div>
-    </div><div style=display:none>
+    </div><div class="fragment" data-fragment-index="62">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1227,7 +1236,7 @@ Let's break the table so we get important description of the events (name, type,
 </div>
 </div>
 </div>
-    </div><div style=display:none>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1238,8 +1247,6 @@ Let's break the table so we get important description of the events (name, type,
 </div>
 </div>
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1249,8 +1256,7 @@ Let's break the table so we get important description of the events (name, type,
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1261,8 +1267,7 @@ Let's break the table so we get important description of the events (name, type,
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div><div class="fragment" data-fragment-index="72">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1274,7 +1279,7 @@ Let's break the table so we get important description of the events (name, type,
 </div>
 </div>
 </div>
-    </div><div style=display:none>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1285,8 +1290,6 @@ Let's break the table so we get important description of the events (name, type,
 </div>
 </div>
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1302,8 +1305,7 @@ Let's break the table so we get important description of the events (name, type,
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1316,8 +1318,7 @@ Let's break the table so we get important description of the events (name, type,
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1328,8 +1329,6 @@ Let's break the table so we get important description of the events (name, type,
 </div>
 </div>
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1358,8 +1357,7 @@ Let's break the table so we get important description of the events (name, type,
 
 </div>
 </div>
-</div>
-    </div><div style=display:none>
+</div><div class="fragment" data-fragment-index="78">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
