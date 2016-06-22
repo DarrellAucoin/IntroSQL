@@ -104,7 +104,7 @@ columns = dbListFields(conn, "table_name")
 library(RSQLite)
 library(xtable)
 m = dbDriver("SQLite")
-con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
+con = dbConnect(m, "/Users/daucoin/GitHub/IntroSQL/stats_club.db")
 query = dbSendQuery(con,
                    "SELECT *
                    FROM exec;")
@@ -119,7 +119,7 @@ dbDisconnect(con)
 ```{r}
 library(RSQLite)
 m = dbDriver("SQLite")
-con = dbConnect(m, "/Users/darrellaucoin/GitHub/IntroSQL/stats_club.db")
+con = dbConnect(m, "/Users/daucoin/GitHub/IntroSQL/stats_club.db")
 result = dbGetQuery(con,
                    "SELECT name, start_time, location
                    FROM event;")
